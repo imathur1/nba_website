@@ -1,48 +1,48 @@
 import os
+import json
 import http.client
+import urllib.request
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 
-# git add .
-# git commit -m ""
 # git remote add origin https://github.com/imathur1/NBA_Website.git
 # git push -u origin master
 
 app = Flask(__name__)
 
 teams = {
-    "Cleveland Cavaliers": "static/images/logos/cavs.png",
-    "Detroit Pistons": "static/images/logos/pistons.png",
-    "Indiana Pacers": "static/images/logos/pacers.gif",
-    "Orlando Magic": "static/images/logos/magic.gif",
-    "Miami Heat": "static/images/logos/heat.gif",
-    "Brooklyn Nets": "static/images/logos/nets.png",
-    "Philadelphia 76ers": "static/images/logos/sixers.png",
-    "Golden State Warriors": "static/images/logos/warriors.gif",
-    "Dallas Mavericks": "static/images/logos/mavs.png",
-    "Memphis Grizzlies": "static/images/logos/grizzlies.png",
-    "San Antonio Spurs": "static/images/logos/spurs.gif",
-    "Oklahoma City Thunder": "static/images/logos/thunder.gif",
-    "Utah Jazz": "static/images/logos/jazz.png",
-    "Milwaukee Bucks": "static/images/logos/bucks.png",
-    "Phoenix Suns": "static/images/logos/suns.png",
-    "Los Angeles Lakers": "static/images/logos/lakers.png",
-    "Denver Nuggets": "static/images/logos/nuggets.png",
-    "New Orleans Pelicans": "static/images/logos/pelicans.png",
-    "Sacramento Kings": "static/images/logos/kings.png",
-    "Los Angeles Clippers": "static/images/logos/clippers.png",
-    "Chicago Bulls": "static/images/logos/bulls.png",
-    "Portland Trail Blazers": "static/images/logos/blazers.gif",
-    "Boston Celtics": "static/images/logos/celtics.png",
-    "Minnesota Timberwolves": "static/images/logos/wolves.png",
-    "Atlanta Hawks": "static/images/logos/hawks.png",
-    "Washington Wizards": "static/images/logos/wizards.png",
-    "Houston Rockets": "static/images/logos/rockets.gif",
-    "Charlotte Hornets": "static/images/logos/hornets.png",
-    "Toronto Raptors": "static/images/logos/raptors.png",
-    "New York Knicks": "static/images/logos/knicks.gif"
+    "Cleveland Cavaliers": ["static/images/logos/cavs.png", "/static/images/mini_logos/cavs.png"],
+    "Detroit Pistons": ["static/images/logos/pistons.png", "/static/images/mini_logos/pistons.png"],
+    "Indiana Pacers": ["static/images/logos/pacers.gif", "/static/images/mini_logos/pacers.png"],
+    "Orlando Magic": ["static/images/logos/magic.gif", "/static/images/mini_logos/magic.png"],
+    "Miami Heat": ["static/images/logos/heat.gif", "/static/images/mini_logos/heat.png"],
+    "Brooklyn Nets": ["static/images/logos/nets.png", "/static/images/mini_logos/nets.png"],
+    "Philadelphia 76ers": ["static/images/logos/sixers.png", "/static/images/mini_logos/sixers.png"],
+    "Golden State Warriors": ["static/images/logos/warriors.gif", "/static/images/mini_logos/warriors.png"],
+    "Dallas Mavericks": ["static/images/logos/mavs.png", "/static/images/mini_logos/mavs.png"],
+    "Memphis Grizzlies": ["static/images/logos/grizzlies.png", "/static/images/mini_logos/grizzlies.png"],
+    "San Antonio Spurs": ["static/images/logos/spurs.gif", "/static/images/mini_logos/spurs.png"],
+    "Oklahoma City Thunder": ["static/images/logos/thunder.gif", "/static/images/mini_logos/thunder.png"],
+    "Utah Jazz": ["static/images/logos/jazz.png", "/static/images/mini_logos/jazz.png"],
+    "Milwaukee Bucks": ["static/images/logos/bucks.png", "/static/images/mini_logos/bucks.png"],
+    "Phoenix Suns": ["static/images/logos/suns.png", "/static/images/mini_logos/suns.png"],
+    "Los Angeles Lakers": ["static/images/logos/lakers.png", "/static/images/mini_logos/lakers.png"],
+    "Denver Nuggets": ["static/images/logos/nuggets.png", "/static/images/mini_logos/nuggets.png"],
+    "New Orleans Pelicans": ["static/images/logos/pelicans.png", "/static/images/mini_logos/pelicans.png"],
+    "Sacramento Kings": ["static/images/logos/kings.png", "/static/images/mini_logos/kings.png"],
+    "Los Angeles Clippers": ["static/images/logos/clippers.png", "/static/images/mini_logos/clippers.png"],
+    "Chicago Bulls": ["static/images/logos/bulls.png", "/static/images/mini_logos/bulls.png"],
+    "Portland Trail Blazers": ["static/images/logos/bulls.png", "/static/images/mini_logos/bulls.png"],
+    "Boston Celtics": ["static/images/logos/celtics.png", "/static/images/mini_logos/celtics.png"],
+    "Minnesota Timberwolves": ["static/images/logos/wolves.png", "/static/images/mini_logos/wolves.png"],
+    "Atlanta Hawks": ["static/images/logos/hawks.png", "/static/images/mini_logos/hawks.png"],
+    "Washington Wizards": ["static/images/logos/wizards.png", "/static/images/mini_logos/wizards.png"],
+    "Houston Rockets": ["static/images/logos/rockets.gif", "/static/images/mini_logos/rockets.png"],
+    "Charlotte Hornets": ["static/images/logos/hornets.png", "/static/images/mini_logos/hornets.png"],
+    "Toronto Raptors": ["static/images/logos/raptors.png", "/static/images/mini_logos/raptors.png"],
+    "New York Knicks": ["static/images/logos/knicks.gif", "/static/images/mini_logos/knicks.png"]
 }
 
 def getTime(time):
@@ -57,7 +57,7 @@ def getTime(time):
 
 def openStore(currentTime):
     upcoming = []
-    file = open("static/text/store.txt", "r")
+    file = open("static/database/store.txt", "r")
     N = int(file.readline().strip("\n"))
     for i in range(N):
         info = []
@@ -88,7 +88,7 @@ def openStore(currentTime):
     return upcoming
 
 def openDate():
-    file = open("static/text/date.txt", "r")
+    file = open("static/database/date.txt", "r")
     a = file.readline().strip("\n")
     b = file.readline().strip("\n")
     c = file.readline().strip("\n")
@@ -133,7 +133,7 @@ def writeXML(year, month, day):
     return str(year), str(month), str(day)
 
 def changeStore(upcoming):
-    file = open("static/text/store.txt", "w")
+    file = open("static/database/store.txt", "w")
     file.write(str(len(upcoming)) + "\n")
     for i in range(len(upcoming)):
         for j in upcoming[i]:
@@ -146,7 +146,7 @@ def changeDate(currentTime):
     a = str(int(num[0:4]))
     b = str(int(num[5:7]))
     c = str(int(num[8:10]))
-    file = open("static/text/date.txt", "w")
+    file = open("static/database/date.txt", "w")
     file.write(a + "\n")
     file.write(b + "\n")
     file.write(c + "\n")
@@ -203,7 +203,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
             elif elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}home" or elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}away":
                 if overlap == False:
                     info.append(elem.attrib["name"])
-                    info.append(teams[elem.attrib["name"]])
+                    info.append(teams[elem.attrib["name"]][0])
             elif elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}broadcasts":
                 if overlap == False:
                     upcoming.append(info)
@@ -215,7 +215,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
 
 @app.route("/")
 def output():
-    return render_template("index.html")
+    return render_template("/index.html")
 
 @app.route("/update", methods = ["POST"])
 def update():
@@ -226,6 +226,85 @@ def update():
     a, b, c = openDate()
     upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
     return jsonify(upcoming)
+
+def getStandings():
+    standings = []
+    teamMapping = {'1610612749': "Milwaukee Bucks",
+    '1610612761': "Toronto Raptors",
+    '1610612754': "Indiana Pacers",
+    '1610612755': "Philadelphia 76ers",
+    '1610612738': "Boston Celtics",
+    '1610612765': "Detroit Pistons",
+    '1610612751': "Brooklyn Nets",
+    '1610612766': "Charlotte Hornets",
+    '1610612748': "Miami Heat",
+    '1610612753': "Orlando Magic",
+    '1610612764': "Washington Wizards",
+    '1610612737': "Atlanta Hawks",
+    '1610612741': "Chicago Bulls",
+    '1610612739': "Cleveland Cavaliers",
+    '1610612752': "New York Knicks",
+    '1610612744': "Golden State Warriors",
+    '1610612743': "Denver Nuggets",
+    '1610612745': "Houston Rockets",
+    '1610612760': "Oklahoma City Thunder",
+    '1610612757': "Portland Trail Blazers",
+    '1610612762': "Utah Jazz",
+    '1610612746': "Los Angeles Clippers",
+    '1610612759': "San Antonio Spurs",
+    '1610612758': "Sacramento Kings",
+    '1610612750': "Minnesota Timberwolves",
+    '1610612747': "Los Angeles Lakers",
+    '1610612740': "New Orleans Pelicans",
+    '1610612742': "Dallas Mavericks",
+    '1610612763': "Memphis Grizzlies",
+    '1610612756': "Phoenix Suns"}
+    with urllib.request.urlopen("http://data.nba.net/prod/v1/current/standings_conference.json") as url:
+        data = json.loads(url.read().decode())
+        east = data['league']['standard']['conference']['east']
+        west = data['league']['standard']['conference']['west']
+        for i in east:
+            teamName = teamMapping[i['teamId']]
+            logo = teams[teamName][1]
+            win = i['win'] 
+            loss = i['loss']
+            winPct = i['winPct']
+            gamesBehind = str(float(i['gamesBehind']))
+            if gamesBehind == "0.0":
+                gamesBehind = "-"
+            conference = i['confWin'] + "-" + i['confLoss']
+            home = i['homeWin'] + "-" + i['homeLoss']
+            away = i['awayWin'] + "-" + i['awayLoss']
+            lastTen = i['lastTenWin'] + "-" + i['lastTenLoss']
+            if i['isWinStreak']:
+                streak = "W" + i['streak']
+            else:
+                streak = "L" + i['streak']
+            standings.append([logo, teamName, win, loss, winPct, gamesBehind, conference, home, away, lastTen, streak])
+        for i in west:
+            teamName = teamMapping[i['teamId']]
+            logo = teams[teamName][1]
+            win = i['win'] 
+            loss = i['loss']
+            winPct = i['winPct']
+            gamesBehind = i['gamesBehind']
+            if gamesBehind == "0":
+                gamesBehind = "-"
+            conference = i['confWin'] + "-" + i['confLoss']
+            home = i['homeWin'] + "-" + i['homeLoss']
+            away = i['awayWin'] + "-" + i['awayLoss']
+            lastTen = i['lastTenWin'] + "-" + i['lastTenLoss']
+            if i['isWinStreak']:
+                streak = "W" + i['streak']
+            else:
+                streak = "L" + i['streak']
+            standings.append([logo, teamName, win, loss, winPct, gamesBehind, conference, home, away, lastTen, streak])
+    return standings
+
+@app.route("/results", methods = ["POST"])
+def results():
+    standings = getStandings()
+    return jsonify(standings)
 
 @app.route("/standings/")
 def standings():

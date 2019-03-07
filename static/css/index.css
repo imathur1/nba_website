@@ -6,6 +6,10 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+#scores:hover, #standings:hover, #news:hover {
+    cursor: pointer;
+}
+
 .navbar-brand {
     margin-left: 5%;
     cursor: pointer;

@@ -8,29 +8,29 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" >
-        <link rel="shortcut icon" type="image/x-icon" href="static/images/other/favicon.ico" />
-        <link rel="stylesheet" href="static/css/standings.css">
+        <link rel="shortcut icon" type="image/x-icon" href="/static/images/other/favicon.ico" />
+        <link rel="stylesheet" href="/static/css/standings.css">
     </head>
     <body>
         <nav class="stroke navbar navbar-expand-lg bg-primary">
-            <a class="navbar-brand" href="#carouselExampleIndicators">
-                <img src="static/images/other/nba.png" width="18" height="40" alt="NBA Logo">
+            <a class="navbar-brand" href="/">
+                <img src="/static/images/other/nba.png" width="18" height="40" alt="NBA Logo">
                 NBA STATS
             </a>        
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav justify-content-around" id="links">
                     <li class="nav-item">
-                        <a class="nav-link" href="#upcoming">Upcoming</a>
+                        <a class="nav-link" href="/#upcoming">Upcoming</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Scores</a>
+                        <a class="nav-link" href="scores">Scores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Standings</a>
+                        <a class="nav-link" href="#standings">Standings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="news">News</a>
                     </li> 
                 </ul>
 
@@ -42,9 +42,492 @@
                 </form> 
             </div>
         </nav>
+
+        <div class="container">
+            <p class="text-center" id="eastern">Eastern Conference</p>
+            <table class="table table-hover" id="standings">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col"></th>
+                        <th scope="col" class="team">Team</th>
+                        <th scope="col">W</th>
+                        <th scope="col">L</th>
+                        <th scope="col">WP</th>
+                        <th scope="col">GB</th>
+                        <th scope="col">Conf</th>
+                        <th scope="col">Home</th>
+                        <th scope="col">Away</th>
+                        <th scope="col">L10</th>
+                        <th scope="col">Streak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr class="table-secondary">
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank1 align-middle"  scope="row"></th>
+                        <td><img class="logo1" src=""></td>
+                        <td class="name1 align-middle"></td>
+                        <td class="win1 align-middle"></td>
+                        <td class="loss1 align-middle"></td>
+                        <td class="wp1 align-middle"></td>
+                        <td class="gb1 align-middle"></td>
+                        <td class="conf1 align-middle"></td>
+                        <td class="home1 align-middle"></td>
+                        <td class="away1 align-middle"></td>
+                        <td class="last1 align-middle"></td>
+                        <td class="streak1 align-middle"></td> 
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-center" id="western">Western Conference</p>
+            <table class="table table-hover">
+                <caption>
+                    <div class="row cap">
+                        <div class="col text-center">W - Wins</div>
+                        <div class="col text-center">L - Losses</div>
+                        <div class="col text-center">WP - Win Percentage</div>
+                        <div class="col text-center">GB - Games Behind</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">Conf - Conference Record</div>
+                        <div class="col text-center">Home - Home Record</div>
+                        <div class="col text-center">Away - Away Record</div>
+                        <div class="col text-center">L10 - Last 10 Games Record</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">Streak - Current Streak</div>
+                    </div>
+                </caption>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col"></th>
+                        <th scope="col" class="team">Team</th>
+                        <th scope="col">W</th>
+                        <th scope="col">L</th>
+                        <th scope="col">WP</th>
+                        <th scope="col">GB</th>
+                        <th scope="col">Conf</th>
+                        <th scope="col">Home</th>
+                        <th scope="col">Away</th>
+                        <th scope="col">L10</th>
+                        <th scope="col">Streak</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr class="table-secondary">
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                    <tr>
+                        <th class="rank2 align-middle"  scope="row"></th>
+                        <td><img class="logo2" src=""></td>
+                        <td class="name2 align-middle"></td>
+                        <td class="win2 align-middle"></td>
+                        <td class="loss2 align-middle"></td>
+                        <td class="wp2 align-middle"></td>
+                        <td class="gb2 align-middle"></td>
+                        <td class="conf2 align-middle"></td>
+                        <td class="home2 align-middle"></td>
+                        <td class="away2 align-middle"></td>
+                        <td class="last2 align-middle"></td>
+                        <td class="streak2 align-middle"></td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="static/js/standings.js"></script>
+        <script type="text/javascript" src="/static/js/standings.js"></script>
     </body>
 </html>

@@ -6,6 +6,29 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+table {
+    font-size: 18px;
+    text-align: center;
+}
+.name1, .name2 {
+    text-align: left;
+}
+.team {
+    text-align: left;
+}
+.cap {
+    margin-bottom: 1%;
+}
+
+#eastern, #western {
+    margin-top: 2.5%;
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #000;
+}
+
 .navbar-brand {
     margin-left: 5%;
     cursor: pointer;

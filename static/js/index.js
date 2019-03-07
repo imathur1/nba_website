@@ -53,16 +53,7 @@ $(document).ready(function(){
       contentType: 'application/json;charset=UTF-8',
       data : JSON.stringify("Sent")
     });
-    /*
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "./standings", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=UTF-8");
-    var standings = document.getElementById("standings");
-    xhr.send();
-    */
   });
-
-
 });
 
 const carousel = document.getElementsByClassName("c-image");
