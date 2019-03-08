@@ -5,10 +5,7 @@ import urllib.request
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
-from flask import Flask, render_template, request, jsonify, redirect, url_for
-
-# git remote add origin https://github.com/imathur1/NBA_Website.git
-# git push -u origin master
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -34,7 +31,7 @@ teams = {
     "Sacramento Kings": ["static/images/logos/kings.png", "/static/images/mini_logos/kings.png"],
     "Los Angeles Clippers": ["static/images/logos/clippers.png", "/static/images/mini_logos/clippers.png"],
     "Chicago Bulls": ["static/images/logos/bulls.png", "/static/images/mini_logos/bulls.png"],
-    "Portland Trail Blazers": ["static/images/logos/bulls.png", "/static/images/mini_logos/bulls.png"],
+    "Portland Trail Blazers": ["static/images/logos/blazers.gif", "/static/images/mini_logos/blazers.png"],
     "Boston Celtics": ["static/images/logos/celtics.png", "/static/images/mini_logos/celtics.png"],
     "Minnesota Timberwolves": ["static/images/logos/wolves.png", "/static/images/mini_logos/wolves.png"],
     "Atlanta Hawks": ["static/images/logos/hawks.png", "/static/images/mini_logos/hawks.png"],
@@ -219,12 +216,14 @@ def output():
 
 @app.route("/update", methods = ["POST"])
 def update():
+    players, javascript = getPlayers()
     info = request.get_json()
     offset = int(info[0])
     currentTime = getTime(info[1])
     upcoming = openStore(currentTime)
     a, b, c = openDate()
     upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
+    upcoming.append(javascript)
     return jsonify(upcoming)
 
 def getStandings():
@@ -309,6 +308,33 @@ def results():
 @app.route("/standings/")
 def standings():
     return render_template("/standings.html")
+
+def getPlayers():
+    file = open("static/database/players.txt", "r")
+    n = int(file.readline().strip("\n"))
+    players = dict()
+    javascript = []
+    for i in range(n):
+        key = file.readline().strip("\n")
+        value = file.readline().strip("\n")
+        players[key] = value
+        javascript.append(key)
+    file.close()
+    return players, javascript
+
+def getPlayerStats(playerID):
+    pass
+
+@app.route("/playerStats/<playerName>/")
+def playerStats(playerName):
+    return render_template("players.html")
+
+@app.route("/players", methods = ["POST"])
+def players():
+    name = request.get_json()
+    players, javascript = getPlayers()
+    playerID = players[name]
+    return jsonify(name)
 
 if __name__ == '__main__':
     app.run("0.0.0.0", "16")

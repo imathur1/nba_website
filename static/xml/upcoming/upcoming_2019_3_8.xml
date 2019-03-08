@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" charset="UTF-8" href="/xslt/basketball/schedule-v5.0.xsl"?>
+<!-- Generation started @ 2019-03-07 02:41:19 +0000 -->
+<league xmlns="http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd" id="4353138d-4c22-4396-95d8-5f587d2df25c" name="NBA" alias="NBA">
+  <daily-schedule date="2019-03-08">
+    <games>
+      <game id="dd0586b6-7d03-42c4-843c-2d9c5505d46f" status="scheduled" coverage="full" scheduled="2019-03-09T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15331718" reference="0021800978" home_team="583ed157-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecf50-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Central"/>
+        <venue id="aecd8da6-0404-599c-a792-4b33fb084a2a" name="Amway Center" capacity="18846" address="400 W. Church Street" city="Orlando" state="FL" zip="32801" country="USA"/>
+        <home name="Orlando Magic" alias="ORL" id="583ed157-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3437" reference="1610612753">
+        </home>
+        <away name="Dallas Mavericks" alias="DAL" id="583ecf50-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3411" reference="1610612742">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-SW" type="TV" locale="Away" channel="676"/>
+          <broadcast network="FS-FL" type="TV" locale="Home" channel="654"/>
+        </broadcasts>
+      </game>
+      <game id="e44fe86d-e08e-4202-b715-2cdd5681cbe2" status="scheduled" coverage="full" scheduled="2019-03-09T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15331556" reference="0021800977" home_team="583ec97e-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec8d4-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="a380f011-6e5d-5430-9f37-209e1e8a9b6f" name="Spectrum Center" capacity="19077" address="330 E. Trade Street" city="Charlotte" state="NC" zip="28202" country="USA" sr_id="sr:venue:6146"/>
+        <home name="Charlotte Hornets" alias="CHA" id="583ec97e-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3430" reference="1610612766">
+        </home>
+        <away name="Washington Wizards" alias="WAS" id="583ec8d4-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3431" reference="1610612764">
+        </away>
+        <broadcasts>
+          <broadcast network="NBCS-DC+" type="TV" locale="Away" channel="642-1"/>
+          <broadcast network="FS-SE" type="TV" locale="Home" channel="649"/>
+        </broadcasts>
+      </game>
+      <game id="2557e40c-0e73-4835-a2c9-84a10942f38c" status="scheduled" coverage="full" scheduled="2019-03-09T01:00:00+00:00" track_on_court="true" sr_id="sr:match:15329136" reference="0021800980" home_team="583ec5fd-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec928-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Central" home="US/Central" away="US/Eastern"/>
+        <venue id="38911649-acfd-551a-949b-68f0fcaa44e7" name="United Center" capacity="20917" address="1901 W Madison Street" city="Chicago" state="IL" zip="60612" country="USA" sr_id="sr:venue:5964"/>
+        <home name="Chicago Bulls" alias="CHI" id="583ec5fd-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3409" reference="1610612741">
+        </home>
+        <away name="Detroit Pistons" alias="DET" id="583ec928-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3424" reference="1610612765">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-DET" type="TV" locale="Away" channel="663"/>
+          <broadcast network="NBCS-CHI" type="TV" locale="Home" channel="665"/>
+        </broadcasts>
+      </game>
+      <game id="72aeb9b2-388b-4e9f-8ced-4bfa2c498cac" status="scheduled" coverage="full" scheduled="2019-03-09T01:00:00+00:00" track_on_court="true" sr_id="sr:match:15329948" reference="0021800982" home_team="583eca88-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ece50-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Mountain"/>
+        <venue id="7657c204-a20b-527a-99cb-dc29218462aa" name="FedExForum" capacity="18119" address="191 Beale Street" city="Memphis" state="TN" zip="38103" country="USA" sr_id="sr:venue:6926"/>
+        <home name="Memphis Grizzlies" alias="MEM" id="583eca88-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3415" reference="1610612763">
+        </home>
+        <away name="Utah Jazz" alias="UTA" id="583ece50-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3434" reference="1610612762">
+        </away>
+        <broadcasts>
+          <broadcast network="SportsNet RM" type="TV" locale="Away" channel="683"/>
+          <broadcast network="FS-SE" type="TV" locale="Home" channel="649"/>
+        </broadcasts>
+      </game>
+      <game id="8912a0c3-25a1-426c-a44b-96db5902fbb6" status="scheduled" coverage="full" scheduled="2019-03-09T01:00:00+00:00" track_on_court="true" sr_id="sr:match:15330532" reference="0021800983" home_team="583ecc9a-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecda6-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="6ec47e31-f778-5319-b6c4-3254e076ba0e" name="Smoothie King Center" capacity="16867" address="1501 Girod Street" city="New Orleans" state="LA" zip="70113" country="USA" sr_id="sr:venue:6932"/>
+        <home name="New Orleans Pelicans" alias="NOP" id="583ecc9a-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:5539" reference="1610612740">
+        </home>
+        <away name="Toronto Raptors" alias="TOR" id="583ecda6-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3433" reference="1610612761">
+        </away>
+        <broadcasts>
+          <broadcast network="SN1" type="TV" locale="International"/>
+          <broadcast network="FS-NO" type="TV" locale="Home" channel="676-4"/>
+        </broadcasts>
+      </game>
+      <game id="b3a0598f-224a-4415-8719-41a04c438cde" status="scheduled" coverage="full" scheduled="2019-03-09T01:00:00+00:00" track_on_court="true" sr_id="sr:match:15331624" reference="0021800979" home_team="583ecea6-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec773-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="b67d5f09-28b2-5bc6-9097-af312007d2f4" name="American Airlines Arena" capacity="19600" address="601 Biscayne Boulevard" city="Miami" state="FL" zip="33132" country="USA" sr_id="sr:venue:6928"/>
+        <home name="Miami Heat" alias="MIA" id="583ecea6-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3435" reference="1610612748">
+        </home>
+        <away name="Cleveland Cavaliers" alias="CLE" id="583ec773-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3432" reference="1610612739">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-OH" type="TV" locale="Away" channel="660"/>
+          <broadcast network="SUN" type="TV" locale="Home" channel="653"/>
+        </broadcasts>
+      </game>
+      <game id="c35751fe-f0cf-40f0-851e-831ec71b178f" status="scheduled" coverage="full" scheduled="2019-03-09T01:00:00+00:00" track_on_court="true" sr_id="sr:match:15331386" reference="0021800981" home_team="583ecb3a-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec87d-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Central" home="US/Central" away="US/Eastern"/>
+        <venue id="5b239206-57ce-50aa-baaa-627f3349dfdc" name="Toyota Center" capacity="18500" address="1510 Polk Street" city="Houston" state="TX" zip="77002" country="USA" sr_id="sr:venue:6134"/>
+        <home name="Houston Rockets" alias="HOU" id="583ecb3a-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3412" reference="1610612745">
+        </home>
+        <away name="Philadelphia 76ers" alias="PHI" id="583ec87d-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3420" reference="1610612755">
+        </away>
+        <broadcasts>
+          <broadcast network="ESPN" type="TV" locale="National" channel="206"/>
+          <broadcast network="SportsNet SW" type="TV" locale="Home" channel="674"/>
+          <broadcast network="NBCS-PH" type="TV" locale="Away"/>
+        </broadcasts>
+      </game>
+      <game id="55aaab3c-bd6c-4518-8fa9-17da675a37b1" status="scheduled" coverage="full" scheduled="2019-03-09T03:30:00+00:00" track_on_court="true" sr_id="sr:match:15330518" reference="0021800985" home_team="583ecdfb-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecfff-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Pacific" home="US/Pacific" away="US/Central"/>
+        <venue id="792ec100-691e-5e16-8ef8-79b2b6ee38ba" name="Staples Center" capacity="18997" address="1111 S. Figueroa Street" city="Los Angeles" state="CA" zip="90015" country="USA"/>
+        <home name="Los Angeles Clippers" alias="LAC" id="583ecdfb-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3425" reference="1610612746">
+        </home>
+        <away name="Oklahoma City Thunder" alias="OKC" id="583ecfff-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3418" reference="1610612760">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-OK" type="TV" locale="Away" channel="675"/>
+          <broadcast network="PRIME" type="TV" locale="Home" channel="693"/>
+        </broadcasts>
+      </game>
+      <game id="fa7d295c-672d-4910-9b99-63c802d24a17" status="scheduled" coverage="full" scheduled="2019-03-09T03:30:00+00:00" track_on_court="true" sr_id="sr:match:15331686" reference="0021800984" home_team="583ec825-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ed102-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Pacific" home="US/Pacific" away="US/Mountain"/>
+        <venue id="e25e21f2-1d67-5f13-910b-81fc8629eea7" name="Oracle Arena" capacity="19596" address="7000 Coliseum Way" city="Oakland" state="CA" zip="94621" country="USA" sr_id="sr:venue:6922"/>
+        <home name="Golden State Warriors" alias="GSW" id="583ec825-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3428" reference="1610612744">
+        </home>
+        <away name="Denver Nuggets" alias="DEN" id="583ed102-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3417" reference="1610612743">
+        </away>
+        <broadcasts>
+          <broadcast network="ESPN" type="TV" locale="National" channel="206"/>
+          <broadcast network="ALT" type="TV" locale="Away" channel="681"/>
+          <broadcast network="NBCS-BA" type="TV" locale="Home" channel="696"/>
+        </broadcasts>
+      </game>
+    </games>
+  </daily-schedule>
+</league>
+<!-- Generation ended @ 2019-03-07 02:41:19 +0000 -->

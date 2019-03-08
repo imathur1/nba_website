@@ -1,0 +1,971 @@
+485
+Thomas Bryant
+030424b9-7367-45e1-b9d4-c8dee3a89e53
+Wesley Johnson
+28121dde-ee9a-42d0-9b0c-9f15aae38281
+Troy Brown Jr.
+5350a897-aa31-4510-8feb-e709e1feb844
+John Wall
+6769d1ca-0581-48b0-b487-b5c87b8f696e
+Bobby Portis
+68b7aac9-02fd-4bd8-b10c-6702d2c5eb98
+Sam Dekker
+763a755f-17b4-4f76-a36f-21f9fb6a6d44
+Jordan McRae
+8f6cd02e-f153-4fd6-ae64-5de2e3d677af
+Devin Robinson
+9129ec46-41ab-4239-82b9-76f95c51d7eb
+Trevor Ariza
+9392d5b6-3dbf-4375-8fdd-4dafaae6ede4
+Tomas Satoransky
+a190e528-a18c-4682-beeb-e0f7360c3e06
+Dwight Howard
+ae8df356-5e57-43e7-be4d-5ec7663312bd
+Jeff Green
+b9155864-4192-4ad7-8652-57a0844c87b3
+Ian Mahinmi
+d2abbbb8-0d36-49d4-9785-d8664021eb78
+Jabari Parker
+e58c5e0e-f1f5-4685-9ff2-7197f9330bea
+Chasson Randle
+f4fbc6f7-d803-404d-9f69-a31ff8fb69c7
+Bradley Beal
+ff461754-ad20-4eeb-af02-2b46cc980b24
+Malik Monk
+3214b8de-d3ea-4188-9329-15a92f894f23
+Dwayne Bacon
+4bce90d5-d5ef-4fe3-b6ce-c974a3d44bdc
+Willy Hernangomez
+5e365d31-3524-45d1-8327-50e7ff7e1dab
+Devonte' Graham
+604571ce-5be8-4938-b8fb-945ff8d15f8d
+Joe Chealey
+77cd0eac-afc3-4791-94cf-f8ebfab0a88b
+Jeremy Lamb
+8d80f6fc-a7ac-48cf-bcd8-516d57acbbfe
+Bismack Biyombo
+8e3cbaa3-e30a-4cf8-aa7a-1b57f15f0f98
+Kemba Walker
+a35ee8ed-f1db-4f7e-bb17-f823e8ee0b38
+Nicolas Batum
+a89ac040-715d-4057-8fc0-9d71ad06fa0a
+J.P. Macura
+aaaf11cd-8988-4af1-a7cb-c77d83356503
+Miles Bridges
+af8f331b-96a6-416e-8837-b14d5b11c52d
+Tony Parker
+b1b2d578-44df-4e05-9884-31dd89e82cf0
+Frank Kaminsky
+c9b1c381-e0ac-4618-9887-ce3e8993b265
+Marvin Williams
+e17a3191-b05c-4878-8be6-21028b8ec007
+Cody Zeller
+e1ce75b8-44ce-4086-b2e1-d2e22efc86ff
+Michael Kidd-Gilchrist
+ea8a18e4-1341-48f1-b75d-5bbac8d789d4
+Shelvin Mack
+ee6b8f67-08cc-4d6f-ac8a-9f7c2432cb80
+Justin Anderson
+0ffd6d00-1aa4-49e0-a85d-6a538417ff3b
+Jaylen Adams
+10a4ebb7-7be4-4fda-b7c7-fd20a6e7a6c0
+John Collins
+28a2e698-9f33-4d4d-9a5d-9bea66ee42a1
+Kent Bazemore
+2c157857-fffd-4eb5-8e2a-b28ebea8da77
+Alex Len
+2facd6c5-10c6-4481-a20f-a885b3f84460
+Taurean Prince
+4f80cdb1-1b10-4669-9774-045bc8a99c99
+Miles Plumlee
+73e55440-d981-48e6-9639-d2ed7276f22d
+Kevin Huerter
+858d255e-9a7b-4c7a-aac4-fc7cf3a5f238
+Omari Spellman
+919fd44b-8714-4e2d-b860-5f4de0fe7d50
+Alex Poythress
+b6af5cf5-47e9-45d5-be2f-3c769f530846
+Dewayne Dedmon
+b8a77045-a325-4ac1-ad9c-d065ec1f41a4
+B.J. Johnson
+c27a4770-03ef-4a91-9022-45fc0fb6a730
+Trae Young
+cf418e0c-de9d-438f-a1ac-3be539a56c42
+DeAndre' Bembry
+db42a3d8-e493-4f0e-aa9f-149397877fea
+Vince Carter
+fa1c4130-38de-4ea1-b93a-4c3c962473e6
+Justise Winslow
+0e6ddc9f-4a7b-4d48-8033-998103edfb32
+Bam Adebayo
+11c303dc-540c-4090-8e0c-76c2fb2c125a
+Duncan Robinson
+18d35316-9f40-408c-abcc-ab49e06ef8e8
+Dion Waiters
+1bf4b5c7-e31d-4c22-9d89-7b909e3cb43c
+James Johnson
+1f0687ca-c8f2-4c71-8306-8a18cbf6cc60
+Dwyane Wade
+2038ebc0-a35b-4979-9fd6-15c72c435101
+Hassan Whiteside
+3b8024e6-5872-4ceb-b675-415715527776
+Yante Maten
+48442a5d-c00e-472d-8aed-73c032018db2
+Ryan Anderson
+4cbbd39c-bece-43a6-80a7-fcd4e72a9e03
+Derrick Jones Jr.
+54cf6e06-9172-44b8-8d3b-ea1b6926553d
+Kelly Olynyk
+8e288d6e-50b8-404b-812b-823ae5bab61f
+Rodney McGruder
+bab1b58c-6d77-433c-bf21-c4a3a6b24b7f
+Udonis Haslem
+ed343fa6-397c-4456-9f3f-63efee6706b5
+Josh Richardson
+ef11cca9-6605-44e8-943e-193c7b821465
+Goran Dragic
+fea7b92a-0124-4775-8747-e4828f0dab8b
+Khem Birch
+13ef372a-5fd1-4336-9901-12e120a5fbd7
+Jarell Martin
+162412a2-d4ff-46f0-8e08-53acc1ab838d
+Wesley Iwundu
+1aeb42f8-f283-45bf-b627-a318f7b246b2
+Aaron Gordon
+20f85838-0bd5-4c1f-ab85-a308bafaf5bc
+Melvin Frazier Jr.
+2750c768-da13-47e9-82b6-f2bc6c7295a4
+Troy Caupain
+2af98bf0-199a-4369-ba87-4d03d3adb899
+Markelle Fultz
+41edefa9-a2f9-447d-9578-d2ea2a0d783d
+Timofey Mozgov
+60aa236a-d9ea-46c2-ae65-fabc54f1bed6
+Nikola Vucevic
+7366b2b7-5959-4dd9-9204-760e861b3119
+Jonathan Isaac
+776679a3-c1d8-4463-99b1-61024008a3ed
+D.J. Augustin
+a18805c2-d746-4d4b-be83-5b96c3bdf6af
+Mo Bamba
+a6bf9402-7f41-49a9-ab28-fe0bdffb5060
+Evan Fournier
+b736d95c-8474-48b2-9000-24ce926eace3
+Jerian Grant
+b7bffcc9-dad4-4363-b2db-41d2c25475b5
+Terrence Ross
+b7d0fa52-b5ca-4465-9bbb-3ec9b6b7b536
+Amile Jefferson
+ef9581fc-49eb-4dc2-b158-6cf3a7a09d46
+Isaiah Briscoe
+fbd00dc4-4f26-428e-b5e1-2f125f5c1499
+DeAndre Jordan
+0036a1fa-ff9a-44a5-8061-68b828ee2b1e
+Damyean Dotson
+2226ff79-37ff-4b63-baeb-13df74890454
+Kevin Knox
+239f0ff0-3d09-4991-bb67-ad8c8b7fd0cb
+Frank Ntilikina
+3a6c2262-7f48-4f0e-996e-3e774e822783
+Mario Hezonja
+4ffb4f4f-f824-4e2f-9f6b-6a05cf2f29ff
+Noah Vonleh
+84215e01-6108-4fd0-9a11-19e9518ab378
+Dennis Smith Jr.
+8bfafad0-c7ac-4eca-8bba-60cf72180545
+Emmanuel Mudiay
+8f7caaba-426f-4bee-be51-9625718d51f3
+Mitchell Robinson
+97e25d19-7c5c-49f9-91c0-5cd9b9cebdcb
+Isaiah Hicks
+bd5c3691-b8a9-46eb-860a-e6475f8c1834
+Allonzo Trier
+cf8bc0a2-f8a8-4aa7-a3d2-151a907ff95c
+Henry Ellenson
+eef64529-e381-43d1-a72b-8dcde914fee9
+Kadeem Allen
+f352a999-007c-4092-9dcf-9b715c2b820a
+John Jenkins
+f4c21698-8e9b-4720-ac1e-5e07bd7c2e92
+Lance Thomas
+f76acd63-bf42-4fa7-9985-a7838f9cb029
+Luke Kornet
+fed6929f-8d92-456c-8a89-9e0c17cf4f7b
+Jimmy Butler
+0e163d44-67a7-4107-9421-5333600166bb
+Boban Marjanovic
+24c17409-ac10-4859-be6c-59d6cc6b5810
+Ben Simmons
+318debd7-dab6-4d4e-8849-03c4c701a7c8
+Zhaire Smith
+3c029ea2-2a9e-4a03-82fa-000bd231119a
+Jonathon Simmons
+44733f78-d10e-4668-ae99-8de54b69b32a
+James Ennis III
+4cbe58e4-5e4b-46b0-9f7b-6cf18ad002c6
+Shake Milton
+5722e429-752c-41f7-9b75-e3fc712f14f1
+Tobias Harris
+82f09975-6a8d-42e4-b42c-a52b9349ed50
+Justin Patton
+86e7ad15-9c26-4158-917c-02e1a3d6f1d4
+Haywood Highsmith
+a17d9b20-4e2b-4612-aecd-27938c997e94
+Jonah Bolden
+a8196c8a-c7d2-4863-a900-273a0244fac1
+Amir Johnson
+b6b33dc2-65be-4fe0-b153-47145c693df2
+Joel Embiid
+bf9ad0fd-0cb8-4360-8970-5f1b5cf3fa8d
+JJ Redick
+c67a37c2-660c-4da9-90c3-95db43613038
+Mike Scott
+e3c8bfbe-086f-4bbf-be9b-38accc5d5037
+T.J. McConnell
+e3dfa2a2-6272-4f3f-adf0-dd5dadea9481
+Furkan Korkmaz
+e558bede-02a3-4e10-993b-39033809c82a
+Jared Dudley
+04856926-1edc-4375-a147-246c4d66b6bb
+Alan Williams
+172550b2-d010-4bcb-b325-6e3c5cfc6551
+Shabazz Napier
+1c1c0edb-84df-42a8-a74b-5899849cd41a
+Treveon Graham
+3f170fb8-2633-481f-bc63-0bce20b37557
+Allen Crabbe
+5ac1fb0f-24fe-4dce-aba5-6fc0dc9c27e7
+DeMarre Carroll
+664afb4f-3fc1-4e25-bcb8-bab2c0c3c33b
+Joe Harris
+766d6b8b-4211-46a3-ae57-2c1c915e538b
+Rodions Kurucs
+80755300-0a97-4444-9e38-06c9f0f71d85
+Spencer Dinwiddie
+8426ab40-888d-4f89-976c-cd9e23717653
+Theo Pinson
+9be260cc-fa70-4fea-b789-eec17268657c
+Ed Davis
+9dbc15ee-deec-4c8c-86e9-71396ff80ef8
+Jarrett Allen
+a3fff5c7-19b6-4dac-bd75-11b944bea505
+Dzanan Musa
+ad2099c6-1ce2-474a-8d41-602eb729dbf5
+Rondae Hollis-Jefferson
+b0d9c043-32b9-4c79-a692-564e93f62bd3
+Caris LeVert
+c34996e5-8be6-4053-a2f2-0acb0155e18c
+Tahjere McCall
+c9f6971d-6e43-4fdf-b5bc-95331386c1cd
+D'Angelo Russell
+dbf09e15-1cd8-434e-acda-9527735ef4d6
+Guerschon Yabusele
+31f78854-0d23-4318-959c-0314588136e1
+Brad Wanamaker
+3c09ef8a-a6f2-4500-9599-ca7bc8d54300
+Marcus Morris
+4d7cb358-0fec-482f-9f57-92c39e8bf214
+Jayson Tatum
+98136da3-452f-49dc-a794-1ee9c76443f2
+Gordon Hayward
+a1ddebee-950c-497d-9acd-b5061360b464
+Marcus Smart
+af460d21-b1d8-46bb-a228-61ac4fb9ccf9
+Aron Baynes
+bca27365-2b46-470a-aaee-40cf0b096f6e
+Robert Williams
+c20dfb58-5622-405e-90b1-92b79ee97461
+Al Horford
+cf3a87ec-c2f7-42e8-9698-6f8b2ba916a9
+Terry Rozier
+d1ee8ac8-f550-4269-ab4f-604b7bba441a
+R.J. Hunter
+db013b56-b4ad-4345-bfed-90a109d3ed63
+Kyrie Irving
+dd146010-902b-4ad7-b98c-650d0363a2f0
+Daniel Theis
+e18e9d0a-97b9-470d-b0a6-0c401ae0e0a0
+Semi Ojeleye
+e9bfd179-878d-4c04-acc7-2ed289d62b65
+P.J. Dozier
+ee06e9d2-98bf-487d-96a5-4954c25b75ef
+Jaylen Brown
+ffc5579c-783f-4d62-80ab-3c3dcb05a27d
+Patrick McCaw
+03854148-a3fa-4564-b1ff-922fe0ba32ba
+Serge Ibaka
+0afca4ef-6ad4-4f96-8cd2-b20b59c6ce90
+Jeremy Lin
+287c389a-0499-4f80-ac4f-1a72366af999
+Pascal Siakam
+3df1db1d-6596-489e-8e26-80f60fd9b1f4
+Fred VanVleet
+45f17314-918c-49bd-a482-adc171859025
+Danny Green
+478e5e20-5d59-402f-a901-b8e78f3e9508
+Malcolm Miller
+860e358a-9494-4f49-94a5-651168f66676
+Kyle Lowry
+8c090758-6baa-468d-82fd-d47e17d5091b
+OG Anunoby
+9474fa0a-70dd-44c4-9751-dac5839ae7f3
+Marc Gasol
+b73a8508-23a1-49ee-a466-aa9ea8add09e
+Kawhi Leonard
+c12fb587-fc86-471c-8a84-19caf31325ce
+Norman Powell
+e1e4c26d-ab5c-4bd7-886a-812854466bb8
+Jordan Loyd
+eef66f1f-ff97-48cd-b351-016ab6b8cfb4
+Chris Boucher
+f01d5d8d-f949-437a-a23f-3835c0939ced
+Denzel Valentine
+036f914a-aad0-4ff1-9771-54f9e963d1b8
+Timothe Luwawu-Cabarrot
+18cfec39-20a4-4ec3-9f00-6e62b5a61798
+Cristiano Felicio
+3f64e9a6-6e1e-499b-aec8-764c99f634b2
+Brandon Sampson
+4c01da5f-42ff-4da6-bb4f-a4c5fd4e4665
+Kris Dunn
+56c796d6-74d3-4881-9166-7f528e2b67f6
+Lauri Markkanen
+583d7994-36f9-4a9a-b527-c18704406981
+Chandler Hutchison
+5d9dd021-537d-478d-8540-2d2708f356f4
+Shaquille Harrison
+73e01c06-7df1-4190-8c5d-62453c66b9bc
+Wendell Carter Jr.
+744d5db7-b0be-474a-a58b-6ddf7ae35567
+Otto Porter Jr.
+792fdc1e-e833-4777-a372-11e93e457480
+Ryan Arcidiacono
+7c2dc4ed-5d14-4342-9fe7-18c66fdcb6ab
+Wayne Selden Jr.
+b6ceacd1-00f8-4e51-a186-bcbf02928e80
+Rawle Alkins
+c2bac78f-8223-4531-bda3-666fede8cb20
+Zach LaVine
+db72e294-1c54-454a-96b9-0b4fd2f38112
+Robin Lopez
+e521ef3c-7892-4f14-a560-df320872d59a
+Antonio Blakeney
+e906a009-a7c4-4c31-b6f8-38cb61d4e13b
+Jordan Clarkson
+03d77214-5780-4715-8df2-13de3af5ea2d
+Jaron Blossomgame
+0995484b-0a2c-4dda-abd3-56bc7a29fb05
+Nik Stauskas
+2ccaaefc-917d-4e2a-b7c6-947836c38c6f
+Tristan Thompson
+335097c3-7919-49d5-80b0-8062d5d3e89c
+Channing Frye
+4d3a5b96-f4e1-424f-b8e2-1995b0eaa5d7
+JR Smith
+5934134d-0d27-42ea-a554-4b0e3e85ce56
+Marquese Chriss
+643ac9e3-9e95-4611-b5ac-8a5416046ec5
+Kevin Love
+7d615ccd-db96-42a3-9a6c-7f18ea25634e
+Collin Sexton
+80b5cccf-203b-4482-92aa-76d1598216be
+Deng Adel
+8d44cd91-6f42-4bf0-bb95-d7668d076f0a
+Larry Nance Jr.
+ad389979-d1d5-4f26-ad64-3e516b3373a3
+John Henson
+c555e067-c4d5-43f6-99af-716b6005cbba
+Cedi Osman
+d8570bcf-9513-47d6-8f21-2f86625e58df
+Matthew Dellavedova
+ef58422e-c7df-4432-8497-0cbb31e90c32
+Ante Zizic
+f3edc230-a6f4-49f0-ad96-deebb00db0d1
+Brandon Knight
+f58a9803-0ede-4c0b-acbd-08bc0da229af
+David Nwaba
+fe9b0c91-5964-4681-8f1b-e76b5d912b23
+Domantas Sabonis
+22038780-8c50-4211-a99e-656d983e5207
+Alize Johnson
+247fda9b-09e6-4949-8fe3-acfcb9ed0983
+Thaddeus Young
+31a50d54-ef46-47a8-863c-6f4d4e5aa184
+Myles Turner
+323f9ef8-ecdd-41a7-859e-dd3db48ba913
+Davon Reed
+474b716b-2dc2-4a2d-ade1-7b3b061b88da
+Cory Joseph
+5769354c-0661-4ac7-86e5-3fd51506df36
+Doug McDermott
+66156be8-6202-40bd-bdc2-014a46bee28f
+Wesley Matthews
+795bcca3-0cca-448c-8198-85c664f76c75
+Bojan Bogdanovic
+7ff02e19-e829-4e56-9a34-233a71fce76c
+Aaron Holiday
+877eb456-2827-475f-b858-2bc00480e24f
+TJ Leaf
+99d762ff-34b9-4ecc-bf40-016fcd297f84
+Edmond Sumner
+a53b857f-2454-445a-8f71-aabbfe5b49f7
+Victor Oladipo
+ae9e275c-9dce-4c10-a108-cfee6958df48
+Kyle O'Quinn
+e58427b6-c42e-4bee-9556-4eed421d1cf7
+Darren Collison
+ea162a49-c774-4ace-b629-8eaf2e889ddb
+Tyreke Evans
+f4526ee7-400d-496b-91cb-6e210595b845
+Ish Smith
+05a90cd6-73de-43d5-9d30-bc2588d03262
+Isaiah Whitehead
+091b9279-be2e-4b31-ad56-a1feb9e2a203
+Langston Galloway
+138f5c1f-b8e6-4e7c-b8ef-ecb7faa7b936
+Khyri Thomas
+17541179-e1c9-4191-aefb-63f4c20daf48
+Blake Griffin
+18358040-89d8-4e25-a6a6-9e209c26fb3a
+Andre Drummond
+440b769d-2b8b-477f-80d7-cb21d83c0d52
+Wayne Ellington
+47e00cc4-53ca-453b-993a-0f58279e2a94
+Zaza Pachulia
+48a2b27a-87a2-4051-ad03-c95a026ca772
+Jose Calderon
+48f84650-080a-42e5-adfb-3074d6f17037
+Thon Maker
+4934ced0-e62b-482d-a5c7-4606d6fba232
+Reggie Jackson
+7b745dde-a011-45a8-98a8-460a9facb3ce
+Glenn Robinson III
+7f462af0-2ac8-4ca5-aa5a-17b37dc5001b
+Svi Mykhailiuk
+8c0929ae-ce3d-47e0-a964-bf6b8d3981ab
+Luke Kennard
+a537047d-c29f-4dfe-99b0-3bac4e258dc7
+Kalin Lucas
+e9ba0168-1eec-469f-8fdc-1b01cf698877
+Jon Leuer
+ee9ddf70-f50d-49b0-846c-f83719b095d8
+Bruce Brown Jr.
+fc058e75-1015-4bbe-8fab-925d5f6d83fb
+Tony Snell
+26414d70-d298-4999-a391-2eee2dd7067d
+Pat Connaughton
+298852ca-299d-4cb9-a9e5-6ac909582f78
+Sterling Brown
+2c04ab46-c23c-4df8-a748-15f0e35e4e8b
+Pau Gasol
+4aafa7e4-d271-42d2-8979-bdefcd221d30
+Khris Middleton
+4c362eee-6474-40ea-b1b4-d8f917f95175
+Giannis Antetokounmpo
+6c60282d-165a-4cba-8e5a-4f2d9d4c5905
+George Hill
+6e566165-6674-4306-9994-470f60720a2c
+Trevon Duval
+7f16e428-9f16-4c3b-a30e-34ba50722df4
+Eric Bledsoe
+8cee3c73-f765-4000-882d-0c6d0b8acbe3
+D.J. Wilson
+91ef3b61-97a2-4b07-981a-c4228713fd1f
+Christian Wood
+98100660-988b-4e71-a89e-f35839964483
+Donte DiVincenzo
+9cfad453-b323-43dc-a066-6cd0a21745ad
+Ersan Ilyasova
+a519659f-7cc0-40ee-8c49-1bb0b9ca5b13
+Brook Lopez
+c179fb5c-9845-4e37-aef7-6e00d97548eb
+Nikola Mirotic
+ca6e9e9a-3d47-422d-bc1e-2dcf6deba5ca
+Bonzie Colson
+f2067702-7e5c-487f-b5b7-74986aeb7dd6
+Malcolm Brogdon
+f7134fc8-b298-41fd-933d-d0c4a5d8f6ac
+Dario Saric
+06255060-3d3d-44f6-a776-2aab8e57584a
+Cameron Reynolds
+0e04a935-33a2-4426-84a7-41b39854a57a
+Josh Okogie
+1938fb4b-347a-43fd-ba41-1abdb9540699
+Anthony Tolliver
+33a91bda-9f4d-4f80-97d8-9bc574f6afc2
+Robert Covington
+3e512d9e-ff9c-4f23-a4fd-a88128ee3af2
+Derrick Rose
+48341095-ae5a-4d61-bcc8-1b0ceed870b2
+Luol Deng
+5176c4c0-b451-4122-81e9-7d5dc9502de5
+Andrew Wiggins
+77c425f0-0fce-4fab-bd1e-c915c8fb5bc7
+C.J. Williams
+92ec1ed2-95f7-45da-a923-71fd541d6cdb
+Taj Gibson
+9c8dc8ee-6207-48d5-81ee-f362f5e17f9b
+Jeff Teague
+9cf99a61-6b51-4aed-8940-0480dc512b36
+Karl-Anthony Towns
+ab532a66-9314-4d57-ade7-bb54a70c65ad
+Keita Bates-Diop
+af3416bc-38fb-46ca-9b03-72a88d7fda35
+Tyus Jones
+cbc0a3b2-985e-4484-9cb6-6891337b18b7
+Jared Terrell
+f0277044-0e4f-42f3-93ae-50257a474eed
+Jerryd Bayless
+f444ee53-e3b3-4899-923e-a27369ce7e59
+Gorgui Dieng
+fd9448f0-99a2-4169-addf-235e14acf9f9
+Dante Exum
+0d187d04-4cd9-44b3-9a29-408fac5b011e
+Royce O'Neale
+32526c95-bc6e-4d28-a751-c4200904d80b
+Rudy Gobert
+37fbc3a5-0d10-4e22-803b-baa2ea0cdb12
+Joe Ingles
+5b297372-b2af-445e-a4bc-777982dbc1e3
+Tony Bradley
+6130d33e-5725-4f5d-8f81-76ecd691a5b2
+Naz Mitrou-Long
+8d64d4d4-86f5-426b-a2db-82c2f72fb722
+Raul Neto
+8e7ffd66-f779-418c-bf18-b9f746a1c5fe
+Ricky Rubio
+a3531f82-7374-41e7-ac71-ef5071ad2a12
+Thabo Sefolosha
+ad0aa3eb-81c3-4688-b769-e0375cdb5c13
+Derrick Favors
+ad354ebb-88e5-46e4-ad79-f7188ee1f6c2
+Donovan Mitchell
+b6dde96e-3748-4cbe-86d2-798d5dffb3c0
+Ekpe Udoh
+b90d7326-f5ab-4ed1-bdd9-db3b43318363
+Kyle Korver
+ba1b12c1-ee81-47d2-9f02-56110ff2a318
+Jae Crowder
+db74c5dd-08bd-41a5-99ba-328e9b18aeb5
+Tyler Cavanaugh
+dec4a0a2-251a-4142-8b88-0f7be1d7433c
+Georges Niang
+fae899bc-3fc7-43d9-b2c9-35721d11e438
+Grayson Allen
+ffa9a64f-d624-4033-bd23-59dcfd805175
+Donte Grantham
+11fb9289-f7e5-4495-aecc-0621e00a12f1
+Nerlens Noel
+2012f4fd-98e0-4080-98a7-0cfb9de87067
+Markieff Morris
+25c4a949-c310-4bd3-af3f-10441215b323
+Hamidou Diallo
+417c9fe2-15ee-48b7-9d8b-a151146fff42
+Patrick Patterson
+5a25d084-9ef7-4e81-8da8-737b5a9d6ed9
+Jerami Grant
+5b315e15-6633-4ce2-8200-71b821553314
+Andre Roberson
+62933587-9382-4b7e-9cb0-9a07e5b4fdc8
+Russell Westbrook
+74a45eed-f2b0-4886-ae71-d04cf7d59528
+Raymond Felton
+83b736a0-6c1e-4526-b948-e4781251cb73
+Steven Adams
+a208e22a-6b63-45f9-b7c6-bf913a68f3df
+Dennis Schroder
+a2c6a907-282f-4172-9d60-42d03987da0e
+Deonte Burton
+a61a1458-1481-4474-8c30-bf4c3430050d
+Terrance Ferguson
+c68679e2-2631-43b4-96b2-4287d6a0c45d
+Abdel Nader
+d21c7f7b-c1aa-4b52-9371-a399cfcabfdd
+Paul George
+db09f372-9a17-4889-add7-bf8a75ab6da6
+Seth Curry
+047d0b63-4142-46e9-8f04-a61622ae2375
+Meyers Leonard
+51d0a386-20a8-4e68-a8ec-face10febaff
+Damian Lillard
+5382cf43-3a79-4a5a-a7fd-153906fe65dd
+Al-Farouq Aminu
+56ff7cb8-4828-4aaa-8f95-0bf569a0786d
+Enes Kanter
+5fb038ef-a3bf-4f52-afce-4f5bd074bb88
+Gary Trent Jr.
+62daf16f-0c4c-46ae-9e54-0d34d6fdef85
+Anfernee Simons
+632adcc4-97f1-4e67-a132-e0b79f013c67
+Skal Labissiere
+a10131d5-a2b6-45a5-bde1-f6c4cdfd328a
+Jusuf Nurkic
+a8b48aa9-cf98-4a87-8bba-e88eead8cdaa
+Zach Collins
+b5310b38-a378-464f-b344-928adee0ed00
+CJ McCollum
+bc70a55a-cee0-478f-9a13-cf51c4a4187c
+Evan Turner
+ca4f6af4-c203-41d0-97a3-0286710710b6
+Jake Layman
+ce08115e-5e01-4fdc-991d-5d0f4db3eb9f
+Rodney Hood
+d38f8754-7ecb-4791-a350-f67e5c4c785a
+Maurice Harkless
+df6f21d3-5221-42e2-945b-8fe7cebdf03e
+Jarred Vanderbilt
+0b79911f-cd24-46d1-9b05-49fe937aa75e
+Michael Porter Jr.
+3a7d6510-00e9-4265-81df-864a1f547269
+Thomas Welsh
+41beee56-6897-4e16-8693-f4ee7d357f77
+Monte Morris
+48b05ddf-0a9f-4426-9394-231c54726eaa
+Trey Lyles
+55f10af0-4b71-4693-aa82-435e958ab560
+Paul Millsap
+59f6f688-7000-4cf5-a27f-a1980dd86d93
+Jamal Murray
+685576ef-ea6c-4ccf-affd-18916baf4e60
+Gary Harris
+6b5d0264-fa2d-4956-919b-61abfc6bb8d7
+Will Barton
+85e1279a-77c4-49a7-bfa0-7699e64b581f
+Mason Plumlee
+9570a938-324f-40e8-92dd-8a4fcf4a953b
+Brandon Goodwin
+ab6f22fc-0ad6-4323-a5fe-343e6f05e7e0
+Isaiah Thomas
+bda5388e-a657-4e2c-8e12-6ed474518d25
+Torrey Craig
+c14eba17-879a-461e-9413-bf71a378de6e
+Juancho Hernangomez
+c1ff3e58-266f-4183-9fa1-d7c914cf4886
+Malik Beasley
+d3392ee6-cbe4-419e-bbd5-1b658d83e10e
+Nikola Jokic
+f2625432-3903-4f90-9b0b-2e4f63856bb0
+Tyler Lydon
+f9b41748-5ab8-4ff7-9fc8-ecfec9f12d4b
+Justin Holiday
+05dea31d-f1ff-491b-9f17-8be88b26f413
+Delon Wright
+1db0df17-b3d5-4ddb-98d0-8f86239347bf
+Kyle Anderson
+2e49c27a-06c5-4c4a-87fd-69840b783947
+Jaren Jackson Jr.
+3e492a6a-ed3c-499d-b3f5-ff68ca16f6fd
+Chandler Parsons
+434e09b0-2da5-44f4-b406-b5a80852d71d
+Mike Conley
+460b7264-b98f-483e-b841-59a18c2e4d67
+Bruno Caboclo
+664f0884-717b-4f4a-a1a6-79f08acb41bd
+Dillon Brooks
+72a6489b-ad35-4f06-8a4f-a68ea1052f7b
+C.J. Miles
+732b1bd6-d99a-4971-bc2c-4de4842b4a9a
+Jevon Carter
+79cd9581-3aaa-484c-a8b1-a349cdc5c34c
+Julian Washburn
+7db3da2f-fc22-4d0f-99ce-417576b3495b
+Tyler Dorsey
+9714d00f-c8a5-4def-bc17-40fb04cca793
+Avery Bradley
+b23917d2-bb0d-49fa-a384-80d994561d0c
+Joakim Noah
+b6eee153-eac4-41e5-afcb-ab46cf7a8ba8
+Yuta Watanabe
+c7900e6e-e5ea-4670-a7bf-cb097f041b25
+Jonas Valanciunas
+c8788ad2-89f7-4ec9-a22b-dcaf6190889b
+Ivan Rabb
+daf2ca0c-5a4f-4bab-936d-f49723fd992f
+Gerald Green
+11da94f7-02c0-4bc9-9da3-8e8994f46fb6
+Danuel House Jr.
+14dee36c-97c6-4668-8f4e-2833967e6ada
+Iman Shumpert
+1f9ac202-95e8-4974-9a94-ff3609ca7441
+Gary Clark
+2c0b750c-91a2-4e1d-8387-47c4944104e8
+Austin Rivers
+34a159c8-9fe6-4386-bf01-3446f4248bcb
+Isaiah Hartenstein
+38745a56-7472-4844-a2dc-f61d3bcd941f
+Terrence Jones
+39975493-d411-4d59-a015-8119c6c6e6ef
+Kenneth Faried
+6ee485e1-534f-4d07-9492-c30b1ae9d607
+Chris Paul
+942c53e3-7268-44e3-b0a9-fdff55a72c03
+James Harden
+a52b2c84-9c3d-4d6e-8a3b-10e75d11c2bc
+Clint Capela
+c37dafbb-a269-41f6-813f-bdb4da388203
+P.J. Tucker
+da7d17aa-f245-4710-820c-99d29a7458b4
+Vincent Edwards
+e52274ff-0d12-47f1-b830-d0fe5718cc64
+Nene
+f1b776e4-b59e-48c7-9e8a-272de4946b37
+Eric Gordon
+f8d6c74c-e0bd-41ed-a814-f0b25259fe0a
+Julius Randle
+24c85a15-686e-4161-934b-40948188fa36
+E'Twaun Moore
+5a854508-5f41-4009-8986-a162224c511d
+Elfrid Payton
+5fe45e9e-7401-4896-8883-5f969361dbb7
+Jrue Holiday
+65700e81-3aa0-49a9-8a94-004f2cfb64e5
+Stanley Johnson
+6ed42a42-6fd6-464c-8425-7e40489c679f
+Cheick Diallo
+74cddaf3-0435-4adb-83fe-d44ae35e7e4b
+Jason Smith
+7992dce6-a785-4b31-9655-abd5a6f028f0
+Frank Jackson
+88382494-4529-43d0-a328-b747e9372564
+Kenrich Williams
+9318b4c1-49d0-40eb-8b76-1098e28133d2
+Ian Clark
+9c1b7930-7022-4e65-878a-4f10665f07a0
+Trevon Bluiett
+a33facf8-8f0b-4703-a4d1-dd38c172ea1c
+Jahlil Okafor
+a47ac0db-084a-4620-95e8-812c6168cf8d
+Solomon Hill
+e68c7b19-7c0e-49a6-920c-48668f7ddbcf
+Anthony Davis
+ea8826b8-1f76-4eab-b61e-ffcb176880f3
+Darius Miller
+ef98a67f-6d45-45af-be21-23fc07eb3f17
+Dairis Bertans
+f339be01-f2cb-4049-a978-50a5b7f241ad
+Drew Eubanks
+0fbb8fd5-9b9c-48a2-a355-18aba7b5d9d5
+Ben Moore
+15ec9b53-3d7d-4064-b1e2-b9db8a2f2026
+LaMarcus Aldridge
+3157a0b5-1b4c-46d1-934c-ac2df3810950
+Marco Belinelli
+385f6a05-7dfb-4fc8-afed-b6a4f141100c
+DeMar DeRozan
+5e86a9c3-b4d0-4fe1-a551-acd83e5d60eb
+Dante Cunningham
+627e78c7-3f9e-4ac3-9b7d-686087c665ae
+Chimezie Metu
+72a69d30-cf07-4b5f-94ad-9c76832788bc
+Rudy Gay
+79d56fd7-f4ed-4905-9d04-dff4b5352334
+Dejounte Murray
+7d27ec3b-1e31-4b0f-abcf-e12039a0e27b
+Derrick White
+9bcd5cff-4a1c-4454-89b6-a5899b0c6bcc
+Patty Mills
+9e917c97-5227-4581-9ab5-2dd07a7187ef
+Davis Bertans
+c1bb78ed-4ce7-4e8c-b30c-06f8148d550a
+Bryn Forbes
+ca784446-05be-4f5e-8108-d7bb1736005a
+Lonnie Walker IV
+d58cf16b-7bf5-4fed-8b1e-61bad46fa43e
+Jakob Poeltl
+e1b3d3d5-b4b1-481a-b5b9-efe4231f48bf
+Quincy Pondexter
+e58c0cb2-4645-4297-abd9-02315fba4683
+Salah Mejri
+067db21b-7c05-419e-9c98-2bf71ca5d84b
+Justin Jackson
+1c6ea43f-a36a-4222-86ab-504f4af6fb4e
+Devin Harris
+24d85151-2c97-4f67-a993-7cbb3d2608b7
+Tim Hardaway Jr.
+35cd1338-c56b-4247-b53c-264585c59883
+Kristaps Porzingis
+3c5901ef-af1d-441d-aeed-8e0a93cead49
+Maxi Kleber
+3ef70a50-cd0d-4148-a1ad-ca830a1a9046
+Dorian Finney-Smith
+426357dc-340b-4d89-8e3b-7d6b4022b460
+Courtney Lee
+5247355c-121e-4053-8627-54d99e61d518
+Trey Burke
+572261e2-8ad9-4198-969d-16cad41fdef3
+Jalen Brunson
+8d3edba8-9004-4199-9328-cc2208e8b0d3
+Dwight Powell
+a465418b-0933-40b4-8f01-253d046872e1
+Dirk Nowitzki
+b4fb962d-4f36-4b82-89e3-dec4733329c3
+J.J. Barea
+b6cdfbf4-fd3f-46f3-b889-732b3bae1da8
+Ryan Broekhoff
+bf954461-55cd-4699-8a66-4288bb16edd7
+Kostas Antetokounmpo
+d1b4d512-869c-497d-b40f-c0215051645b
+Luka Doncic
+d2ee92e9-3e72-45eb-b156-2dc5adc1e6f7
+Daryl Macon
+e6150f03-1e5d-437f-9b80-a52c3e9a32a7
+Damion Lee
+0d9274b1-878c-44e3-8284-2c1f321d148b
+Jordan Bell
+11bda3d9-55a2-4489-928a-1648e6231784
+Andrew Bogut
+26734851-dce6-4e5b-8291-594a7ebd6658
+Damian Jones
+44231f84-c69d-440d-9287-e210d4ce1672
+Klay Thompson
+4e152a06-673e-4701-b115-aa7e2cd00d2d
+Kevin Durant
+53f2fa48-e61b-49fb-843d-8a3e872257eb
+Jonas Jerebko
+5d1f696c-7656-4b96-b116-66344a7dda71
+Draymond Green
+5e5099d1-4a58-43f2-8d03-f2ae5dd49337
+Shaun Livingston
+77f1a040-ff8b-4e20-9db9-dfb6aa041585
+Stephen Curry
+8ec91366-faea-4196-bbfd-b8fab7434795
+Quinn Cook
+9484b30a-4e6e-4307-8b42-12fa141dee17
+Andre Iguodala
+9fdcd102-1c82-4e32-b366-c93139352c75
+Jacob Evans III
+a5828e4a-7844-4e9c-ba68-6698094e7284
+Marcus Derrickson
+c0b8144d-8e64-4146-a02a-670576ecba6d
+Alfonzo McKinnie
+cba64aec-adb0-4ff4-a59f-fa3fd61418d7
+DeMarcus Cousins
+cbb21aed-9716-44a2-b0e4-54ce09333b94
+Kevon Looney
+ebb50069-6fdf-4c07-9a21-a63d5c814536
+Lance Stephenson
+01e8f44f-f1ee-4d3a-86bd-c29d597ba9bd
+LeBron James
+0afbe608-940a-4d5d-a1f7-468718c67d91
+Lonzo Ball
+0f1de951-5a0e-4bc7-977c-8dafd0fbf121
+Isaac Bonga
+2c5b32a1-53c3-4403-b579-c6126c7584a7
+JaVale McGee
+34ff5b55-42ef-40c0-a2c4-9c28b5476a03
+Tyson Chandler
+3cd2d1c1-d575-45fd-b069-3f0adf57796d
+Reggie Bullock
+42fa4c2c-6520-4d04-a753-cfe4a5c5e2e1
+Johnathan Williams
+446bf9e1-c847-4b03-a840-67e074068945
+Kyle Kuzma
+4fae86e2-4f99-4247-af85-d917b4389d31
+Mike Muscala
+7c636961-816a-4b44-8991-671df9d91d9c
+Brandon Ingram
+8082841d-e516-43c6-a81b-7987fa321acd
+Alex Caruso
+8936c15e-f9d5-4b9a-80b9-8f6b7dcf7a17
+Rajon Rondo
+977b67b1-4665-4f97-ba3b-7d7778efecdb
+Kentavious Caldwell-Pope
+cecc054e-b9ec-4c71-8bbb-5ee665a8c3a9
+Josh Hart
+d6fbf8f8-bb4a-43f7-95f6-498a5e042138
+Moritz Wagner
+f1f258c2-9bcf-4e33-ba9e-563e95084893
+Johnathan Motley
+190c3a54-357c-4aed-8b82-737c57255bc3
+Lou Williams
+2629c593-5f7c-4d34-aec7-6b949572af2a
+JaMychal Green
+2bd97a34-ced9-4413-bfaa-94dbafaa0fdd
+Ivica Zubac
+2da18268-82d4-4b40-a296-7ceddd435d0b
+Landry Shamet
+467f6843-4a9d-413b-9924-d2188d60e6fe
+Danilo Gallinari
+47cd6421-0ce1-431e-9b9c-a8d9bfd0eb04
+Sindarius Thornwell
+6bc2803e-4dd4-4db7-9404-9300acf9364d
+Montrezl Harrell
+869c305c-3e1f-49e5-a59b-5f1e03d198f8
+Patrick Beverley
+912e7aa3-dd03-4a98-9980-0442e108f287
+Luc Mbah a Moute
+a696f51d-0329-4d74-a52a-1d5ef80a1bc8
+Jerome Robinson
+befc2559-ffb9-46ab-b3cb-2a9844c5fe4d
+Angel Delgado
+c6e05c4d-88c3-4a10-8938-e7e56c674572
+Shai Gilgeous-Alexander
+d9ea4a8f-ff51-408d-b518-980efc2a35a1
+Wilson Chandler
+db90c8f4-5d2a-4ff9-8f57-1fc44a253dcf
+Tyrone Wallace
+dc40a2ea-393c-4079-8118-1a097bd709da
+Garrett Temple
+ee2644c1-1260-4bf4-9c70-7c5b0cee4770
+Josh Jackson
+05204575-e093-44ee-869c-7668ca6995d6
+Dragan Bender
+1007d525-b100-4e6b-98a5-82adc5e10d47
+TJ Warren
+2ec7092d-e988-4576-ab8b-e3197448fa5d
+Devin Booker
+31baa84f-c759-4f92-8e1f-a92305ade3d6
+Troy Daniels
+562677c1-2a13-4934-a801-a6c88c619e83
+De'Anthony Melton
+5b22ae60-ca29-4cd8-b618-cce7b9766b0e
+Elie Okobo
+7c5ff789-8ea7-4d8f-829a-0e91d8d4721c
+Deandre Ayton
+7ca4beac-bbd6-454f-b820-4e8442a3e1e5
+Kelly Oubre Jr.
+7dfa0971-96be-4705-9811-f9f54758145f
+Jamal Crawford
+8024c36f-3b4e-4d2f-8231-4777f3a09b26
+Mikal Bridges
+83cc5b28-36a7-43ba-ba20-8347bd1de583
+Tyler Johnson
+895fa449-c569-44d1-ac1b-de05db7d2589
+George King
+bc01a465-e5f9-4f11-b259-70384692a2b9
+Jawun Evans
+dc774d94-ed61-445b-94c2-9abb90edce2b
+Richaun Holmes
+e96ef8d2-192f-47a3-a6ad-876603de1907
+Troy Williams
+0a5be5e9-e679-429b-bfe4-7cd713530b3e
+Willie Cauley-Stein
+20ca6325-14b7-49de-9f4c-6a5f45b4d039
+Wenyen Gabriel
+2bf24df1-604d-4eca-b3f3-f5691f4b99b6
+Corey Brewer
+47efff84-454e-4ad9-b140-7184ec4a5008
+Harry Giles
+70ba6b2e-e7c5-4df5-a88a-cd755e43ba97
+Alec Burks
+73fcf334-2088-4862-b83b-66eae415cf87
+Buddy Hield
+795f46f2-c78d-4f1d-9ee2-4331c1cc8184
+Kosta Koufos
+7d78afaf-e145-4928-be17-464276fc8868
+Yogi Ferrell
+8834061f-7541-4ed3-9802-cc60c4435add
+Nemanja Bjelica
+a74d9be9-17de-49ce-93db-20034846b31e
+Frank Mason III
+b232296c-17ab-4c5c-9f05-8ae1cd275a4e
+Bogdan Bogdanovic
+b4282659-dd1a-4042-a075-7df4890858e7
+Harrison Barnes
+ce8d0944-b277-499e-9701-02a5f1828615
+De'Aaron Fox
+cfc1e41b-74ab-45ee-8132-aaf9ca7f8163
+Marvin Bagley III
+e86c1439-4ef0-4530-9c41-c3a682962eb3
+Caleb Swanigan
+f72b2025-d6e9-48b2-a1ba-62cf8a58aa6f

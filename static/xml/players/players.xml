@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generation started @ 2019-03-07 05:41:35 +0000 -->
+<team xmlns="http://feed.elasticstats.com/schema/basketball/team-v2.0.xsd" id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" name="Kings" market="Sacramento" alias="SAC" founded="1923" sr_id="sr:team:3413" reference="1610612758">
+  <venue id="2e687b9a-c7a7-487c-85b4-43479abc8458" name="Golden 1 Center" capacity="17608" address="500 David J. Stern Walkway" city="Sacramento" state="CA" zip="95814" country="USA" sr_id="sr:venue:18976"/>
+  <hierarchy>
+    <league id="4353138d-4c22-4396-95d8-5f587d2df25c" name="NBA" alias="NBA"/>
+    <conference id="7fe7e212-de01-4f8f-a31d-b9f0a95731e3" name="WESTERN CONFERENCE" alias="WESTERN"/>
+    <division id="f074cb3e-90cf-42e1-8067-cdbcd99ec230" name="Pacific" alias="PACIFIC"/>
+  </hierarchy>
+  <coaches>
+    <coach id="f6671d74-62be-4be5-a4e7-1b8ded20c4ca" full_name="Dave Joerger" first_name="David" last_name="Joerger" position="Head Coach" experience="4" reference="201220"/>
+  </coaches>
+  <players>
+    <player id="0a5be5e9-e679-429b-bfe4-7cd713530b3e" status="D-LEAGUE" full_name="Troy Williams" first_name="Troy" last_name="Williams" abbr_name="T.Williams" height="79" weight="218" position="G-F" primary_position="SG" jersey_number="19" experience="2" college="Indiana" birth_place="Hampton, VA, USA" birthdate="1994-12-30" updated="2019-01-04T05:34:43+00:00" sr_id="sr:player:1070976" reference="1627786">
+      <draft year="2016"/>
+    </player>
+    <player id="20ca6325-14b7-49de-9f4c-6a5f45b4d039" status="ACT" full_name="Willie Cauley-Stein" first_name="Willie" last_name="Cauley-Stein" abbr_name="W.Cauley-Stein" height="84" weight="240" position="C" primary_position="C" jersey_number="00" experience="3" college="Kentucky" birth_place="Olathe, KS, USA" birthdate="1993-08-18" updated="2018-10-23T20:03:09+00:00" sr_id="sr:player:852140" reference="1626161">
+      <draft team_id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" year="2015" round="1" pick="6"/>
+    </player>
+    <player id="2bf24df1-604d-4eca-b3f3-f5691f4b99b6" status="D-LEAGUE" full_name="Wenyen Gabriel" first_name="Wenyen" last_name="Gabriel" abbr_name="W.Gabriel" height="81" weight="205" position="F" primary_position="PF" jersey_number="32" experience="0" college="Kentucky" birth_place="Manchester, NJ, USA" birthdate="1997-03-26" updated="2018-12-02T05:42:51+00:00" sr_id="sr:player:1499733" reference="1629117">
+      <draft year="2018"/>
+    </player>
+    <player id="47efff84-454e-4ad9-b140-7184ec4a5008" status="ACT" full_name="Corey Brewer" first_name="Corey" last_name="Brewer" abbr_name="C.Brewer" height="81" weight="186" position="F" primary_position="SF" jersey_number="33" experience="11" college="Florida" birth_place="Portland, TN, USA" birthdate="1986-03-05" updated="2019-02-18T20:44:41+00:00" reference="201147">
+      <draft team_id="583eca2f-fb46-11e1-82cb-f4ce4684ea4c" year="2007" round="1" pick="7"/>
+    </player>
+    <player id="70ba6b2e-e7c5-4df5-a88a-cd755e43ba97" status="ACT" full_name="Harry Giles" first_name="Harry" last_name="Giles III" abbr_name="H.Giles" height="82" weight="240" position="F-C" primary_position="PF" jersey_number="20" experience="0" college="Duke" birth_place="Winston-Salem, NC, USA" birthdate="1998-04-22" updated="2019-01-23T02:50:05+00:00" sr_id="sr:player:1141366" reference="1628385">
+      <draft team_id="583ed056-fb46-11e1-82cb-f4ce4684ea4c" year="2017" round="1" pick="20"/>
+    </player>
+    <player id="73fcf334-2088-4862-b83b-66eae415cf87" status="ACT" full_name="Alec Burks" first_name="Alec" last_name="Burks" abbr_name="A.Burks" height="78" weight="214" position="G" primary_position="SG" jersey_number="13" experience="7" college="Colorado" birth_place="Grandview, MO, USA" birthdate="1991-07-20" updated="2019-02-07T19:29:06+00:00" sr_id="sr:player:607750" reference="202692">
+      <draft team_id="583ece50-fb46-11e1-82cb-f4ce4684ea4c" year="2011" round="1" pick="12"/>
+    </player>
+    <player id="795f46f2-c78d-4f1d-9ee2-4331c1cc8184" status="ACT" full_name="Buddy Hield" first_name="Buddy" last_name="Hield" abbr_name="B.Hield" height="76" weight="214" position="G" primary_position="SG" jersey_number="24" experience="2" college="Oklahoma" birth_place="Freeport,, BHS" birthdate="1992-12-17" updated="2018-12-21T20:29:06+00:00" sr_id="sr:player:996305" reference="1627741">
+      <draft team_id="583ecc9a-fb46-11e1-82cb-f4ce4684ea4c" year="2016" round="1" pick="6"/>
+    </player>
+    <player id="7d78afaf-e145-4928-be17-464276fc8868" status="ACT" full_name="Kosta Koufos" first_name="Kosta" last_name="Koufos" abbr_name="K.Koufos" height="84" weight="245" position="C" primary_position="C" jersey_number="41" experience="10" college="Ohio State" birth_place="Canton, OH, USA" birthdate="1989-02-24" updated="2018-09-29T00:34:20+00:00" reference="201585">
+      <draft team_id="583ece50-fb46-11e1-82cb-f4ce4684ea4c" year="2008" round="1" pick="23"/>
+    </player>
+    <player id="8834061f-7541-4ed3-9802-cc60c4435add" status="ACT" full_name="Yogi Ferrell" first_name="Yogi" last_name="Ferrell" abbr_name="Y.Ferrell" height="72" weight="180" position="G" primary_position="PG" jersey_number="3" experience="2" college="Indiana" birth_place="Indianapolis, IN, USA" birthdate="1993-05-09" updated="2018-09-29T00:34:21+00:00" sr_id="sr:player:1077506" reference="1627812">
+      <draft year="2016"/>
+    </player>
+    <player id="a74d9be9-17de-49ce-93db-20034846b31e" status="ACT" full_name="Nemanja Bjelica" first_name="Nemanja" last_name="Bjelica" abbr_name="N.Bjelica" height="82" weight="234" position="F" primary_position="PF" jersey_number="88" experience="3" birth_place="Belgrade,, SRB" birthdate="1988-05-09" updated="2018-09-24T16:55:52+00:00" sr_id="sr:player:854480" reference="202357">
+      <draft team_id="583ec8d4-fb46-11e1-82cb-f4ce4684ea4c" year="2010" round="2" pick="35"/>
+    </player>
+    <player id="b232296c-17ab-4c5c-9f05-8ae1cd275a4e" status="ACT" full_name="Frank Mason III" first_name="Frank" last_name="Mason" abbr_name="F.Mason" height="71" weight="190" position="G" primary_position="PG" jersey_number="10" experience="1" college="Kansas" birth_place="Petersburg, VA, USA" birthdate="1994-04-03" updated="2018-08-21T14:46:02+00:00" sr_id="sr:player:1142560" reference="1628412">
+      <draft team_id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" year="2017" round="2" pick="34"/>
+    </player>
+    <player id="b4282659-dd1a-4042-a075-7df4890858e7" status="ACT" full_name="Bogdan Bogdanovic" first_name="Bogdan" last_name="Bogdanovic" abbr_name="B.Bogdanovic" height="78" weight="205" position="G" primary_position="SG" jersey_number="8" experience="1" birth_place="Belgrade,, SRB" birthdate="1992-08-18" updated="2018-08-21T14:46:02+00:00" sr_id="sr:player:607922" reference="203992">
+      <draft team_id="583ecfa8-fb46-11e1-82cb-f4ce4684ea4c" year="2014" round="1" pick="27"/>
+    </player>
+    <player id="ce8d0944-b277-499e-9701-02a5f1828615" status="ACT" full_name="Harrison Barnes" first_name="Harrison" last_name="Barnes" abbr_name="H.Barnes" height="80" weight="225" position="F" primary_position="SF" jersey_number="40" experience="6" college="North Carolina" birth_place="Ames, IA, USA" birthdate="1992-05-30" updated="2019-02-07T17:29:07+00:00" sr_id="sr:player:607350" reference="203084">
+      <draft team_id="583ec825-fb46-11e1-82cb-f4ce4684ea4c" year="2012" round="1" pick="7"/>
+    </player>
+    <player id="cfc1e41b-74ab-45ee-8132-aaf9ca7f8163" status="ACT" full_name="De'Aaron Fox" first_name="De'Aaron" last_name="Fox" abbr_name="D.Fox" height="75" weight="175" position="G" primary_position="PG" jersey_number="5" experience="1" college="Kentucky" birth_place="Houston, TX, USA" birthdate="1997-12-20" updated="2018-08-21T14:46:02+00:00" sr_id="sr:player:1121881" reference="1628368">
+      <draft team_id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" year="2017" round="1" pick="5"/>
+    </player>
+    <player id="e86c1439-4ef0-4530-9c41-c3a682962eb3" status="ACT" full_name="Marvin Bagley III" first_name="Marvin" last_name="Bagley III" abbr_name="M.Bagley" height="83" weight="234" position="F" primary_position="PF" jersey_number="35" experience="0" college="Duke" birth_place="Tempe, AZ, USA" birthdate="1999-03-14" updated="2018-09-29T00:34:21+00:00" sr_id="sr:player:1255696" reference="1628963">
+      <draft team_id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" year="2018" round="1" pick="2"/>
+      <injuries>
+        <injury id="10a04b12-e879-4e19-a373-5e4e58411c56" comment="The Kings announced that Bagley III is dealing with a left knee sprain. He will be re-evaluated in 1-2 weeks." desc="Knee" status="Out" start_date="2019-02-27" update_date="2019-02-28"/>
+      </injuries>
+    </player>
+    <player id="f72b2025-d6e9-48b2-a1ba-62cf8a58aa6f" status="D-LEAGUE" full_name="Caleb Swanigan" first_name="Caleb" last_name="Swanigan" abbr_name="C.Swanigan" height="81" weight="250" position="F" primary_position="PF" jersey_number="50" experience="1" college="Purdue" birth_place="Indianapolis, IN, USA" birthdate="1997-04-18" updated="2019-02-21T16:31:01+00:00" sr_id="sr:player:1141960" reference="1628403">
+      <draft team_id="583ed056-fb46-11e1-82cb-f4ce4684ea4c" year="2017" round="1" pick="26"/>
+    </player>
+  </players>
+</team>
+<!-- Generation ended @ 2019-03-07 05:41:35 +0000 -->

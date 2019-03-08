@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" charset="UTF-8" href="/xslt/basketball/schedule-v5.0.xsl"?>
-<!-- Generation started @ 2019-03-07 01:00:55 +0000 -->
+<!-- Generation started @ 2019-03-07 02:41:19 +0000 -->
 <league xmlns="http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd" id="4353138d-4c22-4396-95d8-5f587d2df25c" name="NBA" alias="NBA">
   <daily-schedule date="2019-03-07">
     <games>
@@ -30,4 +30,4 @@
     </games>
   </daily-schedule>
 </league>
-<!-- Generation ended @ 2019-03-07 01:00:55 +0000 -->
+<!-- Generation ended @ 2019-03-07 02:41:19 +0000 -->

@@ -6,27 +6,8 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-table {
-    font-size: 18px;
-    text-align: center;
-}
-.name1, .name2 {
-    text-align: left;
-}
-.team {
-    text-align: left;
-}
-.cap {
-    margin-bottom: 1%;
-}
-
-#eastern, #western {
-    margin-top: 2.5%;
-    font-size: 50px;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin-bottom: 2.5%;
-    color: #6c757d;
+#name {
+    display: none;
 }
 
 .navbar-brand {
@@ -57,7 +38,7 @@ nav ul .nav-item .nav-link:before {
     transition: all .5s;
 }
 nav ul .nav-item .nav-link:hover {
-    color: #6c757d;
+    color: #000;
 }
 .stroke ul .nav-item .nav-link {
   position: relative;
