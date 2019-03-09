@@ -9,10 +9,39 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" >
         <link rel="shortcut icon" type="image/x-icon" href="/static/images/other/favicon.ico" />
-        <link rel="stylesheet" href="/static/css/players.css">
+        <link rel="stylesheet" href="/static/css/play.css">
     </head>
     <body>
-        <p>hi</p>
+        <nav class="stroke navbar navbar-expand-lg bg-dark">
+            <a class="navbar-brand" href="/">
+                <img src="/static/images/other/nba.png" width="18" height="40" alt="NBA Logo">
+                NBA STATS
+            </a>        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav justify-content-around" id="links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#upcoming">Upcoming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scores">Scores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/standings">Standings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news">News</a>
+                    </li> 
+                </ul>
+
+                <form autocomplete="off" class="search">
+                    <div class="autocomplete search__wrapper">
+                        <input spellcheck="false" type="text" name="" id="playersID" placeholder="Search players..." class="search__field bg-dark">
+                        <button type="submit" class="fa fa-search search__icon bg-dark"></button>
+                    </div>
+                </form>
+            </div>
+        </nav>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
