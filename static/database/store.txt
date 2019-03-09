@@ -1,64 +1,43 @@
-9
-1552068000.0
+6
+1552129200.0
+Tomorrow
+11:00 AM
+New York Knicks
+static/images/logos/knicks.gif
+Sacramento Kings
+static/images/logos/kings.png
+1552154400.0
 Tomorrow
 6:00 PM
-Orlando Magic
-static/images/logos/magic.gif
-Dallas Mavericks
-static/images/logos/mavs.png
-1552068000.0
+Atlanta Hawks
+static/images/logos/hawks.png
+Brooklyn Nets
+static/images/logos/nets.png
+1552158000.0
 Tomorrow
-6:00 PM
-Charlotte Hornets
-static/images/logos/hornets.png
+7:00 PM
+Minnesota Timberwolves
+static/images/logos/wolves.png
 Washington Wizards
 static/images/logos/wizards.png
-1552071600.0
+1552159800.0
 Tomorrow
-7:00 PM
-Chicago Bulls
-static/images/logos/bulls.png
-Detroit Pistons
-static/images/logos/pistons.png
-1552071600.0
+7:30 PM
+Los Angeles Lakers
+static/images/logos/lakers.png
+Boston Celtics
+static/images/logos/celtics.png
+1552161600.0
 Tomorrow
-7:00 PM
-Memphis Grizzlies
-static/images/logos/grizzlies.png
-Utah Jazz
-static/images/logos/jazz.png
-1552071600.0
+8:00 PM
+Milwaukee Bucks
+static/images/logos/bucks.png
+Charlotte Hornets
+static/images/logos/hornets.png
+1552165200.0
 Tomorrow
-7:00 PM
-New Orleans Pelicans
-static/images/logos/pelicans.png
-Toronto Raptors
-static/images/logos/raptors.png
-1552071600.0
-Tomorrow
-7:00 PM
-Miami Heat
-static/images/logos/heat.gif
-Cleveland Cavaliers
-static/images/logos/cavs.png
-1552071600.0
-Tomorrow
-7:00 PM
-Houston Rockets
-static/images/logos/rockets.gif
-Philadelphia 76ers
-static/images/logos/sixers.png
-1552080600.0
-Tomorrow
-9:30 PM
-Los Angeles Clippers
-static/images/logos/clippers.png
-Oklahoma City Thunder
-static/images/logos/thunder.gif
-1552080600.0
-Tomorrow
-9:30 PM
-Golden State Warriors
-static/images/logos/warriors.gif
-Denver Nuggets
-static/images/logos/nuggets.png
+9:00 PM
+Portland Trail Blazers
+static/images/logos/blazers.gif
+Phoenix Suns
+static/images/logos/suns.png

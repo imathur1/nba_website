@@ -6,10 +6,6 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-#name {
-    display: none;
-}
-
 .navbar-brand {
     margin-left: 5%;
     cursor: pointer;

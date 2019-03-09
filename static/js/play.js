@@ -1,30 +1,4 @@
-const rank1 = document.getElementsByClassName('rank1');
-const logo1 = document.getElementsByClassName('logo1');
-const name1 = document.getElementsByClassName('name1');
-const win1 = document.getElementsByClassName('win1');
-const loss1 = document.getElementsByClassName('loss1');
-const wp1 = document.getElementsByClassName('wp1');
-const gb1 = document.getElementsByClassName('gb1');
-const conf1 = document.getElementsByClassName('conf1');
-const home1 = document.getElementsByClassName('home1');
-const away1 = document.getElementsByClassName('away1');
-const last1 = document.getElementsByClassName('last1');
-const streak1 = document.getElementsByClassName('streak1');
-
-const rank2 = document.getElementsByClassName('rank2');
-const logo2 = document.getElementsByClassName('logo2');
-const name2 = document.getElementsByClassName('name2');
-const win2 = document.getElementsByClassName('win2');
-const loss2 = document.getElementsByClassName('loss2');
-const wp2 = document.getElementsByClassName('wp2');
-const gb2 = document.getElementsByClassName('gb2');
-const conf2 = document.getElementsByClassName('conf2');
-const home2 = document.getElementsByClassName('home2');
-const away2 = document.getElementsByClassName('away2');
-const last2 = document.getElementsByClassName('last2');
-const streak2 = document.getElementsByClassName('streak2');
-
-var playerNames = [];
+var stats = [];
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -80,14 +54,21 @@ function autocomplete(inp, arr) {
         }
     });
   
+    /*execute a function presses a key on the keyboard:*/
     inp.addEventListener("keydown", function(e) {
         var x = document.getElementById(this.id + "autocomplete-list");
         if (x) x = x.getElementsByTagName("div");
         if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
           currentFocus++;
+          /*and and make the current item more visible:*/
           addActive(x);
-        } else if (e.keyCode == 38) {
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
           currentFocus--;
+          /*and and make the current item more visible:*/
           addActive(x);
         } else if (e.keyCode == 13) {
           if (playerNames.includes($("#players").val())) {
@@ -102,6 +83,7 @@ function autocomplete(inp, arr) {
               window.location = "/playerStats/" + name + "/";
             });
           } else if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
             if (x) {
               x[currentFocus].click();
               var name = $("#players").val().replace(" ", "-");
@@ -121,18 +103,24 @@ function autocomplete(inp, arr) {
         }
     });
     function addActive(x) {
+      /*a function to classify an item as "active":*/
       if (!x) return false;
+      /*start by removing the "active" class on all items:*/
       removeActive(x);
       if (currentFocus >= x.length) currentFocus = 0;
       if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
       x[currentFocus].classList.add("autocomplete-active");
     }
     function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
       for (var i = 0; i < x.length; i++) {
         x[i].classList.remove("autocomplete-active");
       }
     }
     function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
       var x = document.getElementsByClassName("autocomplete-items");
       for (var i = 0; i < x.length; i++) {
         if (elmnt != x[i] && elmnt != inp) {
@@ -141,11 +129,13 @@ function autocomplete(inp, arr) {
       }
     }
     function closeAllLists2() {
+      /*close all autocomplete lists in the document*/
       var x = document.getElementsByClassName("autocomplete-items");
       for (var i = 0; i < x.length; i++) {  
         x[i].parentNode.removeChild(x[i]);
       }
     }
+  /*execute a function when someone clicks in the document:*/
   document.addEventListener("click", function (e) {
       closeAllLists(e.target);
   });
@@ -167,39 +157,11 @@ $(document).ready(function(){
 
     $.ajax({
         type : 'POST',
-        url : "/results",
+        url : "/playerInfo",
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
       }).done(function(data) {
-        var standings = data;
-        for (var i = 0; i < 15; i++) {
-            rank1[i].innerHTML = i + 1;
-            logo1[i].src = standings[i][0];
-            name1[i].innerHTML = standings[i][1];
-            win1[i].innerHTML = standings[i][2];
-            loss1[i].innerHTML = standings[i][3];
-            wp1[i].innerHTML = standings[i][4];
-            gb1[i].innerHTML = standings[i][5];
-            conf1[i].innerHTML = standings[i][6];
-            home1[i].innerHTML = standings[i][7];
-            away1[i].innerHTML = standings[i][8];
-            last1[i].innerHTML = standings[i][9];
-            streak1[i].innerHTML = standings[i][10];
-        }
-        for (var i = 0; i < 15; i++) {
-            rank2[i].innerHTML = i + 1;
-            logo2[i].src = standings[i + 15][0];
-            name2[i].innerHTML = standings[i + 15][1];
-            win2[i].innerHTML = standings[i + 15][2];
-            loss2[i].innerHTML = standings[i + 15][3];
-            wp2[i].innerHTML = standings[i + 15][4];
-            gb2[i].innerHTML = standings[i + 15][5];
-            conf2[i].innerHTML = standings[i + 15][6];
-            home2[i].innerHTML = standings[i + 15][7];
-            away2[i].innerHTML = standings[i + 15][8];
-            last2[i].innerHTML = standings[i + 15][9];
-            streak2[i].innerHTML = standings[i + 15][10];
-        }  
+        console.log(data);
     });
     $("#/").click(function() {
         $.ajax({

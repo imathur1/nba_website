@@ -9,6 +9,8 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+name = ""
+modified = ""
 teams = {
     "Cleveland Cavaliers": ["static/images/logos/cavs.png", "/static/images/mini_logos/cavs.png"],
     "Detroit Pistons": ["static/images/logos/pistons.png", "/static/images/mini_logos/pistons.png"],
@@ -210,22 +212,6 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
     changeDate(currentTime)
     return upcoming
 
-@app.route("/")
-def output():
-    return render_template("/index.html")
-
-@app.route("/update", methods = ["POST"])
-def update():
-    players, javascript = getPlayers()
-    info = request.get_json()
-    offset = int(info[0])
-    currentTime = getTime(info[1])
-    upcoming = openStore(currentTime)
-    a, b, c = openDate()
-    upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
-    upcoming.append(javascript)
-    return jsonify(upcoming)
-
 def getStandings():
     standings = []
     teamMapping = {'1610612749': "Milwaukee Bucks",
@@ -300,15 +286,6 @@ def getStandings():
             standings.append([logo, teamName, win, loss, winPct, gamesBehind, conference, home, away, lastTen, streak])
     return standings
 
-@app.route("/results", methods = ["POST"])
-def results():
-    standings = getStandings()
-    return jsonify(standings)
-
-@app.route("/standings/")
-def standings():
-    return render_template("/standings.html")
-
 def getPlayers():
     file = open("static/database/players.txt", "r")
     n = int(file.readline().strip("\n"))
@@ -322,19 +299,52 @@ def getPlayers():
     file.close()
     return players, javascript
 
-def getPlayerStats(playerID):
-    pass
+@app.route("/")
+def output():
+    return render_template("/index.html")
 
-@app.route("/playerStats/<playerName>/")
-def playerStats(playerName):
-    return render_template("players.html")
+@app.route("/update", methods = ["POST"])
+def update():
+    info = request.get_json()
+    offset = int(info[0])
+    currentTime = getTime(info[1])
+    upcoming = openStore(currentTime)
+    a, b, c = openDate()
+    upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
+    return jsonify(upcoming)
 
-@app.route("/players", methods = ["POST"])
-def players():
-    name = request.get_json()
+@app.route("/updateAutocomplete", methods = ["POST"])
+def updateAutocomplete():
+    players, javascript = getPlayers()
+    return jsonify(javascript)
+
+@app.route("/results", methods = ["POST"])
+def results():
+    standings = getStandings()
+    return jsonify(standings)
+
+@app.route("/standings/")
+def standings():
+    return render_template("/standings.html")
+
+@app.route("/playerInfo", methods = ["POST"])
+def playerInfo():
     players, javascript = getPlayers()
     playerID = players[name]
-    return jsonify(name)
+    return jsonify(playerID)
+
+@app.route("/playerName", methods = ["POST"])
+def playerName():
+    global name
+    global modified
+    name = request.get_json()
+    modified = name
+    modified = modified.replace(" ", "-")
+    return ''
+
+@app.route("/players/<modified>/")
+def players(modified):
+    return render_template("players.html")
 
 if __name__ == '__main__':
     app.run("0.0.0.0", "16")
