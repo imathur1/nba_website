@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" charset="UTF-8" href="/xslt/basketball/schedule-v5.0.xsl"?>
-<!-- Generation started @ 2019-03-09 01:36:51 +0000 -->
+<!-- Generation started @ 2019-03-10 00:12:39 +0000 -->
 <league xmlns="http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd" id="4353138d-4c22-4396-95d8-5f587d2df25c" name="NBA" alias="NBA">
   <daily-schedule date="2019-03-09">
     <games>
-      <game id="d8d79cd1-f66b-4f9a-8dd2-a729b566b0a2" status="scheduled" coverage="full" scheduled="2019-03-09T17:00:00+00:00" track_on_court="true" sr_id="sr:match:15331404" reference="0021800986" home_team="583ec70e-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c">
+      <game id="d8d79cd1-f66b-4f9a-8dd2-a729b566b0a2" status="closed" coverage="full" scheduled="2019-03-09T17:00:00+00:00" home_points="94" away_points="102" track_on_court="true" sr_id="sr:match:15331404" reference="0021800986" home_team="583ec70e-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c">
         <time_zones venue="US/Eastern" home="US/Eastern" away="US/Pacific"/>
         <venue id="583152aa-de75-5bea-ac92-ac5b8a51f9f9" name="Madison Square Garden" capacity="19812" address="4 Pennsylvania Plaza" city="New York" state="NY" zip="10001" country="USA" sr_id="sr:venue:6054"/>
         <home name="New York Knicks" alias="NYK" id="583ec70e-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3421" reference="1610612752">
@@ -16,7 +16,7 @@
           <broadcast network="MSG" type="TV" locale="Home" channel="634"/>
         </broadcasts>
       </game>
-      <game id="22567352-7e4f-4991-82e9-55ac513d2152" status="scheduled" coverage="full" scheduled="2019-03-10T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15329392" reference="0021800987" home_team="583ecb8f-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec9d6-fb46-11e1-82cb-f4ce4684ea4c">
+      <game id="22567352-7e4f-4991-82e9-55ac513d2152" status="inprogress" coverage="full" scheduled="2019-03-10T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15329392" reference="0021800987" home_team="583ecb8f-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec9d6-fb46-11e1-82cb-f4ce4684ea4c">
         <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
         <venue id="fd21f639-8a47-51ac-a5dd-590629d445cf" name="State Farm Arena" capacity="18118" address="One Philips Drive" city="Atlanta" state="GA" zip="30303" country="USA" sr_id="sr:venue:6916"/>
         <home name="Atlanta Hawks" alias="ATL" id="583ecb8f-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3423" reference="1610612737">
@@ -78,4 +78,4 @@
     </games>
   </daily-schedule>
 </league>
-<!-- Generation ended @ 2019-03-09 01:36:51 +0000 -->
+<!-- Generation ended @ 2019-03-10 00:12:39 +0000 -->

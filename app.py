@@ -12,36 +12,68 @@ app = Flask(__name__)
 name = ""
 modified = ""
 teams = {
-    "Cleveland Cavaliers": ["static/images/logos/cavs.png", "/static/images/mini_logos/cavs.png"],
-    "Detroit Pistons": ["static/images/logos/pistons.png", "/static/images/mini_logos/pistons.png"],
-    "Indiana Pacers": ["static/images/logos/pacers.gif", "/static/images/mini_logos/pacers.png"],
-    "Orlando Magic": ["static/images/logos/magic.gif", "/static/images/mini_logos/magic.png"],
-    "Miami Heat": ["static/images/logos/heat.gif", "/static/images/mini_logos/heat.png"],
-    "Brooklyn Nets": ["static/images/logos/nets.png", "/static/images/mini_logos/nets.png"],
-    "Philadelphia 76ers": ["static/images/logos/sixers.png", "/static/images/mini_logos/sixers.png"],
-    "Golden State Warriors": ["static/images/logos/warriors.gif", "/static/images/mini_logos/warriors.png"],
-    "Dallas Mavericks": ["static/images/logos/mavs.png", "/static/images/mini_logos/mavs.png"],
-    "Memphis Grizzlies": ["static/images/logos/grizzlies.png", "/static/images/mini_logos/grizzlies.png"],
-    "San Antonio Spurs": ["static/images/logos/spurs.gif", "/static/images/mini_logos/spurs.png"],
-    "Oklahoma City Thunder": ["static/images/logos/thunder.gif", "/static/images/mini_logos/thunder.png"],
-    "Utah Jazz": ["static/images/logos/jazz.png", "/static/images/mini_logos/jazz.png"],
-    "Milwaukee Bucks": ["static/images/logos/bucks.png", "/static/images/mini_logos/bucks.png"],
-    "Phoenix Suns": ["static/images/logos/suns.png", "/static/images/mini_logos/suns.png"],
-    "Los Angeles Lakers": ["static/images/logos/lakers.png", "/static/images/mini_logos/lakers.png"],
-    "Denver Nuggets": ["static/images/logos/nuggets.png", "/static/images/mini_logos/nuggets.png"],
-    "New Orleans Pelicans": ["static/images/logos/pelicans.png", "/static/images/mini_logos/pelicans.png"],
-    "Sacramento Kings": ["static/images/logos/kings.png", "/static/images/mini_logos/kings.png"],
-    "Los Angeles Clippers": ["static/images/logos/clippers.png", "/static/images/mini_logos/clippers.png"],
-    "Chicago Bulls": ["static/images/logos/bulls.png", "/static/images/mini_logos/bulls.png"],
-    "Portland Trail Blazers": ["static/images/logos/blazers.gif", "/static/images/mini_logos/blazers.png"],
-    "Boston Celtics": ["static/images/logos/celtics.png", "/static/images/mini_logos/celtics.png"],
-    "Minnesota Timberwolves": ["static/images/logos/wolves.png", "/static/images/mini_logos/wolves.png"],
-    "Atlanta Hawks": ["static/images/logos/hawks.png", "/static/images/mini_logos/hawks.png"],
-    "Washington Wizards": ["static/images/logos/wizards.png", "/static/images/mini_logos/wizards.png"],
-    "Houston Rockets": ["static/images/logos/rockets.gif", "/static/images/mini_logos/rockets.png"],
-    "Charlotte Hornets": ["static/images/logos/hornets.png", "/static/images/mini_logos/hornets.png"],
-    "Toronto Raptors": ["static/images/logos/raptors.png", "/static/images/mini_logos/raptors.png"],
-    "New York Knicks": ["static/images/logos/knicks.gif", "/static/images/mini_logos/knicks.png"]
+    "Cleveland Cavaliers": ["http://content.sportslogos.net/logos/6/222/full/ige5q46x2v9c8hw80jhi4f85h.png", "https://ssl.gstatic.com/onebox/media/sports/logos/NAlGkmv45l1L-3NhwVhDPg_48x48.png", "http://content.sportslogos.net/logos/6/222/full/5681_cleveland_cavaliers-primary_on_dark-2011.png"],
+    "Detroit Pistons": ["http://content.sportslogos.net/logos/6/223/full/2164_detroit_pistons-primary-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/qvWE2FgBX0MCqFfciFBDiw_48x48.png", "http://content.sportslogos.net/logos/6/223/full/6107_detroit_pistons-primary_on_dark-2018.png"],
+    "Indiana Pacers": ["http://content.sportslogos.net/logos/6/224/full/gdm7egmgv3tsspc6f1gym7cwz.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/andumiE_wrpDpXvUgqCGYQ_48x48.png", "http://content.sportslogos.net/logos/6/224/full/1405_indiana_pacers-primary_on_dark-2018.png"],
+    "Orlando Magic": ["http://content.sportslogos.net/logos/6/217/full/h2k5cbia6m8e1dbdcfxfgre84.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/p69oiJ4LDsvCJUDQ3wR9PQ_48x48.png", "https://wallpapercave.com/wp/OXtonk1.jpg"],
+    "Miami Heat": ["http://content.sportslogos.net/logos/6/214/full/93lzfcfcnq125eh7etyxpuhfp.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/0nQXN6OF7wnLY3hJz8lZJQ_48x48.png", "http://i0.wp.com/wallpapercave.com/wp/u9KklPe.jpg"],
+    "Brooklyn Nets": ["http://content.sportslogos.net/logos/6/3786/full/930_brooklyn-nets-partial-2013.png", "https://ssl.gstatic.com/onebox/media/sports/logos/iishUmO7vbJBE7iK2CZCdw_48x48.png", "http://content.sportslogos.net/logos/6/3786/full/6332_brooklyn_nets-primary_on_dark-2013.png"],
+    "Philadelphia 76ers": ["http://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/US6KILZue2D5766trEf0Mg_48x48.png", "https://wallpapercave.com/wp/0KmgXJr.jpg"],
+    "Golden State Warriors": ["http://content.sportslogos.net/logos/6/235/full/5gzur7f6x09cv61jt16smhopl.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/XD2v321N_-vk7paF53TkAg_48x48.png", "http://content.sportslogos.net/logos/6/235/full/4411_golden_state_warriors-primary_on_dark-2011.png"],
+    "Dallas Mavericks": ["http://content.sportslogos.net/logos/6/228/full/5118_dallas_mavericks-alternate-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/xxxlj9RpmAKJ9P9phstWCQ_48x48.png", "http://content.sportslogos.net/logos/6/228/full/4996_dallas_mavericks-primary_on_dark-2018.png"],
+    "Memphis Grizzlies": ["http://content.sportslogos.net/logos/6/231/full/7277_memphis_grizzlies-alternate-2019.png", "https://ssl.gstatic.com/onebox/media/sports/logos/3ho45P8yNw-WmQ2m4A4TIA_48x48.png", "http://content.sportslogos.net/logos/6/231/full/9500_memphis_grizzlies-primary_on_dark-2019.png"],
+    "San Antonio Spurs": ["http://content.sportslogos.net/logos/6/233/full/828.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/FKwMB_85FlZ_7PTt1f7hjQ_48x48.png", "http://content.sportslogos.net/logos/6/233/full/6259_san_antonio_spurs-primary_on_dark-2018.png"],
+    "Oklahoma City Thunder": ["http://content.sportslogos.net/logos/6/2687/full/qdx55wdx4akljqkvzi1s3e6t3.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/b4bJ9zKFBDykdSIGUrbWdw_48x48.png", "http://content.sportslogos.net/logos/6/2687/full/qu0jvjrn2w1gjc5pn9qcpnlrg.png"],
+    "Utah Jazz": ["http://content.sportslogos.net/logos/6/234/full/txe1ybetuoye8pirnrhqalh04.png", "https://ssl.gstatic.com/onebox/media/sports/logos/SP_dsmXEKFVZH5N1DQpZ4A_48x48.png", "http://content.sportslogos.net/logos/6/234/full/1734_utah_jazz-primary_on_dark-2017.png"],
+    "Milwaukee Bucks": ["http://content.sportslogos.net/logos/6/225/full/3864_milwaukee_bucks-alternate-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/Wd6xIEIXpfqg9EZC6PAepQ_48x48.png", "https://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/bucks/150409-wallpaper-primary-1920x1080.jpg"],
+    "Phoenix Suns": ["http://content.sportslogos.net/logos/6/238/full/3834_phoenix_suns-partial-2014.png", "https://ssl.gstatic.com/onebox/media/sports/logos/pRr87i24KHWH0UuAc5EamQ_48x48.png", "https://wallpapercave.com/wp/wp2004669.jpg"],
+    "Los Angeles Lakers": ["http://content.sportslogos.net/logos/6/237/full/uig7aiht8jnpl1szbi57zzlsh.png", "https://ssl.gstatic.com/onebox/media/sports/logos/4ndR-n-gall7_h3f7NYcpQ_48x48.png", "http://content.sportslogos.net/logos/6/237/full/1772_los_angeles_lakers-primary_on_dark-2002.png"],
+    "Denver Nuggets": ["http://content.sportslogos.net/logos/6/229/full/8954_denver_nuggets-alternate-2019.png", "https://ssl.gstatic.com/onebox/media/sports/logos/9wPFTOxV_zP1KmRRggJNqQ_48x48.png", "http://content.sportslogos.net/logos/6/229/full/8155_denver_nuggets-primary_on_dark-2019.png"],
+    "New Orleans Pelicans": ["http://content.sportslogos.net/logos/6/4962/full/2681_new_orleans_pelicans-primary-2014.png", "https://ssl.gstatic.com/onebox/media/sports/logos/JCQO978-AWbg00TQUNPUVg_48x48.png", "http://content.sportslogos.net/logos/6/4962/full/2890_new_orleans_pelicans-primary_on_dark-2014.png"],
+    "Sacramento Kings": ["http://content.sportslogos.net/logos/6/240/full/4043_sacramento_kings-primary-2017.png", "https://ssl.gstatic.com/onebox/media/sports/logos/wkCDHakxEThLGoZ4Ven48Q_48x48.png", "http://content.sportslogos.net/logos/6/240/full/8579_sacramento_kings-primary_on_dark-2017.png"],
+    "Los Angeles Clippers": ["http://content.sportslogos.net/logos/6/236/full/9657_los_angeles_clippers-alternate-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/F36nQLCQ2FND3za-Eteeqg_48x48.png", "http://content.sportslogos.net/logos/6/236/full/5529_los_angeles_clippers-jersey-2016.png"],
+    "Chicago Bulls": ["http://content.sportslogos.net/logos/6/221/full/zdrycpc7mh5teihl10gko8sgf.png", "https://ssl.gstatic.com/onebox/media/sports/logos/ofjScRGiytT__Flak2j4dg_48x48.png", "http://content.sportslogos.net/logos/6/221/full/6355_chicago_bulls-primary_on_dark-1967.png"],
+    "Portland Trail Blazers": ["http://content.sportslogos.net/logos/6/239/full/826.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/_bgagBCd6ieOIt3INWRN_w_48x48.png", "http://content.sportslogos.net/logos/6/239/full/8395_portland_trail_blazers-primary_on_dark-2018.png"],
+    "Boston Celtics": ["http://content.sportslogos.net/logos/6/213/full/slhg02hbef3j1ov4lsnwyol5o.png", "https://ssl.gstatic.com/onebox/media/sports/logos/GDJBo7eEF8EO5-kDHVpdqw_48x48.png", "http://content.sportslogos.net/logos/6/213/full/2723_boston_celtics-primary_on_dark-1997.png"],
+    "Minnesota Timberwolves": ["http://content.sportslogos.net/logos/6/232/full/9669_minnesota_timberwolves-primary-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/JzePt6Fp_HJMNEz-1B99yw_48x48.png", "http://content.sportslogos.net/logos/6/232/full/7654_minnesota_timberwolves-primary_on_dark-2018.png"],
+    "Atlanta Hawks": ["http://content.sportslogos.net/logos/6/220/full/8452_atlanta_hawks-alternate-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/pm5l5mtY1elOQAl9ZEcm2A_48x48.png", "http://content.sportslogos.net/logos/6/220/full/5592_atlanta_hawks-primary_on_dark-2016.png"],
+    "Washington Wizards": ["http://content.sportslogos.net/logos/6/219/full/3g5wchibh2ltoh617fcpgmfio.png", "https://ssl.gstatic.com/onebox/media/sports/logos/NBkMJapxft4V5kvufec4Jg_48x48.png", "http://content.sportslogos.net/logos/6/219/full/7525_washington_wizards-primary_on_dark-2015.png"],
+    "Houston Rockets": ["http://content.sportslogos.net/logos/6/230/full/etpzlhc48xgh58agjuln2khsl.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/zhO6MIB1UzZmtXLHkJQBmg_48x48.png", "http://content.sportslogos.net/logos/6/230/full/2365_houston_rockets-primary_on_dark-2004.png"],
+    "Charlotte Hornets": ["http://content.sportslogos.net/logos/6/5120/full/1926_charlotte__hornets_-primary-2015.png", "https://ssl.gstatic.com/onebox/media/sports/logos/ToeKy5-TrHAnTCl-qhuuHQ_48x48.png", "http://content.sportslogos.net/logos/6/5120/full/1604_charlotte_hornets-primary_on_dark-2015.png"],
+    "Toronto Raptors": ["http://content.sportslogos.net/logos/6/227/full/4578_toronto_raptors-primary-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/745IgW4NSvnRxg-W9oczmQ_48x48.png", "http://content.sportslogos.net/logos/6/227/full/1643_toronto_raptors-primary_on_dark-2016.png"],
+    "New York Knicks": ["http://content.sportslogos.net/logos/6/216/full/2nn48xofg0hms8k326cqdmuis.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/-rf7eY39l_0V7J4ekakuKA_48x48.png", "http://content.sportslogos.net/logos/6/216/full/gg7nf60yyitn5egfj1zvigpuh.gif"]
+}
+teamMapping = {
+    '1610612749': "Milwaukee Bucks",
+    '1610612761': "Toronto Raptors",
+    '1610612754': "Indiana Pacers",
+    '1610612755': "Philadelphia 76ers",
+    '1610612738': "Boston Celtics",
+    '1610612765': "Detroit Pistons",
+    '1610612751': "Brooklyn Nets",
+    '1610612766': "Charlotte Hornets",
+    '1610612748': "Miami Heat",
+    '1610612753': "Orlando Magic",
+    '1610612764': "Washington Wizards",
+    '1610612737': "Atlanta Hawks",
+    '1610612741': "Chicago Bulls",
+    '1610612739': "Cleveland Cavaliers",
+    '1610612752': "New York Knicks",
+    '1610612744': "Golden State Warriors",
+    '1610612743': "Denver Nuggets",
+    '1610612745': "Houston Rockets",
+    '1610612760': "Oklahoma City Thunder",
+    '1610612757': "Portland Trail Blazers",
+    '1610612762': "Utah Jazz",
+    '1610612746': "Los Angeles Clippers",
+    '1610612759': "San Antonio Spurs",
+    '1610612758': "Sacramento Kings",
+    '1610612750': "Minnesota Timberwolves",
+    '1610612747': "Los Angeles Lakers",
+    '1610612740': "New Orleans Pelicans",
+    '1610612742': "Dallas Mavericks",
+    '1610612763': "Memphis Grizzlies",
+    '1610612756': "Phoenix Suns"
 }
 
 def getTime(time):
@@ -161,9 +193,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
         for elem in tree.iter():
             if elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}game":
                 if elem.attrib["status"] == "closed":
-                    os.remove("static/xml/upcoming/upcoming_" + a + "_" + b + "_" + c + ".xml")
-                    writeXML(int(a), int(b), int(c))
-                    break
+                    pass
                 
                 time = elem.attrib["scheduled"]
                 gameTime = datetime.fromisoformat(time).timestamp() - offset
@@ -214,36 +244,6 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
 
 def getStandings():
     standings = []
-    teamMapping = {'1610612749': "Milwaukee Bucks",
-    '1610612761': "Toronto Raptors",
-    '1610612754': "Indiana Pacers",
-    '1610612755': "Philadelphia 76ers",
-    '1610612738': "Boston Celtics",
-    '1610612765': "Detroit Pistons",
-    '1610612751': "Brooklyn Nets",
-    '1610612766': "Charlotte Hornets",
-    '1610612748': "Miami Heat",
-    '1610612753': "Orlando Magic",
-    '1610612764': "Washington Wizards",
-    '1610612737': "Atlanta Hawks",
-    '1610612741': "Chicago Bulls",
-    '1610612739': "Cleveland Cavaliers",
-    '1610612752': "New York Knicks",
-    '1610612744': "Golden State Warriors",
-    '1610612743': "Denver Nuggets",
-    '1610612745': "Houston Rockets",
-    '1610612760': "Oklahoma City Thunder",
-    '1610612757': "Portland Trail Blazers",
-    '1610612762': "Utah Jazz",
-    '1610612746': "Los Angeles Clippers",
-    '1610612759': "San Antonio Spurs",
-    '1610612758': "Sacramento Kings",
-    '1610612750': "Minnesota Timberwolves",
-    '1610612747': "Los Angeles Lakers",
-    '1610612740': "New Orleans Pelicans",
-    '1610612742': "Dallas Mavericks",
-    '1610612763': "Memphis Grizzlies",
-    '1610612756': "Phoenix Suns"}
     with urllib.request.urlopen("http://data.nba.net/prod/v1/current/standings_conference.json") as url:
         data = json.loads(url.read().decode())
         east = data['league']['standard']['conference']['east']
@@ -287,17 +287,126 @@ def getStandings():
     return standings
 
 def getPlayers():
-    file = open("static/database/players.txt", "r")
-    n = int(file.readline().strip("\n"))
     players = dict()
     javascript = []
+    file = open("static/database/players.txt", "r")
+    year = int(file.readline().strip("\n"))
+    n = int(file.readline().strip("\n"))
     for i in range(n):
         key = file.readline().strip("\n")
         value = file.readline().strip("\n")
-        players[key] = value
+        season = file.readline().strip("\n")
+        players[key] = [value, season]
         javascript.append(key)
     file.close()
+
+    temp = year
+    while True:
+        try:
+            with urllib.request.urlopen("http://data.nba.net/prod/v1/" + str(year) + "/players.json") as url:
+                data = json.loads(url.read().decode())
+                for i in data['league']['standard']:
+                    key = i['firstName'] + " " + i['lastName']
+                    value = i['personId']
+                    season = year
+                    if key not in javascript:
+                        javascript.append(key)
+                    players[key] = [value, season]
+            year += 1
+        except urllib.error.HTTPError:
+            if temp != year:
+                file = open("static/database/players.txt", "w")
+                file.write(str(year) + "\n")
+                file.write(str(len(players)) + "\n")
+                for i in players:
+                    file.write(i + "\n")
+                    file.write(players[i][0] + "\n")
+                    file.write(str(players[i][1]) + "\n")
+                file.close()
+            break
     return players, javascript
+
+def getStats(playerID, year):
+    stats = []
+    with urllib.request.urlopen("http://data.nba.net/prod/v1/" + year + "/players/" + playerID + "_profile.json") as url:
+        data = json.loads(url.read().decode())
+        career = data['league']['standard']['stats']['careerSummary']
+        points = float(career['ppg'])
+        rebounds = float(career['rpg'])
+        assists = float(career['apg'])
+        minutes = float(career['mpg'])
+        steals = float(career['spg'])
+        blocks = float(career['bpg'])
+        totAssists = int(career['assists'])
+        totBlocks = int(career['blocks'])
+        totSteals = int(career['steals'])
+        totTurnovers = int(career['turnovers'])
+        offReb = int(career['offReb'])
+        defReb = int(career['defReb'])
+        totReb = int(career['totReb'])
+        fieldGoalsMade = int(career['fgm'])
+        fieldGoalsAttempted = int(career['fga'])
+        fieldGoalPercent = float(career['fgp'])
+        threePointsMade = int(career['tpm'])
+        threePointsAttempted = int(career['tpa'])
+        threePointPercent = float(career['tpp'])
+        freeThrowsMade = int(career['ftm'])
+        freeThrowsAttempted = int(career['fta'])
+        freeThrowPercent = float(career['ftp'])
+        personalFouls = int(career['pFouls'])
+        totPoints = int(career['points'])
+        gamesPlayed = int(career['gamesPlayed'])
+        gamesStarted = int(career['gamesStarted'])
+        totMinutes = int(career['min'])
+        doubleDoubles = int(career['dd2'])
+        tripleDoubles = int(career['td3'])
+        stats.append([points, rebounds, assists, minutes,
+            steals, blocks, totAssists, totBlocks, totSteals, totTurnovers,
+            offReb, defReb, totReb, fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent,
+            threePointsMade, threePointsAttempted, threePointPercent, freeThrowsMade,
+            freeThrowsAttempted, freeThrowPercent, personalFouls, totPoints, gamesPlayed,
+            gamesStarted, totMinutes, doubleDoubles, tripleDoubles])    
+        for i in data['league']['standard']['stats']['regularSeason']['season']:
+            for j in i['teams']:
+                team = teamMapping[j['teamId']]
+                logo = teams[team][2]
+                points = float(j['ppg'])
+                rebounds = float(j['rpg'])
+                assists = float(j['apg'])
+                minutes = float(j['mpg'])
+                steals = float(j['spg'])
+                turnovers = float(j['topg'])
+                blocks = float(j['bpg'])
+                totAssists = int(j['assists'])
+                totBlocks = int(j['blocks'])
+                totSteals = int(j['steals'])
+                totTurnovers = int(j['turnovers'])
+                offReb = int(j['offReb'])
+                defReb = int(j['defReb'])
+                totReb = int(j['totReb'])
+                fieldGoalsMade = int(j['fgm'])
+                fieldGoalsAttempted = int(j['fga'])
+                fieldGoalPercent = float(j['fgp'])
+                threePointsMade = int(j['tpm'])
+                threePointsAttempted = int(j['tpa'])
+                threePointPercent = float(j['tpp'])
+                freeThrowsMade = int(j['ftm'])
+                freeThrowsAttempted = int(j['fta'])
+                freeThrowPercent = float(j['ftp'])
+                personalFouls = int(j['pFouls'])
+                totPoints = int(j['points'])
+                gamesPlayed = int(j['gamesPlayed'])
+                gamesStarted = int(j['gamesStarted'])
+                totMinutes = int(j['min'])
+                doubleDoubles = int(j['dd2'])
+                tripleDoubles = int(j['td3'])
+                stats.append([i['seasonYear'], team, logo, points, rebounds, assists, minutes,
+                steals, turnovers, blocks, totAssists, totBlocks, totSteals, totTurnovers,
+                offReb, defReb, totReb, fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent,
+                threePointsMade, threePointsAttempted, threePointPercent, freeThrowsMade,
+                freeThrowsAttempted, freeThrowPercent, personalFouls, totPoints, gamesPlayed,
+                gamesStarted, totMinutes, doubleDoubles, tripleDoubles])
+    return stats
 
 @app.route("/")
 def output():
@@ -330,8 +439,11 @@ def standings():
 @app.route("/playerInfo", methods = ["POST"])
 def playerInfo():
     players, javascript = getPlayers()
-    playerID = players[name]
-    return jsonify(playerID)
+    playerID = players[name][0]
+    playerYear = players[name][1]
+    stats = getStats(playerID, playerYear)
+    stats.append(name)
+    return jsonify(stats)
 
 @app.route("/playerName", methods = ["POST"])
 def playerName():

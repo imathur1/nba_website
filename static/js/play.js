@@ -87,8 +87,13 @@ $(document).ready(function(){
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
       }).done(function(data) {
-        stats = data;
-        console.log(data);
+        document.getElementsByTagName("title")[0].innerHTML = "NBA Stats | " + data[data.length - 1];
+        var cardImages = document.getElementsByClassName("card-img-top");
+        cardImages[0].src = data[1][2];
+        cardImages[1].src = data[2][2];
+        cardImages[2].src = data[3][2];
+        cardImages[3].src = data[4][2];
+        /* no data if -1  JERSEY position, height */
     });
     $("#/").click(function() {
       $.ajax({

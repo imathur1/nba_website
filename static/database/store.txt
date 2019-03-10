@@ -1,43 +1,64 @@
-6
-1552129200.0
+9
+1552212000.0
 Tomorrow
-11:00 AM
-New York Knicks
-static/images/logos/knicks.gif
-Sacramento Kings
-static/images/logos/kings.png
-1552154400.0
+10:00 AM
+Detroit Pistons
+http://content.sportslogos.net/logos/6/223/full/2164_detroit_pistons-primary-2018.png
+Chicago Bulls
+http://content.sportslogos.net/logos/6/221/full/zdrycpc7mh5teihl10gko8sgf.png
+1552224600.0
+Tomorrow
+1:30 PM
+Miami Heat
+http://content.sportslogos.net/logos/6/214/full/93lzfcfcnq125eh7etyxpuhfp.gif
+Toronto Raptors
+http://content.sportslogos.net/logos/6/227/full/4578_toronto_raptors-primary-2016.png
+1552224600.0
+Tomorrow
+1:30 PM
+Philadelphia 76ers
+http://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png
+Indiana Pacers
+http://content.sportslogos.net/logos/6/224/full/gdm7egmgv3tsspc6f1gym7cwz.gif
+1552233600.0
+Tomorrow
+4:00 PM
+Atlanta Hawks
+http://content.sportslogos.net/logos/6/220/full/8452_atlanta_hawks-alternate-2016.png
+New Orleans Pelicans
+http://content.sportslogos.net/logos/6/4962/full/2681_new_orleans_pelicans-primary-2014.png
+1552233600.0
+Tomorrow
+4:00 PM
+Memphis Grizzlies
+http://content.sportslogos.net/logos/6/231/full/7277_memphis_grizzlies-alternate-2019.png
+Orlando Magic
+http://content.sportslogos.net/logos/6/217/full/h2k5cbia6m8e1dbdcfxfgre84.gif
+1552237200.0
+Tomorrow
+5:00 PM
+Dallas Mavericks
+http://content.sportslogos.net/logos/6/228/full/5118_dallas_mavericks-alternate-2018.png
+Houston Rockets
+http://content.sportslogos.net/logos/6/230/full/etpzlhc48xgh58agjuln2khsl.gif
+1552240800.0
 Tomorrow
 6:00 PM
-Atlanta Hawks
-static/images/logos/hawks.png
-Brooklyn Nets
-static/images/logos/nets.png
-1552158000.0
-Tomorrow
-7:00 PM
 Minnesota Timberwolves
-static/images/logos/wolves.png
-Washington Wizards
-static/images/logos/wizards.png
-1552159800.0
+http://content.sportslogos.net/logos/6/232/full/9669_minnesota_timberwolves-primary-2018.png
+New York Knicks
+http://content.sportslogos.net/logos/6/216/full/2nn48xofg0hms8k326cqdmuis.gif
+1552240800.0
 Tomorrow
-7:30 PM
-Los Angeles Lakers
-static/images/logos/lakers.png
-Boston Celtics
-static/images/logos/celtics.png
-1552161600.0
-Tomorrow
-8:00 PM
+6:00 PM
+San Antonio Spurs
+http://content.sportslogos.net/logos/6/233/full/828.gif
 Milwaukee Bucks
-static/images/logos/bucks.png
-Charlotte Hornets
-static/images/logos/hornets.png
-1552165200.0
+http://content.sportslogos.net/logos/6/225/full/3864_milwaukee_bucks-alternate-2016.png
+1552242600.0
 Tomorrow
-9:00 PM
-Portland Trail Blazers
-static/images/logos/blazers.gif
+6:30 PM
+Golden State Warriors
+http://content.sportslogos.net/logos/6/235/full/5gzur7f6x09cv61jt16smhopl.gif
 Phoenix Suns
-static/images/logos/suns.png
+http://content.sportslogos.net/logos/6/238/full/3834_phoenix_suns-partial-2014.png
