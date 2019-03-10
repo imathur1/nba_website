@@ -130,18 +130,18 @@ $(document).ready(function(){
 
 const carousel = document.getElementsByClassName("c-image");
 var players = [
-"static/images/players/giannis.jpg",
-"static/images/players/curry.jpg",
-"static/images/players/lebron.jpg",
-"static/images/players/durant.jpg",
-"static/images/players/irving.jpg",
-"static/images/players/harden.jpg",
-"static/images/players/leonard.jpg",
-"static/images/players/davis.jpg",
-"static/images/players/westbrook.jpg",
-"static/images/players/butler.jpeg",
-"static/images/players/embiid.jpg",
-"static/images/players/doncic.jpg"
+"https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2017-10/20171021_GIANNIS.jpg?itok=DyZjKsHL",
+"https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2018-11/stephen-curry-shoots-pose-iso-1107.jpg?itok=5BEWJZoQ",
+"https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2018-10/lebron_dunk.jpg?itok=vqzWCrFw",
+"https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2017-08/durant-celebrates-finals.jpg?itok=gvt_aiWz",
+"http://images.performgroup.com/di/library/omnisport/3a/ff/kyrieirving-cropped_6kd1csejc48n1psgtc4py4dno.jpg?t=1182393929",
+"https://images.axios.com/8wUansaUjDMYzmt8t2qLSXMa5rM=/0x71:4269x2472/1920x1080/2019/02/11/1549849055985.jpg",
+"https://nssdata.s3.amazonaws.com/images/galleries/18429/kawhi-leonard-110318-ftr-gettyjpg-t12l29gx1ont10g3s2nvbqbrn.jpg",
+"https://www.bet.com/content/dam/betcom/images/2019/01/BREAKS/BREAKS-01-29-19/012919-shows-bet-breaks-anthony-davis-2.jpg",
+"https://s.yimg.com/uu/api/res/1.2/Ezf7oPM7Ek3Bh1jp7RvQTw--~B/aD0xMDgwO3c9MTkyMDtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/en-GB/homerun/omnisport.uk/00ec56829389c8474af529a07ed2ef50",
+"https://a.espncdn.com/combiner/i?img=%2Fmedia%2Fmotion%2F2018%2F1207%2Fdm_181207_nba_76ers_butler_sotfull%2Fdm_181207_nba_76ers_butler_sotfull.jpg",
+"https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2017-11/EMBIID%20PP.jpg?itok=jIgfw7N6",
+"https://images.performgroup.com/di/library/NBA_Global_CMS_image_storage/f8/40/luka-doncic-2-012119-ftr-gettyjpg_fblns1vpdkjz1thjkjzs6uprh.jpg?t=1913837288&quality=100"
 ];
 
 for (var i = 0; i < carousel.length; i++) {
