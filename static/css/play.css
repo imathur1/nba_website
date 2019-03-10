@@ -55,6 +55,35 @@ nav ul .nav-item .nav-link:hover {
   width: 100%;
 }
 
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+}
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9; 
+}
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #d4d4d4 !important; 
+}
+
 .search {
     position: absolute;
     top: 50%;
@@ -227,17 +256,24 @@ nav ul .nav-item .nav-link:hover {
     visibility: visible !important;
 }
 
-.row {
-    margin-top: 5%;
+table {
+    font-size: 18px;
+    text-align: center;
 }
-.card {
-    border: 0;
+
+p {
+    margin-top: 2.5%;
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #000;
 }
-.card-text {
-    margin-bottom: 7.5%;
+.name {
+    text-align: left;
 }
-.card-subtitle {
-    margin-top: 7.5%;
-    margin-bottom: 7.5%;
-    color: #8F8F8F;
+.noData {
+    text-align: center;
+    font-size: 80px;
+    margin-top: 30vh;
 }
