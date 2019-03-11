@@ -87,14 +87,11 @@ $(document).ready(function(){
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
       }).done(function(data) {
+        console.log(data[data.length - 2]);
         document.getElementsByTagName("title")[0].innerHTML = "NBA Stats | " + data[data.length - 1];
-        const total = document.getElementById("total");
-        const average = document.getElementById("average");
-        const scoring = document.getElementById("scoring");
-        const games = document.getElementById("games");
-        console.log(data);
-        if (data[data.length - 2][3] == -1) {
-          tables = document.getElementsByClassName("container")[0];
+
+        if (data[data.length - 3][3] == -1) {
+          var tables = document.getElementsByClassName("container")[0];
           while (tables.firstChild) {
             tables.removeChild(tables.firstChild);
           }
@@ -103,8 +100,21 @@ $(document).ready(function(){
           noData.setAttribute("class", "noData")
           tables.appendChild(noData);
         } else {
+          const total = document.getElementById("total");
+          const average = document.getElementById("average");
+          const scoring = document.getElementById("scoring");
+          const games = document.getElementById("games");
+          var hover = document.getElementsByTagName("tbody");
+          document.getElementsByTagName("p")[0].innerHTML = data[data.length - 1];
+
+          document.getElementsByClassName("card-img-top")[0].src = data[data.length - 2][9];
+          const texts = document.getElementsByClassName("ml-auto");
+          for (var i = 0; i < texts.length; i++) {
+            texts[i].innerHTML = data[data.length - 2][i];
+          }
+
           var turnovers = 0;
-          for (i = 0; i < data.length - 1; i++) {
+          for (i = 0; i < data.length - 2; i++) {
             var tr = document.createElement("tr");
             var th = document.createElement("th");
             th.innerHTML = data[i][0];
@@ -153,9 +163,10 @@ $(document).ready(function(){
             tr.appendChild(td6);
             tr.appendChild(td7);
             tr.appendChild(td8);
-            total.appendChild(tr);
+            hover[0].appendChild(tr);
+            total.appendChild(hover[0]);
           }
-          for (i = 0; i < data.length - 1; i++) {
+          for (i = 0; i < data.length - 2; i++) {
             var tr = document.createElement("tr");
             var th = document.createElement("th");
             th.innerHTML = data[i][0];
@@ -192,8 +203,8 @@ $(document).ready(function(){
             td7.innerHTML = data[i][14];
             var td8 = document.createElement("td");
             td8.setAttribute("class", "align-middle");
-            if (i == data.length - 2) {
-              turnovers /= (data.length - 2);
+            if (i == data.length - 3) {
+              turnovers /= (data.length - 3);
               turnovers = turnovers.toFixed(1);
               td8.innerHTML = turnovers;
             } else {
@@ -211,9 +222,10 @@ $(document).ready(function(){
             tr.appendChild(td6);
             tr.appendChild(td7);
             tr.appendChild(td8);
-            average.appendChild(tr);
+            hover[1].appendChild(tr);
+            average.appendChild(hover[1]);
           }
-          for (i = 0; i < data.length - 1; i++) {
+          for (i = 0; i < data.length - 2; i++) {
             var tr = document.createElement("tr");
             var th = document.createElement("th");
             th.innerHTML = data[i][0];
@@ -270,9 +282,10 @@ $(document).ready(function(){
             tr.appendChild(td8);
             tr.appendChild(td9);
             tr.appendChild(td10);
-            scoring.appendChild(tr);
+            hover[2].appendChild(tr);
+            scoring.appendChild(hover[2]);
           }
-          for (i = 0; i < data.length - 1; i++) {
+          for (i = 0; i < data.length - 2; i++) {
             var tr = document.createElement("tr");
             var th = document.createElement("th");
             th.innerHTML = data[i][0];
@@ -313,10 +326,10 @@ $(document).ready(function(){
             tr.appendChild(td4);
             tr.appendChild(td5);
             tr.appendChild(td6);
-            games.appendChild(tr);
+            hover[3].appendChild(tr);
+            games.appendChild(hover[3]);
           }
         }
-        /* no data if -1  JERSEY position, height */
     });
     $("#/").click(function() {
       $.ajax({
@@ -341,5 +354,13 @@ $(document).ready(function(){
           contentType: 'application/json;charset=UTF-8',
           data : JSON.stringify("Sent")
       });
-  });
+   });
+   $("#/scores").click(function() {
+    $.ajax({
+        type : 'POST',
+        url : "/",
+        contentType: 'application/json;charset=UTF-8',
+        data : JSON.stringify("Sent")
+    });
+ });
 });

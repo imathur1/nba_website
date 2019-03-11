@@ -90,6 +90,13 @@ document.addEventListener("click", function (e) {
 $(window).blur(function() {
   closeAllLists2();
 });
+window.addEventListener('mouseup', function(e) {
+  if (typeof e === 'object') {
+    if (e.which == 2) {
+      closeAllLists2();
+    }
+  }
+});
 }
 
 var playerNames = [];

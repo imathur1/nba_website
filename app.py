@@ -3,6 +3,7 @@ import json
 import http.client
 import urllib.request
 from pathlib import Path
+from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
 from flask import Flask, render_template, request, jsonify
@@ -12,17 +13,17 @@ app = Flask(__name__)
 name = ""
 modified = ""
 teams = {
-    "Cleveland Cavaliers": ["http://content.sportslogos.net/logos/6/222/full/ige5q46x2v9c8hw80jhi4f85h.png", "https://ssl.gstatic.com/onebox/media/sports/logos/NAlGkmv45l1L-3NhwVhDPg_48x48.png", "http://content.sportslogos.net/logos/6/222/full/5681_cleveland_cavaliers-primary_on_dark-2011.png"],
-    "Detroit Pistons": ["http://content.sportslogos.net/logos/6/223/full/2164_detroit_pistons-primary-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/qvWE2FgBX0MCqFfciFBDiw_48x48.png", "http://content.sportslogos.net/logos/6/223/full/6107_detroit_pistons-primary_on_dark-2018.png"],
-    "Indiana Pacers": ["http://content.sportslogos.net/logos/6/224/full/gdm7egmgv3tsspc6f1gym7cwz.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/andumiE_wrpDpXvUgqCGYQ_48x48.png", "http://content.sportslogos.net/logos/6/224/full/1405_indiana_pacers-primary_on_dark-2018.png"],
-    "Orlando Magic": ["http://content.sportslogos.net/logos/6/217/full/h2k5cbia6m8e1dbdcfxfgre84.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/p69oiJ4LDsvCJUDQ3wR9PQ_48x48.png", "https://wallpapercave.com/wp/OXtonk1.jpg"],
-    "Miami Heat": ["http://content.sportslogos.net/logos/6/214/full/93lzfcfcnq125eh7etyxpuhfp.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/0nQXN6OF7wnLY3hJz8lZJQ_48x48.png", "http://i0.wp.com/wallpapercave.com/wp/u9KklPe.jpg"],
-    "Brooklyn Nets": ["http://content.sportslogos.net/logos/6/3786/full/930_brooklyn-nets-partial-2013.png", "https://ssl.gstatic.com/onebox/media/sports/logos/iishUmO7vbJBE7iK2CZCdw_48x48.png", "http://content.sportslogos.net/logos/6/3786/full/6332_brooklyn_nets-primary_on_dark-2013.png"],
-    "Philadelphia 76ers": ["http://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/US6KILZue2D5766trEf0Mg_48x48.png", "https://wallpapercave.com/wp/0KmgXJr.jpg"],
-    "Golden State Warriors": ["http://content.sportslogos.net/logos/6/235/full/5gzur7f6x09cv61jt16smhopl.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/XD2v321N_-vk7paF53TkAg_48x48.png", "http://content.sportslogos.net/logos/6/235/full/4411_golden_state_warriors-primary_on_dark-2011.png"],
-    "Dallas Mavericks": ["http://content.sportslogos.net/logos/6/228/full/5118_dallas_mavericks-alternate-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/xxxlj9RpmAKJ9P9phstWCQ_48x48.png", "http://content.sportslogos.net/logos/6/228/full/4996_dallas_mavericks-primary_on_dark-2018.png"],
-    "Memphis Grizzlies": ["http://content.sportslogos.net/logos/6/231/full/7277_memphis_grizzlies-alternate-2019.png", "https://ssl.gstatic.com/onebox/media/sports/logos/3ho45P8yNw-WmQ2m4A4TIA_48x48.png", "http://content.sportslogos.net/logos/6/231/full/9500_memphis_grizzlies-primary_on_dark-2019.png"],
-    "San Antonio Spurs": ["http://content.sportslogos.net/logos/6/233/full/828.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/FKwMB_85FlZ_7PTt1f7hjQ_48x48.png", "http://content.sportslogos.net/logos/6/233/full/6259_san_antonio_spurs-primary_on_dark-2018.png"],
+    "Cleveland Cavaliers": ["http://content.sportslogos.net/logos/6/222/full/ige5q46x2v9c8hw80jhi4f85h.png", "https://ssl.gstatic.com/onebox/media/sports/logos/NAlGkmv45l1L-3NhwVhDPg_48x48.png"],
+    "Detroit Pistons": ["http://content.sportslogos.net/logos/6/223/full/2164_detroit_pistons-primary-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/qvWE2FgBX0MCqFfciFBDiw_48x48.png"],
+    "Indiana Pacers": ["http://content.sportslogos.net/logos/6/224/full/gdm7egmgv3tsspc6f1gym7cwz.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/andumiE_wrpDpXvUgqCGYQ_48x48.png"],
+    "Orlando Magic": ["http://content.sportslogos.net/logos/6/217/full/h2k5cbia6m8e1dbdcfxfgre84.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/p69oiJ4LDsvCJUDQ3wR9PQ_48x48.png"],
+    "Miami Heat": ["http://content.sportslogos.net/logos/6/214/full/93lzfcfcnq125eh7etyxpuhfp.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/0nQXN6OF7wnLY3hJz8lZJQ_48x48.png"],
+    "Brooklyn Nets": ["http://content.sportslogos.net/logos/6/3786/full/930_brooklyn-nets-partial-2013.png", "https://ssl.gstatic.com/onebox/media/sports/logos/iishUmO7vbJBE7iK2CZCdw_48x48.png"],
+    "Philadelphia 76ers": ["http://content.sportslogos.net/logos/6/218/full/7034_philadelphia_76ers-primary-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/US6KILZue2D5766trEf0Mg_48x48.png"],
+    "Golden State Warriors": ["http://content.sportslogos.net/logos/6/235/full/5gzur7f6x09cv61jt16smhopl.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/XD2v321N_-vk7paF53TkAg_48x48.png"],
+    "Dallas Mavericks": ["http://content.sportslogos.net/logos/6/228/full/5118_dallas_mavericks-alternate-2018.png", "https://ssl.gstatic.com/onebox/media/sports/logos/xxxlj9RpmAKJ9P9phstWCQ_48x48.png"],
+    "Memphis Grizzlies": ["http://content.sportslogos.net/logos/6/231/full/7277_memphis_grizzlies-alternate-2019.png", "https://ssl.gstatic.com/onebox/media/sports/logos/3ho45P8yNw-WmQ2m4A4TIA_48x48.png"],
+    "San Antonio Spurs": ["http://content.sportslogos.net/logos/6/233/full/828.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/FKwMB_85FlZ_7PTt1f7hjQ_48x48.png"],
     "Oklahoma City Thunder": ["http://content.sportslogos.net/logos/6/2687/full/qdx55wdx4akljqkvzi1s3e6t3.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/b4bJ9zKFBDykdSIGUrbWdw_48x48.png"],
     "Utah Jazz": ["http://content.sportslogos.net/logos/6/234/full/txe1ybetuoye8pirnrhqalh04.png", "https://ssl.gstatic.com/onebox/media/sports/logos/SP_dsmXEKFVZH5N1DQpZ4A_48x48.png"],
     "Milwaukee Bucks": ["http://content.sportslogos.net/logos/6/225/full/3864_milwaukee_bucks-alternate-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/Wd6xIEIXpfqg9EZC6PAepQ_48x48.png"],
@@ -31,7 +32,7 @@ teams = {
     "Denver Nuggets": ["http://content.sportslogos.net/logos/6/229/full/8954_denver_nuggets-alternate-2019.png", "https://ssl.gstatic.com/onebox/media/sports/logos/9wPFTOxV_zP1KmRRggJNqQ_48x48.png"],
     "New Orleans Pelicans": ["http://content.sportslogos.net/logos/6/4962/full/2681_new_orleans_pelicans-primary-2014.png", "https://ssl.gstatic.com/onebox/media/sports/logos/JCQO978-AWbg00TQUNPUVg_48x48.png"],
     "Sacramento Kings": ["http://content.sportslogos.net/logos/6/240/full/4043_sacramento_kings-primary-2017.png", "https://ssl.gstatic.com/onebox/media/sports/logos/wkCDHakxEThLGoZ4Ven48Q_48x48.png"],
-    "Los Angeles Clippers": ["http://content.sportslogos.net/logos/6/236/full/9657_los_angeles_clippers-alternate-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/F36nQLCQ2FND3za-Eteeqg_48x48.png"],
+    "Los Angeles Clippers": ["http://content.sportslogos.net/logos/6/236/full/1038_los_angeles_clippers-secondary-2016.png", "https://ssl.gstatic.com/onebox/media/sports/logos/F36nQLCQ2FND3za-Eteeqg_48x48.png"],
     "Chicago Bulls": ["http://content.sportslogos.net/logos/6/221/full/zdrycpc7mh5teihl10gko8sgf.png", "https://ssl.gstatic.com/onebox/media/sports/logos/ofjScRGiytT__Flak2j4dg_48x48.png"],
     "Portland Trail Blazers": ["http://content.sportslogos.net/logos/6/239/full/826.gif", "https://ssl.gstatic.com/onebox/media/sports/logos/_bgagBCd6ieOIt3INWRN_w_48x48.png"],
     "Boston Celtics": ["http://content.sportslogos.net/logos/6/213/full/slhg02hbef3j1ov4lsnwyol5o.png", "https://ssl.gstatic.com/onebox/media/sports/logos/GDJBo7eEF8EO5-kDHVpdqw_48x48.png"],
@@ -163,6 +164,18 @@ def writeXML(year, month, day):
     file.close()
     return str(year), str(month), str(day)
 
+def deleteXML(year, month, day):
+    value = 365 * year + 30 * month + day
+    files = os.listdir("static/xml/upcoming/")
+    for i in files:
+        s = i.split("_")
+        y = int(s[1])
+        m = int(s[2])
+        d = int(s[3][:-4])
+        newValue = 365 * y + 30 * m + d
+        if newValue < value:
+            os.remove("static/xml/upcoming/" + i)
+
 def changeStore(upcoming):
     file = open("static/database/store.txt", "w")
     file.write(str(len(upcoming)) + "\n")
@@ -188,6 +201,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
     overlap = False
     while len(upcoming) < 6:
         a, b, c = writeXML(int(a), int(b), int(c))
+        deleteXML(int(a), int(b), int(c))
         tree = ET.parse("static/xml/upcoming/upcoming_" + a + "_" + b + "_" + c + ".xml")
         info = []
         for elem in tree.iter():
@@ -405,6 +419,31 @@ def getStats(playerID, year):
         fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
         freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
         doubleDoubles, tripleDoubles])
+
+    background = []
+    n = name.split(" ")
+    with urllib.request.urlopen("https://www.nba.com/players/" + n[0].lower() + "/" + n[1].lower() + "/" + playerID) as url:
+        data = url.read().decode()
+        parsed = BeautifulSoup(data, features='lxml')
+        jersey = parsed.body.find('span', attrs={'class':'nba-player-header__jersey-number'}).text
+        position = parsed.body.find('span', attrs={'class':'nba-player-header__position'}).text
+        height = parsed.body.findAll('p', attrs={'class':'nba-player-vitals__top-info-imperial'})
+
+        children1 = height[0].findChildren("span", recursive=False)
+        height1 = children1[0].text + " " + children1[1].text
+        children2 = height[1].findChildren("span", recursive=False)
+        weight1 = children2[0].text
+        
+        info = parsed.body.findAll('span', attrs={'class':'nba-player-vitals__bottom-info'})
+        born = info[0].text.strip()
+        age = info[1].text.strip()
+        from1 = info[2].text.strip()
+        debut = info[3].text.strip()
+        years = info[4].text.strip()
+        image = "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/" + playerID + ".png"
+        background = [jersey, position, height1, weight1, born, age, from1, debut, years, image]
+
+    stats.append(background)
     return stats
 
 @app.route("/")
@@ -425,6 +464,10 @@ def update():
 def updateAutocomplete():
     players, javascript = getPlayers()
     return jsonify(javascript)
+
+@app.route("/scores/")
+def scores():
+    return render_template("/scores.html")
 
 @app.route("/results", methods = ["POST"])
 def results():

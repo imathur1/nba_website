@@ -64,7 +64,6 @@ nav ul .nav-item .nav-link:hover {
     border: 1px solid #d4d4d4;
     border-bottom: none;
     border-top: none;
-    /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
     left: 0;
     right: 0;
@@ -76,11 +75,9 @@ nav ul .nav-item .nav-link:hover {
     border-bottom: 1px solid #d4d4d4; 
 }
   .autocomplete-items div:hover {
-    /*when hovering an item:*/
     background-color: #e9e9e9; 
 }
   .autocomplete-active {
-    /*when navigating through the items using the arrow keys:*/
     background-color: #d4d4d4 !important; 
 }
 
@@ -269,6 +266,9 @@ p {
     margin-bottom: 2.5%;
     color: #000;
 }
+.card {
+    width: 400px;
+}
 .name {
     text-align: left;
 }
@@ -279,4 +279,7 @@ p {
 }
 .cap {
     margin-bottom: 1%;
+}
+.des {
+    color: #66737C;
 }
