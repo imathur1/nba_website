@@ -87,7 +87,6 @@ $(document).ready(function(){
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
       }).done(function(data) {
-        console.log(data[data.length - 2]);
         document.getElementsByTagName("title")[0].innerHTML = "NBA Stats | " + data[data.length - 1];
 
         if (data[data.length - 3][3] == -1) {
@@ -112,7 +111,6 @@ $(document).ready(function(){
           for (var i = 0; i < texts.length; i++) {
             texts[i].innerHTML = data[data.length - 2][i];
           }
-
           var turnovers = 0;
           for (i = 0; i < data.length - 2; i++) {
             var tr = document.createElement("tr");

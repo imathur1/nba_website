@@ -15,8 +15,20 @@ body {
     color: #fff;
 }
 
+.modal-header .close {
+    font-size: 40px;
+}
+.modal-title {
+    font-size: 30px;
+}
+.modal-body {
+    font-size: 20px;
+}
 .navbar-brand:hover {
     color: #fff;
+}
+.bottom {
+    text-align: right;
 }
 
 #links {

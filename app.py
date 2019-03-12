@@ -204,6 +204,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
         deleteXML(int(a), int(b), int(c))
         tree = ET.parse("static/xml/upcoming/upcoming_" + a + "_" + b + "_" + c + ".xml")
         info = []
+        dates = []
         for elem in tree.iter():
             if elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}game":
                 if elem.attrib["status"] == "closed":
@@ -446,6 +447,33 @@ def getStats(playerID, year):
     stats.append(background)
     return stats
 
+def getPreviewArticles(upcoming):
+    preview = []
+    articleInfo = []
+    for i in range(6):
+        d = str(date.fromtimestamp(upcoming[i][0])).replace("-", "")
+        teams = [upcoming[i][3], upcoming[i][5]]
+        with urllib.request.urlopen("http://data.nba.net/prod/v2/" + d + "/scoreboard.json") as url:
+            data = json.loads(url.read().decode()) 
+            for i in data['games']:
+                game = i['gameId']
+                t1 = teamMapping[i['vTeam']['teamId']]
+                t2 = teamMapping[i['hTeam']['teamId']]
+                if t1 in teams and t2 in teams:
+                    try:
+                        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + d + "/" + game + "_preview_article.json") as url:
+                            data2 = json.loads(url.read().decode()) 
+                            title = data2['title']
+                            copyright = data2['copyright']
+                            info = [title, copyright]
+                            for i in data2['paragraphs']:
+                                info.append(i['paragraph'])
+                        articleInfo.append(info)
+                    except urllib.error.HTTPError:
+                        articleInfo.append("Error")
+
+    return articleInfo
+                    
 @app.route("/")
 def output():
     return render_template("/index.html")
@@ -458,6 +486,8 @@ def update():
     upcoming = openStore(currentTime)
     a, b, c = openDate()
     upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
+    preview = getPreviewArticles(upcoming)
+    upcoming.append(preview)
     return jsonify(upcoming)
 
 @app.route("/updateAutocomplete", methods = ["POST"])

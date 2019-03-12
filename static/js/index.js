@@ -23,6 +23,8 @@ if (Number(minutes) < 10) {
 var date = year + "-" + month + "-" + day + "T" + hours + ":" + minutes + ":00+00:00";
 var info = [Number(offset), date];
 
+$('#myModal').modal({show: false});
+
 function autocomplete(inp, arr) {
   var currentFocus;    
   inp.addEventListener("input", function(e) {
@@ -100,7 +102,7 @@ window.addEventListener('mouseup', function(e) {
 }
 
 var playerNames = [];
-
+var preview = [];
 $(document).ready(function(){
   $.ajax({
     type : 'POST',
@@ -108,6 +110,7 @@ $(document).ready(function(){
     contentType: 'application/json;charset=UTF-8',
     data : JSON.stringify(info)
   }).done(function(data) {
+    preview = data[data.length - 1];
     var upcoming = data;
     const logos = document.getElementsByClassName("logo");
     const teams = document.getElementsByClassName("team");
@@ -155,4 +158,33 @@ for (var i = 0; i < carousel.length; i++) {
   var random = Math.floor(Math.random() * players.length);
   carousel[i].src = players[random];
   players.splice(random, 1);
+}
+
+cards = document.getElementsByClassName("card");
+for (let i = 0; i < cards.length; i++) {
+  cards[i].onclick = function() {
+    var body = document.getElementsByClassName('modal-body')[0];
+    console.log(preview);
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    if (preview[i] == "Error") {
+      var h1 = document.createElement("h1");
+      h1.innerHTML = "No Article :(";
+      body.appendChild(h1);
+    } else {      
+      var h1 = document.createElement("h1");
+      h1.innerHTML = preview[i][0];
+      body.appendChild(h1);
+      for (var j = 2; j < preview[i].length; j++) {
+        var p = document.createElement("p");
+        p.innerHTML = preview[i][j];
+        if (j == preview[i].length - 1) {
+          p.setAttribute('class', 'bottom');
+        }
+        body.appendChild(p);
+      }
+    }
+    $('#myModal').modal('show');
+  }
 }
