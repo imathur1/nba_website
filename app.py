@@ -159,14 +159,14 @@ def writeXML(year, month, day):
     res = conn.getresponse()
     data = res.read()
     text = data.decode("utf-8")
-    file = open("static/xml/upcoming/upcoming_" + str(year) + "_" + str(month) + "_" + str(day) + ".xml", "w")
+    file = open("static/xml/upcoming_" + str(year) + "_" + str(month) + "_" + str(day) + ".xml", "w")
     file.write(text)
     file.close()
     return str(year), str(month), str(day)
 
 def deleteXML(year, month, day):
     value = 365 * year + 30 * month + day
-    files = os.listdir("static/xml/upcoming/")
+    files = os.listdir("static/xml/")
     for i in files:
         s = i.split("_")
         y = int(s[1])
@@ -174,7 +174,7 @@ def deleteXML(year, month, day):
         d = int(s[3][:-4])
         newValue = 365 * y + 30 * m + d
         if newValue < value:
-            os.remove("static/xml/upcoming/" + i)
+            os.remove("static/xml/" + i)
 
 def changeStore(upcoming):
     file = open("static/database/store.txt", "w")
@@ -202,7 +202,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
     while len(upcoming) < 6:
         a, b, c = writeXML(int(a), int(b), int(c))
         deleteXML(int(a), int(b), int(c))
-        tree = ET.parse("static/xml/upcoming/upcoming_" + a + "_" + b + "_" + c + ".xml")
+        tree = ET.parse("static/xml/upcoming_" + a + "_" + b + "_" + c + ".xml")
         info = []
         dates = []
         for elem in tree.iter():
@@ -349,34 +349,118 @@ def getStats(playerID, year):
             for j in i['teams']:
                 team = teamMapping[j['teamId']]
                 logo = teams[team][1]
-                points = float(j['ppg'])
-                rebounds = float(j['rpg'])
-                assists = float(j['apg'])
-                minutes = float(j['mpg'])
-                steals = float(j['spg'])
-                turnovers = float(j['topg'])
-                blocks = float(j['bpg'])
-                totAssists = int(j['assists'])
-                totBlocks = int(j['blocks'])
-                totSteals = int(j['steals'])
-                totTurnovers = int(j['turnovers'])
-                totReb = int(j['totReb'])
-                fieldGoalsMade = int(j['fgm'])
-                fieldGoalsAttempted = int(j['fga'])
-                fieldGoalPercent = float(j['fgp'])
-                threePointsMade = int(j['tpm'])
-                threePointsAttempted = int(j['tpa'])
-                threePointPercent = float(j['tpp'])
-                freeThrowsMade = int(j['ftm'])
-                freeThrowsAttempted = int(j['fta'])
-                freeThrowPercent = float(j['ftp'])
-                personalFouls = int(j['pFouls'])
-                totPoints = int(j['points'])
-                gamesPlayed = int(j['gamesPlayed'])
-                gamesStarted = int(j['gamesStarted'])
-                totMinutes = int(j['min'])
-                doubleDoubles = int(j['dd2'])
-                tripleDoubles = int(j['td3'])
+                try:
+                    points = float(j['ppg'])
+                except:
+                    points = -1
+                try:
+                    rebounds = float(j['rpg'])
+                except:
+                    rebounds = -1
+                try:
+                    assists = float(j['apg'])
+                except:
+                    assists = -1
+                try:
+                    minutes = float(j['mpg'])
+                except:
+                    minutes = -1
+                try:
+                    steals = float(j['spg'])
+                except:
+                    steals = -1
+                try:
+                    turnovers = float(j['topg'])
+                except:
+                    turnovers = -1
+                try:
+                    blocks = float(j['bpg'])
+                except:
+                    blocks = -1
+                try:
+                    totAssists = int(j['assists'])
+                except:
+                    totAssists = -1
+                try:
+                    totBlocks = int(j['blocks'])
+                except:
+                    totBlocks = -1
+                try:
+                    totSteals = int(j['steals'])
+                except:
+                    totSteals = -1
+                try:
+                    totTurnovers = int(j['turnovers'])
+                except:
+                    totTurnovers = -1
+                try:
+                    totReb = int(j['totReb'])
+                except:  
+                    totReb = -1
+                try:
+                    fieldGoalsMade = int(j['fgm'])
+                except:
+                    fieldGoalsMade = -1
+                try:
+                    fieldGoalsAttempted = int(j['fga'])
+                except:
+                    fieldGoalsAttempted = -1
+                try:
+                    fieldGoalPercent = float(j['fgp'])
+                except:
+                    fieldGoalPercent = -1
+                try:
+                    threePointsMade = int(j['tpm'])
+                except:  
+                    threePointsMade = -1
+                try:
+                    threePointsAttempted = int(j['tpa'])
+                except:
+                    threePointsAttempted = -1
+                try:
+                    threePointPercent = float(j['tpp'])
+                except:
+                    threePointPercent = -1
+                try:
+                    freeThrowsMade = int(j['ftm'])
+                except:
+                    freeThrowsMade = -1
+                try:
+                    freeThrowsAttempted = int(j['fta'])
+                except:
+                    freeThrowsAttempted = -1
+                try:
+                    freeThrowPercent = float(j['ftp'])
+                except:
+                    freeThrowPercent = -1
+                try:
+                    personalFouls = int(j['pFouls'])
+                except:
+                    personalFouls = -1               
+                try:
+                    totPoints = int(j['points'])
+                except:
+                    totPoints = -1
+                try:
+                    gamesPlayed = int(j['gamesPlayed'])
+                except:
+                    gamesPlayed = -1
+                try:
+                    gamesStarted = int(j['gamesStarted'])
+                except:
+                    gamesStarted = -1
+                try:
+                    totMinutes = int(j['min'])
+                except:
+                    totMinutes = -1
+                try:
+                    doubleDoubles = int(j['dd2'])
+                except:
+                    doubleDoubles = -1
+                try:
+                    tripleDoubles = int(j['td3'])
+                except:
+                    tripleDoubles = -1
                 stats.append([i['seasonYear'], logo, team, totMinutes, minutes, totPoints, points, 
                 totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
                 totTurnovers, turnovers, threePointsMade, threePointsAttempted, threePointPercent,
@@ -384,63 +468,90 @@ def getStats(playerID, year):
                 freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
                 doubleDoubles, tripleDoubles])
                 
-        career = data['league']['standard']['stats']['careerSummary']
-        logo = ""
-        team = ""
-        points = float(career['ppg'])
-        rebounds = float(career['rpg'])
-        assists = float(career['apg'])
-        minutes = float(career['mpg'])
-        steals = float(career['spg'])
-        blocks = float(career['bpg'])
-        totAssists = int(career['assists'])
-        totBlocks = int(career['blocks'])
-        totSteals = int(career['steals'])
-        totTurnovers = int(career['turnovers'])
-        totReb = int(career['totReb'])
-        fieldGoalsMade = int(career['fgm'])
-        fieldGoalsAttempted = int(career['fga'])
-        fieldGoalPercent = float(career['fgp'])
-        threePointsMade = int(career['tpm'])
-        threePointsAttempted = int(career['tpa'])
-        threePointPercent = float(career['tpp'])
-        freeThrowsMade = int(career['ftm'])
-        freeThrowsAttempted = int(career['fta'])
-        freeThrowPercent = float(career['ftp'])
-        personalFouls = int(career['pFouls'])
-        totPoints = int(career['points'])
-        gamesPlayed = int(career['gamesPlayed'])
-        gamesStarted = int(career['gamesStarted'])
-        totMinutes = int(career['min'])
-        doubleDoubles = int(career['dd2'])
-        tripleDoubles = int(career['td3'])
-        stats.append(["Career", logo, team, totMinutes, minutes, totPoints, points, 
-        totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
-        totTurnovers, "None", threePointsMade, threePointsAttempted, threePointPercent,
-        fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
-        freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
-        doubleDoubles, tripleDoubles])
+        try:
+            career = data['league']['standard']['stats']['careerSummary']
+            logo = ""
+            team = ""
+            points = float(career['ppg'])
+            rebounds = float(career['rpg'])
+            assists = float(career['apg'])
+            minutes = float(career['mpg'])
+            steals = float(career['spg'])
+            blocks = float(career['bpg'])
+            totAssists = int(career['assists'])
+            totBlocks = int(career['blocks'])
+            totSteals = int(career['steals'])
+            totTurnovers = int(career['turnovers'])
+            totReb = int(career['totReb'])
+            fieldGoalsMade = int(career['fgm'])
+            fieldGoalsAttempted = int(career['fga'])
+            fieldGoalPercent = float(career['fgp'])
+            threePointsMade = int(career['tpm'])
+            threePointsAttempted = int(career['tpa'])
+            threePointPercent = float(career['tpp'])
+            freeThrowsMade = int(career['ftm'])
+            freeThrowsAttempted = int(career['fta'])
+            freeThrowPercent = float(career['ftp'])
+            personalFouls = int(career['pFouls'])
+            totPoints = int(career['points'])
+            gamesPlayed = int(career['gamesPlayed'])
+            gamesStarted = int(career['gamesStarted'])
+            totMinutes = int(career['min'])
+            doubleDoubles = int(career['dd2'])
+            tripleDoubles = int(career['td3'])
+
+            stats.append(["Career", logo, team, totMinutes, minutes, totPoints, points, 
+            totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
+            totTurnovers, "None", threePointsMade, threePointsAttempted, threePointPercent,
+            fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
+            freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
+            doubleDoubles, tripleDoubles])
+        except:
+            stats.append(["Career", -1, -1, -1])
 
     background = []
     n = name.split(" ")
     with urllib.request.urlopen("https://www.nba.com/players/" + n[0].lower() + "/" + n[1].lower() + "/" + playerID) as url:
         data = url.read().decode()
         parsed = BeautifulSoup(data, features='lxml')
-        jersey = parsed.body.find('span', attrs={'class':'nba-player-header__jersey-number'}).text
-        position = parsed.body.find('span', attrs={'class':'nba-player-header__position'}).text
-        height = parsed.body.findAll('p', attrs={'class':'nba-player-vitals__top-info-imperial'})
+        try:
+            jersey = parsed.body.find('span', attrs={'class':'nba-player-header__jersey-number'}).text
+        except AttributeError:
+            jersey = "None"
+        try:
+            position = parsed.body.find('span', attrs={'class':'nba-player-header__position'}).text
+        except AttributeError:
+            position = "None"
+        try:
+            height = parsed.body.findAll('p', attrs={'class':'nba-player-vitals__top-info-imperial'})
+        except AttributeError:
+            height = "None"
 
-        children1 = height[0].findChildren("span", recursive=False)
-        height1 = children1[0].text + " " + children1[1].text
-        children2 = height[1].findChildren("span", recursive=False)
-        weight1 = children2[0].text
+        try:
+            children1 = height[0].findChildren("span", recursive=False)
+            height1 = children1[0].text + " " + children1[1].text
+        except:
+            height1 = "None"
+        try:
+            children2 = height[1].findChildren("span", recursive=False)
+            weight1 = children2[0].text
+        except:
+            weight1 = "None"
         
-        info = parsed.body.findAll('span', attrs={'class':'nba-player-vitals__bottom-info'})
-        born = info[0].text.strip()
-        age = info[1].text.strip()
-        from1 = info[2].text.strip()
-        debut = info[3].text.strip()
-        years = info[4].text.strip()
+        try:
+            info = parsed.body.findAll('span', attrs={'class':'nba-player-vitals__bottom-info'})
+            born = info[0].text.strip()
+            age = info[1].text.strip()
+            from1 = info[2].text.strip()
+            debut = info[3].text.strip()
+            years = info[4].text.strip()
+        except:
+            info = "None"
+            born = "None"
+            age = "None"
+            from1 = "None"
+            debut = "None"
+            years = "None"
         image = "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/" + playerID + ".png"
         background = [jersey, position, height1, weight1, born, age, from1, debut, years, image]
 
@@ -507,6 +618,10 @@ def results():
 @app.route("/standings/")
 def standings():
     return render_template("/standings.html")
+
+@app.route("/news/")
+def news():
+    return render_template("/news.html")
 
 @app.route("/playerInfo", methods = ["POST"])
 def playerInfo():

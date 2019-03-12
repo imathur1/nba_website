@@ -106,7 +106,11 @@ $(document).ready(function(){
           var hover = document.getElementsByTagName("tbody");
           document.getElementsByTagName("p")[0].innerHTML = data[data.length - 1];
 
-          document.getElementsByClassName("card-img-top")[0].src = data[data.length - 2][9];
+          try {
+            document.getElementsByClassName("card-img-top")[0].src = data[data.length - 2][9];
+          } catch (err) {
+            document.getElementsByClassName("card-img-top")[0].src = "https://www.nba.com/.element/img/2.0/sect/statscube/players/large/default_nba_headshot_v2.png";
+          }
           const texts = document.getElementsByClassName("ml-auto");
           for (var i = 0; i < texts.length; i++) {
             texts[i].innerHTML = data[data.length - 2][i];
@@ -359,6 +363,14 @@ $(document).ready(function(){
         url : "/",
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
+    });
+    $("#/news").click(function() {
+      $.ajax({
+          type : 'POST',
+          url : "/",
+          contentType: 'application/json;charset=UTF-8',
+          data : JSON.stringify("Sent")
+      });
     });
  });
 });

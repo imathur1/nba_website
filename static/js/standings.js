@@ -174,4 +174,12 @@ $(document).ready(function(){
           data : JSON.stringify("Sent")
       });
     });
+    $("#/news").click(function() {
+      $.ajax({
+          type : 'POST',
+          url : "/",
+          contentType: 'application/json;charset=UTF-8',
+          data : JSON.stringify("Sent")
+      });
+    });
 });

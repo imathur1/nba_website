@@ -164,7 +164,6 @@ cards = document.getElementsByClassName("card");
 for (let i = 0; i < cards.length; i++) {
   cards[i].onclick = function() {
     var body = document.getElementsByClassName('modal-body')[0];
-    console.log(preview);
     while (body.firstChild) {
       body.removeChild(body.firstChild);
     }
