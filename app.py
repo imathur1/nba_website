@@ -4,12 +4,14 @@ import http.client
 import urllib.request
 from pathlib import Path
 from bs4 import BeautifulSoup
+from newsapi import NewsApiClient
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+cTime = ""
 name = ""
 modified = ""
 teams = {
@@ -343,219 +345,222 @@ def getPlayers():
 
 def getStats(playerID, year):
     stats = []
-    with urllib.request.urlopen("http://data.nba.net/prod/v1/" + year + "/players/" + playerID + "_profile.json") as url:
-        data = json.loads(url.read().decode())  
-        for i in data['league']['standard']['stats']['regularSeason']['season']:
-            for j in i['teams']:
-                team = teamMapping[j['teamId']]
-                logo = teams[team][1]
-                try:
-                    points = float(j['ppg'])
-                except:
-                    points = -1
-                try:
-                    rebounds = float(j['rpg'])
-                except:
-                    rebounds = -1
-                try:
-                    assists = float(j['apg'])
-                except:
-                    assists = -1
-                try:
-                    minutes = float(j['mpg'])
-                except:
-                    minutes = -1
-                try:
-                    steals = float(j['spg'])
-                except:
-                    steals = -1
-                try:
-                    turnovers = float(j['topg'])
-                except:
-                    turnovers = -1
-                try:
-                    blocks = float(j['bpg'])
-                except:
-                    blocks = -1
-                try:
-                    totAssists = int(j['assists'])
-                except:
-                    totAssists = -1
-                try:
-                    totBlocks = int(j['blocks'])
-                except:
-                    totBlocks = -1
-                try:
-                    totSteals = int(j['steals'])
-                except:
-                    totSteals = -1
-                try:
-                    totTurnovers = int(j['turnovers'])
-                except:
-                    totTurnovers = -1
-                try:
-                    totReb = int(j['totReb'])
-                except:  
-                    totReb = -1
-                try:
-                    fieldGoalsMade = int(j['fgm'])
-                except:
-                    fieldGoalsMade = -1
-                try:
-                    fieldGoalsAttempted = int(j['fga'])
-                except:
-                    fieldGoalsAttempted = -1
-                try:
-                    fieldGoalPercent = float(j['fgp'])
-                except:
-                    fieldGoalPercent = -1
-                try:
-                    threePointsMade = int(j['tpm'])
-                except:  
-                    threePointsMade = -1
-                try:
-                    threePointsAttempted = int(j['tpa'])
-                except:
-                    threePointsAttempted = -1
-                try:
-                    threePointPercent = float(j['tpp'])
-                except:
-                    threePointPercent = -1
-                try:
-                    freeThrowsMade = int(j['ftm'])
-                except:
-                    freeThrowsMade = -1
-                try:
-                    freeThrowsAttempted = int(j['fta'])
-                except:
-                    freeThrowsAttempted = -1
-                try:
-                    freeThrowPercent = float(j['ftp'])
-                except:
-                    freeThrowPercent = -1
-                try:
-                    personalFouls = int(j['pFouls'])
-                except:
-                    personalFouls = -1               
-                try:
-                    totPoints = int(j['points'])
-                except:
-                    totPoints = -1
-                try:
-                    gamesPlayed = int(j['gamesPlayed'])
-                except:
-                    gamesPlayed = -1
-                try:
-                    gamesStarted = int(j['gamesStarted'])
-                except:
-                    gamesStarted = -1
-                try:
-                    totMinutes = int(j['min'])
-                except:
-                    totMinutes = -1
-                try:
-                    doubleDoubles = int(j['dd2'])
-                except:
-                    doubleDoubles = -1
-                try:
-                    tripleDoubles = int(j['td3'])
-                except:
-                    tripleDoubles = -1
-                stats.append([i['seasonYear'], logo, team, totMinutes, minutes, totPoints, points, 
+    try:
+        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + year + "/players/" + playerID + "_profile.json") as url:
+            data = json.loads(url.read().decode())  
+            for i in data['league']['standard']['stats']['regularSeason']['season']:
+                for j in i['teams']:
+                    team = teamMapping[j['teamId']]
+                    logo = teams[team][1]
+                    try:
+                        points = float(j['ppg'])
+                    except:
+                        points = -1
+                    try:
+                        rebounds = float(j['rpg'])
+                    except:
+                        rebounds = -1
+                    try:
+                        assists = float(j['apg'])
+                    except:
+                        assists = -1
+                    try:
+                        minutes = float(j['mpg'])
+                    except:
+                        minutes = -1
+                    try:
+                        steals = float(j['spg'])
+                    except:
+                        steals = -1
+                    try:
+                        turnovers = float(j['topg'])
+                    except:
+                        turnovers = -1
+                    try:
+                        blocks = float(j['bpg'])
+                    except:
+                        blocks = -1
+                    try:
+                        totAssists = int(j['assists'])
+                    except:
+                        totAssists = -1
+                    try:
+                        totBlocks = int(j['blocks'])
+                    except:
+                        totBlocks = -1
+                    try:
+                        totSteals = int(j['steals'])
+                    except:
+                        totSteals = -1
+                    try:
+                        totTurnovers = int(j['turnovers'])
+                    except:
+                        totTurnovers = -1
+                    try:
+                        totReb = int(j['totReb'])
+                    except:  
+                        totReb = -1
+                    try:
+                        fieldGoalsMade = int(j['fgm'])
+                    except:
+                        fieldGoalsMade = -1
+                    try:
+                        fieldGoalsAttempted = int(j['fga'])
+                    except:
+                        fieldGoalsAttempted = -1
+                    try:
+                        fieldGoalPercent = float(j['fgp'])
+                    except:
+                        fieldGoalPercent = -1
+                    try:
+                        threePointsMade = int(j['tpm'])
+                    except:  
+                        threePointsMade = -1
+                    try:
+                        threePointsAttempted = int(j['tpa'])
+                    except:
+                        threePointsAttempted = -1
+                    try:
+                        threePointPercent = float(j['tpp'])
+                    except:
+                        threePointPercent = -1
+                    try:
+                        freeThrowsMade = int(j['ftm'])
+                    except:
+                        freeThrowsMade = -1
+                    try:
+                        freeThrowsAttempted = int(j['fta'])
+                    except:
+                        freeThrowsAttempted = -1
+                    try:
+                        freeThrowPercent = float(j['ftp'])
+                    except:
+                        freeThrowPercent = -1
+                    try:
+                        personalFouls = int(j['pFouls'])
+                    except:
+                        personalFouls = -1               
+                    try:
+                        totPoints = int(j['points'])
+                    except:
+                        totPoints = -1
+                    try:
+                        gamesPlayed = int(j['gamesPlayed'])
+                    except:
+                        gamesPlayed = -1
+                    try:
+                        gamesStarted = int(j['gamesStarted'])
+                    except:
+                        gamesStarted = -1
+                    try:
+                        totMinutes = int(j['min'])
+                    except:
+                        totMinutes = -1
+                    try:
+                        doubleDoubles = int(j['dd2'])
+                    except:
+                        doubleDoubles = -1
+                    try:
+                        tripleDoubles = int(j['td3'])
+                    except:
+                        tripleDoubles = -1
+                    stats.append([i['seasonYear'], logo, team, totMinutes, minutes, totPoints, points, 
+                    totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
+                    totTurnovers, turnovers, threePointsMade, threePointsAttempted, threePointPercent,
+                    fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
+                    freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
+                    doubleDoubles, tripleDoubles])
+                    
+            try:
+                career = data['league']['standard']['stats']['careerSummary']
+                logo = ""
+                team = ""
+                points = float(career['ppg'])
+                rebounds = float(career['rpg'])
+                assists = float(career['apg'])
+                minutes = float(career['mpg'])
+                steals = float(career['spg'])
+                blocks = float(career['bpg'])
+                totAssists = int(career['assists'])
+                totBlocks = int(career['blocks'])
+                totSteals = int(career['steals'])
+                totTurnovers = int(career['turnovers'])
+                totReb = int(career['totReb'])
+                fieldGoalsMade = int(career['fgm'])
+                fieldGoalsAttempted = int(career['fga'])
+                fieldGoalPercent = float(career['fgp'])
+                threePointsMade = int(career['tpm'])
+                threePointsAttempted = int(career['tpa'])
+                threePointPercent = float(career['tpp'])
+                freeThrowsMade = int(career['ftm'])
+                freeThrowsAttempted = int(career['fta'])
+                freeThrowPercent = float(career['ftp'])
+                personalFouls = int(career['pFouls'])
+                totPoints = int(career['points'])
+                gamesPlayed = int(career['gamesPlayed'])
+                gamesStarted = int(career['gamesStarted'])
+                totMinutes = int(career['min'])
+                doubleDoubles = int(career['dd2'])
+                tripleDoubles = int(career['td3'])
+
+                stats.append(["Career", logo, team, totMinutes, minutes, totPoints, points, 
                 totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
-                totTurnovers, turnovers, threePointsMade, threePointsAttempted, threePointPercent,
+                totTurnovers, "None", threePointsMade, threePointsAttempted, threePointPercent,
                 fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
                 freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
                 doubleDoubles, tripleDoubles])
-                
-        try:
-            career = data['league']['standard']['stats']['careerSummary']
-            logo = ""
-            team = ""
-            points = float(career['ppg'])
-            rebounds = float(career['rpg'])
-            assists = float(career['apg'])
-            minutes = float(career['mpg'])
-            steals = float(career['spg'])
-            blocks = float(career['bpg'])
-            totAssists = int(career['assists'])
-            totBlocks = int(career['blocks'])
-            totSteals = int(career['steals'])
-            totTurnovers = int(career['turnovers'])
-            totReb = int(career['totReb'])
-            fieldGoalsMade = int(career['fgm'])
-            fieldGoalsAttempted = int(career['fga'])
-            fieldGoalPercent = float(career['fgp'])
-            threePointsMade = int(career['tpm'])
-            threePointsAttempted = int(career['tpa'])
-            threePointPercent = float(career['tpp'])
-            freeThrowsMade = int(career['ftm'])
-            freeThrowsAttempted = int(career['fta'])
-            freeThrowPercent = float(career['ftp'])
-            personalFouls = int(career['pFouls'])
-            totPoints = int(career['points'])
-            gamesPlayed = int(career['gamesPlayed'])
-            gamesStarted = int(career['gamesStarted'])
-            totMinutes = int(career['min'])
-            doubleDoubles = int(career['dd2'])
-            tripleDoubles = int(career['td3'])
+            except:
+                stats.append(["Career", -1, -1, -1])
 
-            stats.append(["Career", logo, team, totMinutes, minutes, totPoints, points, 
-            totAssists, assists, totReb, rebounds, totBlocks, blocks, totSteals, steals,
-            totTurnovers, "None", threePointsMade, threePointsAttempted, threePointPercent,
-            fieldGoalsMade, fieldGoalsAttempted, fieldGoalPercent, freeThrowsMade,
-            freeThrowsAttempted, freeThrowPercent, personalFouls, gamesPlayed, gamesStarted,
-            doubleDoubles, tripleDoubles])
-        except:
-            stats.append(["Career", -1, -1, -1])
+        background = []
+        n = name.split(" ")
+        with urllib.request.urlopen("https://www.nba.com/players/" + n[0].lower() + "/" + n[1].lower() + "/" + playerID) as url:
+            data = url.read().decode()
+            parsed = BeautifulSoup(data, features='lxml')
+            try:
+                jersey = parsed.body.find('span', attrs={'class':'nba-player-header__jersey-number'}).text
+            except AttributeError:
+                jersey = "None"
+            try:
+                position = parsed.body.find('span', attrs={'class':'nba-player-header__position'}).text
+            except AttributeError:
+                position = "None"
+            try:
+                height = parsed.body.findAll('p', attrs={'class':'nba-player-vitals__top-info-imperial'})
+            except AttributeError:
+                height = "None"
 
-    background = []
-    n = name.split(" ")
-    with urllib.request.urlopen("https://www.nba.com/players/" + n[0].lower() + "/" + n[1].lower() + "/" + playerID) as url:
-        data = url.read().decode()
-        parsed = BeautifulSoup(data, features='lxml')
-        try:
-            jersey = parsed.body.find('span', attrs={'class':'nba-player-header__jersey-number'}).text
-        except AttributeError:
-            jersey = "None"
-        try:
-            position = parsed.body.find('span', attrs={'class':'nba-player-header__position'}).text
-        except AttributeError:
-            position = "None"
-        try:
-            height = parsed.body.findAll('p', attrs={'class':'nba-player-vitals__top-info-imperial'})
-        except AttributeError:
-            height = "None"
+            try:
+                children1 = height[0].findChildren("span", recursive=False)
+                height1 = children1[0].text + " " + children1[1].text
+            except:
+                height1 = "None"
+            try:
+                children2 = height[1].findChildren("span", recursive=False)
+                weight1 = children2[0].text
+            except:
+                weight1 = "None"
+            
+            try:
+                info = parsed.body.findAll('span', attrs={'class':'nba-player-vitals__bottom-info'})
+                born = info[0].text.strip()
+                age = info[1].text.strip()
+                from1 = info[2].text.strip()
+                debut = info[3].text.strip()
+                years = info[4].text.strip()
+            except:
+                info = "None"
+                born = "None"
+                age = "None"
+                from1 = "None"
+                debut = "None"
+                years = "None"
+            image = "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/" + playerID + ".png"
+            background = [jersey, position, height1, weight1, born, age, from1, debut, years, image]
 
-        try:
-            children1 = height[0].findChildren("span", recursive=False)
-            height1 = children1[0].text + " " + children1[1].text
-        except:
-            height1 = "None"
-        try:
-            children2 = height[1].findChildren("span", recursive=False)
-            weight1 = children2[0].text
-        except:
-            weight1 = "None"
-        
-        try:
-            info = parsed.body.findAll('span', attrs={'class':'nba-player-vitals__bottom-info'})
-            born = info[0].text.strip()
-            age = info[1].text.strip()
-            from1 = info[2].text.strip()
-            debut = info[3].text.strip()
-            years = info[4].text.strip()
-        except:
-            info = "None"
-            born = "None"
-            age = "None"
-            from1 = "None"
-            debut = "None"
-            years = "None"
-        image = "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/" + playerID + ".png"
-        background = [jersey, position, height1, weight1, born, age, from1, debut, years, image]
-
-    stats.append(background)
+        stats.append(background)
+    except urllib.error.HTTPError:
+        return "Error"
     return stats
 
 def getPreviewArticles(upcoming):
@@ -584,16 +589,99 @@ def getPreviewArticles(upcoming):
                         articleInfo.append("Error")
 
     return articleInfo
-                    
+
+def getNews(date1, date2):
+    newsapi = NewsApiClient(api_key='7477d1d0e72844348ebc6472a323c125')
+    top_headlines = newsapi.get_top_headlines(q='nba',
+                                            category='sports',
+                                            language='en',
+                                            country='us')
+    all_articles = newsapi.get_everything(q='nba',
+                                        sources='espn,bleacher-report',
+                                        domains='espn.com,bleacherreport.com,nba.com',
+                                        from_param=date1,
+                                        to=date2,
+                                        language='en',
+                                        sort_by='relevancy')
+
+    seen = []
+    data = []
+    articles1 = top_headlines['articles']
+    articles2 = all_articles['articles']
+    data.append(len(articles1))
+    for i in articles1:
+        source = i['source']['name']
+        author = i['author']
+        title = i['title']
+        url = i['url']
+        image = i['urlToImage']
+        time = i['publishedAt']
+        content = i['content']
+        if source == 'Espn.com' or source == 'Nba.com' or source == 'Bleacher Report':
+            if title not in seen:
+                seen.append(title)
+                by = ""
+                if author is None:
+                    by = source
+                elif author == "NBA.com":
+                    author = "Official release"
+                    by = author + " from " + source
+                else:
+                    by = author + " from " + source
+                if content is None:
+                    content = "No content"
+                if image is None:
+                    image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
+                
+                mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
+                "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
+                "11":"November", "12":"December"}
+                time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
+                content = content.replace('\xa0', ' -')
+                data.append([title, by, time, content, image, url])
+
+    for i in articles2:
+        source = i['source']['name']
+        author = i['author']
+        title = i['title']
+        url = i['url']
+        image = i['urlToImage']
+        time = i['publishedAt']
+        content = i['content']
+        if title not in seen:
+            seen.append(title)
+            by = ""
+            if author is None:
+                by = source
+            elif author == "NBA.com":
+                author = "Official release"
+                by = author + " from " + source
+            else:
+                by = author + " from " + source
+            if content is None:
+                content = "No content"
+            if image is None:
+                image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
+            
+            mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
+            "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
+            "11":"November", "12":"December"}
+            time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
+            content = content.replace('\xa0', '  -')
+            data.append([title, by, time, content, image, url])
+    return data
+
 @app.route("/")
 def output():
     return render_template("/index.html")
 
 @app.route("/update", methods = ["POST"])
 def update():
+    global cTime
     info = request.get_json()
     offset = int(info[0])
     currentTime = getTime(info[1])
+    cTime = currentTime
     upcoming = openStore(currentTime)
     a, b, c = openDate()
     upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
@@ -619,6 +707,15 @@ def results():
 def standings():
     return render_template("/standings.html")
 
+@app.route("/updateNews", methods = ["POST"])
+def updateNews():
+    # news = getNews('h', 'w')
+    # return jsonify(news)
+    d2 = str(date.fromtimestamp(cTime))
+    d1 = str(date.fromtimestamp(cTime - 604800))
+    news = getNews(d1, d2)
+    return jsonify(news)
+
 @app.route("/news/")
 def news():
     return render_template("/news.html")
@@ -629,7 +726,8 @@ def playerInfo():
     playerID = players[name][0]
     playerYear = players[name][1]
     stats = getStats(playerID, playerYear)
-    stats.append(name)
+    if stats != "Error":
+        stats.append(name)
     return jsonify(stats)
 
 @app.route("/playerName", methods = ["POST"])

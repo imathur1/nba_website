@@ -179,6 +179,9 @@ for (let i = 0; i < cards.length; i++) {
         var p = document.createElement("p");
         p.innerHTML = preview[i][j];
         if (j == preview[i].length - 1) {
+          if (p.innerHTML.charAt(0) === "-") {
+            p.innerHTML = "- " + p.innerHTML.substr(2);
+          }
           p.setAttribute('class', 'bottom');
         }
         body.appendChild(p);

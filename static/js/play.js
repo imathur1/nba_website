@@ -87,9 +87,7 @@ $(document).ready(function(){
         contentType: 'application/json;charset=UTF-8',
         data : JSON.stringify("Sent")
       }).done(function(data) {
-        document.getElementsByTagName("title")[0].innerHTML = "NBA Stats | " + data[data.length - 1];
-
-        if (data[data.length - 3][3] == -1) {
+        if (data === "Error" || data[data.length - 3][3] == -1) {
           var tables = document.getElementsByClassName("container")[0];
           while (tables.firstChild) {
             tables.removeChild(tables.firstChild);
@@ -99,6 +97,7 @@ $(document).ready(function(){
           noData.setAttribute("class", "noData")
           tables.appendChild(noData);
         } else {
+          document.getElementsByTagName("title")[0].innerHTML = "NBA Stats | " + data[data.length - 1];
           const total = document.getElementById("total");
           const average = document.getElementById("average");
           const scoring = document.getElementById("scoring");

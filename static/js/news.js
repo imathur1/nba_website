@@ -1,3 +1,4 @@
+playerNames = [];
 
 function autocomplete(inp, arr) {
     var currentFocus;    
@@ -78,6 +79,92 @@ $(document).ready(function(){
         playerNames = data;
         autocomplete(document.getElementById("playersID"), playerNames);
     });
+
+    $.ajax({
+      type : 'POST',
+      url : "/updateNews",
+      contentType: 'application/json;charset=UTF-8',
+      data : JSON.stringify("Sent")
+    }).done(function(data) {
+      var group1 = document.getElementsByClassName('row justify-content-around')[0];
+      for (var i = 0; i < data[0]; i++) {
+        var div = document.createElement("div");
+        div.setAttribute('class', 'card col-7');
+        let url = data[i + 1][5];
+        div.addEventListener('click', function() {
+          window.open(url, '_blank');
+        });
+        var img = document.createElement("img");
+        img.setAttribute('class', 'card-img-top');
+        img.setAttribute('src', data[i + 1][4]);
+        var div2 = document.createElement("div");
+        div2.setAttribute('class', 'card-body');
+        var h2 = document.createElement("h2");
+        h2.setAttribute('class', 'card-title');
+        var h5 = document.createElement("h5");
+        h5.setAttribute('class', 'card-subtitle mb-3');
+        var h6 = document.createElement("h6");
+        h6.setAttribute('class', 'card-subtitle mb-2 text-muted');
+        var h52 = document.createElement("h5");
+        h52.setAttribute('class', 'card-text');
+
+        h2.innerHTML = data[i + 1][0];
+        h5.innerHTML = data[i + 1][1];
+        h6.innerHTML = data[i + 1][2];
+        h52.innerHTML = data[i + 1][3];
+
+        div2.appendChild(h2);
+        div2.appendChild(h5);
+        div2.appendChild(h6);
+        div2.appendChild(h52);
+        div.appendChild(img);
+        div.appendChild(div2);
+        group1.appendChild(div);
+      }
+      counter = 1;
+      index = 5;
+      for (var i = data[0]; i < data.length - data[0]; i++) {
+        var div = document.createElement("div");
+        div.setAttribute('class', 'card col-4');
+        let url = data[i + 1][5];
+        div.addEventListener('click', function() {
+          window.open(url, '_blank');
+        });
+        var img = document.createElement("img");
+        img.setAttribute('class', 'card-img-top');
+        img.setAttribute('src', data[i + 1][4]);
+        var div2 = document.createElement("div");
+        div2.setAttribute('class', 'card-body');
+        var h2 = document.createElement("h2");
+        h2.setAttribute('class', 'card-title');
+        var h5 = document.createElement("h5");
+        h5.setAttribute('class', 'card-subtitle mb-3');
+        var h6 = document.createElement("h6");
+        h6.setAttribute('class', 'card-subtitle mb-2 text-muted');
+        var h52 = document.createElement("h5");
+        h52.setAttribute('class', 'card-text');
+
+        h2.innerHTML = data[i + 1][0];
+        h5.innerHTML = data[i + 1][1];
+        h6.innerHTML = data[i + 1][2];
+        h52.innerHTML = data[i + 1][3];
+
+        div2.appendChild(h2);
+        div2.appendChild(h5);
+        div2.appendChild(h6);
+        div2.appendChild(h52);
+        div.appendChild(img);
+        div.appendChild(div2);
+        document.getElementsByClassName('row justify-content-around')[index].appendChild(div);
+
+        if (counter == 2) {
+          index += 1;
+          counter = 0;
+        }
+        counter += 1;
+      }
+    });
+
     $("#/").click(function() {
         $.ajax({
             type : 'POST',
