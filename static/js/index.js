@@ -110,20 +110,31 @@ $(document).ready(function(){
     contentType: 'application/json;charset=UTF-8',
     data : JSON.stringify(info)
   }).done(function(data) {
-    preview = data[data.length - 1];
-    var upcoming = data;
-    const logos = document.getElementsByClassName("logo");
-    const teams = document.getElementsByClassName("team");
-    const days = document.getElementsByClassName("day");
-    const times = document.getElementsByClassName("time");
-
-    for (var i = 0; i < 6; i++) {
-      logos[i * 2].src = upcoming[i][4];
-      logos[i * 2 + 1].src = upcoming[i][6];
-      teams[i * 2].innerHTML = upcoming[i][3];
-      teams[i * 2 + 1].innerHTML = upcoming[i][5];      
-      days[i].innerHTML = upcoming[i][1];
-      times[i].innerHTML = upcoming[i][2];
+    if (data === "Season Over") {
+      var container = document.getElementsByClassName('container-fluid');
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+      var seasonOver = document.createElement("h1");
+      seasonOver.innerHTML = "Season Over";
+      seasonOver.setAttribute("class", "seasonOver")
+      container.appendChild(seasonOver);
+    } else {
+      preview = data[data.length - 1];
+      var upcoming = data;
+      const logos = document.getElementsByClassName("logo");
+      const teams = document.getElementsByClassName("team");
+      const days = document.getElementsByClassName("day");
+      const times = document.getElementsByClassName("time");
+  
+      for (var i = 0; i < 6; i++) {
+        logos[i * 2].src = upcoming[i][4];
+        logos[i * 2 + 1].src = upcoming[i][6];
+        teams[i * 2].innerHTML = upcoming[i][3];
+        teams[i * 2 + 1].innerHTML = upcoming[i][5];      
+        days[i].innerHTML = upcoming[i][1];
+        times[i].innerHTML = upcoming[i][2];
+      }
     }
   });
 

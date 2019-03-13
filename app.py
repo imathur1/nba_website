@@ -201,7 +201,12 @@ def changeDate(currentTime):
 
 def updateUpcoming(upcoming, currentTime, offset, a, b, c):
     overlap = False
+    count = 0
     while len(upcoming) < 6:
+        count += 1
+        if count >= 21:
+            upcoming = "Season Over"
+            break
         a, b, c = writeXML(int(a), int(b), int(c))
         deleteXML(int(a), int(b), int(c))
         tree = ET.parse("static/xml/upcoming_" + a + "_" + b + "_" + c + ".xml")
@@ -685,9 +690,12 @@ def update():
     upcoming = openStore(currentTime)
     a, b, c = openDate()
     upcoming = updateUpcoming(upcoming, currentTime, offset, a, b, c)
-    preview = getPreviewArticles(upcoming)
-    upcoming.append(preview)
-    return jsonify(upcoming)
+    if upcoming == "Season Over":
+        return jsonify(upcoming)
+    else:
+        preview = getPreviewArticles(upcoming)
+        upcoming.append(preview)
+        return jsonify(upcoming)
 
 @app.route("/updateAutocomplete", methods = ["POST"])
 def updateAutocomplete():

@@ -300,6 +300,12 @@ nav ul .nav-item .nav-link:hover {
     margin-bottom: 5%;
 }
 
+.seasonOver {
+    text-align: center;
+    font-size: 80px;
+    margin-top: 30vh;
+}
+
 .card {
     height: 300px;
     margin-bottom: 5%;
