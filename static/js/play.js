@@ -93,6 +93,7 @@ $(document).ready(function(){
             tables.removeChild(tables.firstChild);
           }
           var noData = document.createElement("h1");
+          noData.style.height = Number(screen.height * 0.45) + "px";
           noData.innerHTML = "NO DATA";
           noData.setAttribute("class", "noData")
           tables.appendChild(noData);

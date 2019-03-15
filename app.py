@@ -11,7 +11,8 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-cTime = ""
+gameID = ""
+cTime = 0
 name = ""
 modified = ""
 teams = {
@@ -257,7 +258,8 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
                     info.append(teams[elem.attrib["name"]][0])
             elif elem.tag == "{http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd}broadcasts":
                 if overlap == False:
-                    upcoming.append(info)
+                    if info not in upcoming:
+                        upcoming.append(info)
                 info = []
                 overlap = False
     changeStore(upcoming)
@@ -676,6 +678,29 @@ def getNews(date1, date2):
             data.append([title, by, time, content, image, url])
     return data
 
+def updateRecent(time):
+    userTime = getTime(time[1])
+    day = 0
+    recent = []
+    while len(recent) < 6:
+        d = str(date.fromtimestamp(userTime - 86400 * day)).replace("-", "")
+        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + d + "/scoreboard.json") as url:
+            data = json.loads(url.read().decode())
+            for i in data['games']:
+                if i['statusNum'] == 3:
+                    gameID = i['gameId']
+                    team1 = teamMapping[i['vTeam']['teamId']]
+                    logo1 = teams[team1][0]
+                    record1 = "(" + i['vTeam']['win'] + " - " + i['vTeam']['loss'] + ")"
+                    score1 = i['vTeam']['score']
+                    team2 = teamMapping[i['hTeam']['teamId']]
+                    logo2 = teams[team2][0]
+                    record2 = "(" + i['hTeam']['win'] + " - " + i['hTeam']['loss'] + ")"
+                    score2 = i['hTeam']['score']
+                    recent.append([team1, logo1, record1, score1, team2, logo2, record2, score2, gameID])
+        day += 1
+    return recent
+
 @app.route("/")
 def output():
     return render_template("/index.html")
@@ -702,8 +727,53 @@ def updateAutocomplete():
     players, javascript = getPlayers()
     return jsonify(javascript)
 
+@app.route('/gameID', methods = ["POST"])
+def game_id():
+    gameID = request.get_json()
+    return ''
+
+@app.route('/scores/<gameID>/')
+def gameInfo(gameID):
+    return render_template("gameInfo.html")
+
+@app.route('/recent', methods = ["POST"])
+def recent():
+    time = request.get_json()
+    recent = updateRecent(time)
+    return jsonify(recent)
+
+@app.route("/gameDate", methods = ["POST"])
+def gameDate():
+    date = request.get_json()
+    info = []
+    try:
+        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + date + "/scoreboard.json") as url:
+            data = json.loads(url.read().decode())
+            if data['numGames'] == 0:
+                info = "NO GAMES"
+            else:
+                for i in data['games']:
+                    if i['statusNum'] == 3:
+                        gameID = i['gameId']
+                        team1 = teamMapping[i['vTeam']['teamId']]
+                        logo1 = teams[team1][0]
+                        record1 = "(" + i['vTeam']['win'] + " - " + i['vTeam']['loss'] + ")"
+                        score1 = i['vTeam']['score']
+                        team2 = teamMapping[i['hTeam']['teamId']]
+                        logo2 = teams[team2][0]
+                        record2 = "(" + i['hTeam']['win'] + " - " + i['hTeam']['loss'] + ")"
+                        score2 = i['hTeam']['score']
+                        info.append([team1, logo1, record1, score1, team2, logo2, record2, score2, gameID])
+    except:
+        info = "NO GAMES"
+    if len(info) == 0:
+        info = "NO GAMES"
+    return jsonify(info)
+
 @app.route("/scores/")
 def scores():
+    # LIVE games
+    # random chance of coming news (via badges) live games and playoff bracket
     return render_template("/scores.html")
 
 @app.route("/results", methods = ["POST"])
@@ -717,8 +787,6 @@ def standings():
 
 @app.route("/updateNews", methods = ["POST"])
 def updateNews():
-    # news = getNews('h', 'w')
-    # return jsonify(news)
     d2 = str(date.fromtimestamp(cTime))
     d1 = str(date.fromtimestamp(cTime - 604800))
     news = getNews(d1, d2)

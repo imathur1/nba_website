@@ -27,9 +27,6 @@ body {
 .navbar-brand:hover {
     color: #fff;
 }
-.bottom {
-    text-align: right;
-}
 
 #links {
     width: 400px;
@@ -287,7 +284,6 @@ nav ul .nav-item .nav-link:hover {
 .time {
     font-size: 20px;
 }
-
 .top {
     margin-top: 5%;
     height: 50%;

@@ -6,6 +6,17 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+label {
+  font-size: 23px;
+}
+input[type="text"] {
+    font-size: 23px;
+}
+
+form {
+  margin-bottom: 5%;
+}
+
 .navbar-brand {
     margin-left: 5%;
     cursor: pointer;
@@ -13,6 +24,72 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+}
+#recent, #catalog {
+  margin-top: 2.5%;
+  font-size: 50px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 2.5%;
+  color: #000; 
+}
+
+.noGames {
+  text-align: center;
+  font-size: 80px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#catalog {
+  margin-top: -2.5%;
+}
+
+.team, .newTeam {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.score, .newScore {
+  font-size: 70px;
+}
+
+.record, .newRecord {
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+.higher {
+  height: 35%;
+}
+.top {
+  height: 40%;
+}
+.middle {
+  height: 15%;
+}
+.dash, .newDash {
+  font-size: 70px;
+}
+.card {
+  height: 300px;
+  margin-bottom: 5%;
+  transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.19), 0 9px 9px rgba(0, 0, 0, 0.23);
 }
 
 .navbar-brand:hover {
