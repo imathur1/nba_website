@@ -104,6 +104,10 @@ window.addEventListener('mouseup', function(e) {
 var playerNames = [];
 var preview = [];
 $(document).ready(function(){
+  var rand = Math.random();
+  if (rand <= (1 / 3)) {
+    $('#myModal2').modal('show');
+  }
   $.ajax({
     type : 'POST',
     url : "/update",
@@ -192,7 +196,7 @@ for (let i = 0; i < cards.length; i++) {
           if (p.innerHTML.charAt(0) === "-") {
             p.innerHTML = "- " + p.innerHTML.substr(2);
           }
-          p.setAttribute('class', 'bottom');
+          p.setAttribute('class', 'bottomO');
         }
         body.appendChild(p);
       }

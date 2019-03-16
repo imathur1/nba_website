@@ -319,46 +319,6 @@ $(document).ready(function(){
       });
       event.preventDefault();
     });
-    $("#/").click(function() {
-      $.ajax({
-          type : 'POST',
-          url : "/",
-          contentType: 'application/json;charset=UTF-8',
-          data : JSON.stringify("Sent")
-      });
-    });
-    $("#/#upcoming").click(function() {
-      $.ajax({
-          type : 'POST',
-          url : "/",
-          contentType: 'application/json;charset=UTF-8',
-          data : JSON.stringify("Sent")
-      });
-    });
-    $("#/standings").click(function() {
-      $.ajax({
-          type : 'POST',
-          url : "/",
-          contentType: 'application/json;charset=UTF-8',
-          data : JSON.stringify("Sent")
-      });
-    $("#/scores").click(function() {
-      $.ajax({
-          type : 'POST',
-          url : "/",
-          contentType: 'application/json;charset=UTF-8',
-          data : JSON.stringify("Sent")
-      });
-    });
-    $("#/news").click(function() {
-      $.ajax({
-          type : 'POST',
-          url : "/",
-          contentType: 'application/json;charset=UTF-8',
-          data : JSON.stringify("Sent")
-      });
-    });
-  });
 });
 
 const cards = document.getElementsByClassName('card');
