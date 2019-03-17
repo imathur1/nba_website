@@ -105,7 +105,7 @@ var playerNames = [];
 var preview = [];
 $(document).ready(function(){
   var rand = Math.random();
-  if (rand <= (1 / 3)) {
+  if (rand <= (1 / 10)) {
     $('#myModal2').modal('show');
   }
   $.ajax({

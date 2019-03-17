@@ -12,6 +12,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+people = dict()
 theDate = ""
 gameID = ""
 cTime = 0
@@ -313,6 +314,7 @@ def getStandings():
     return standings
 
 def getPlayers():
+    global people
     players = dict()
     javascript = []
     file = open("static/database/players.txt", "r")
@@ -350,6 +352,7 @@ def getPlayers():
                     file.write(str(players[i][1]) + "\n")
                 file.close()
             break
+    people = players
     return players, javascript
 
 def getStats(playerID, year):
@@ -701,7 +704,7 @@ def updateRecent(time):
                     logo2 = teams[team2][0]
                     record2 = "(" + i['hTeam']['win'] + " - " + i['hTeam']['loss'] + ")"
                     score2 = i['hTeam']['score']
-                    recent.append([team1, logo1, record1, score1, team2, logo2, record2, score2, gameID])
+                    recent.append([team1, logo1, record1, score1, team2, logo2, record2, score2, gameID, d])
         day += 1
     return recent
 
@@ -734,174 +737,203 @@ def updateAutocomplete():
 @app.route('/gameID', methods = ["POST"])
 def game_id():
     global gameID
-    gameID = request.get_json()
+    global theDate
+    inputs = request.get_json()
+    if type(inputs) == list:
+        gameID = inputs[0]
+        theDate = inputs[1]
+    else:
+        gameID = inputs
+    if type(gameID) == list:
+        gameID = gameID[0]
     return ''
 
 @app.route('/gameUpdate', methods = ["POST"])
 def gameUpdate():
+    recap = []
+    try:
+        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + theDate + "/" + gameID + "_recap_article.json") as url:
+            data = json.loads(url.read().decode())
+            title = data['title']
+            copyright = data['copyright']
+            info = [title, copyright]
+            for i in data['paragraphs']:
+                recap.append(i['paragraph'])
+    except urllib.error.HTTPError:
+        recap == ["Error"]
+
     info = []
-    with urllib.request.urlopen("http://data.nba.net/prod/v1/" + theDate + "/" + gameID + "_boxscore.json") as url:
-        data = json.loads(url.read().decode())
+    try:
+        with urllib.request.urlopen("http://data.nba.net/prod/v1/" + theDate + "/" + gameID + "_boxscore.json") as url:
+            data = json.loads(url.read().decode())
 
-        both = []
-        arena = data['basicGameData']['arena']['name']
-        city = data['basicGameData']['arena']['city']
-        abbrv = data['basicGameData']['arena']['stateAbbr']
-        startTime = data['basicGameData']['startTimeEastern']
-        startDate = data['basicGameData']['startDateEastern']
+            both = []
+            arena = data['basicGameData']['arena']['name']
+            city = data['basicGameData']['arena']['city']
+            abbrv = data['basicGameData']['arena']['stateAbbr']
+            startTime = data['basicGameData']['startTimeEastern']
+            startDate = data['basicGameData']['startDateEastern']
 
-        days = {0: "Monday, ", 1: "Tuesday, ", 2: "Wednesday, ", 3: "Thursday, ", 
-        4: "Friday, ", 5: "Saturday, ", 6: "Sunday, "}
-        months = {1:"January ", 2:"February ", 3:"March ", 4:"April ", 5:"May ",
-        6:"June", 7: "July ", 8: "August ", 9: "September ", 10: "October ",
-        11:"November ", 12:"December "}
-        year = int(startDate[0:4])
-        month = int(startDate[4:6])
-        day = int(startDate[6:8])
-        when = days[calendar.weekday(year, month, day)] + months[month] + str(day) + ", " + str(year) + " • " + startTime
-        where = arena + " • " + city + ", " + abbrv
-        text = data['basicGameData']['nugget']['text']
-        attendance = data['basicGameData']['attendance']
-        duration = text = data['basicGameData']['gameDuration']['hours'] + " Hours " + data['basicGameData']['gameDuration']['minutes'] + " Minutes"
-        
-        t1 = []
-        t2 = []
-        team1 = teamMapping[data['basicGameData']['vTeam']['teamId']]
-        triCode1 = data['basicGameData']['vTeam']['triCode']
-        record1 = "(" + data['basicGameData']['vTeam']['win'] + "-" + data['basicGameData']['vTeam']['loss'] + ")"
-        score1 = data['basicGameData']['vTeam']['score']
-        quarters1 = []
-        for i in data['basicGameData']['vTeam']['linescore']:
-            quarters1.append(i['score'])
+            days = {0: "Monday, ", 1: "Tuesday, ", 2: "Wednesday, ", 3: "Thursday, ", 
+            4: "Friday, ", 5: "Saturday, ", 6: "Sunday, "}
+            months = {1:"January ", 2:"February ", 3:"March ", 4:"April ", 5:"May ",
+            6:"June", 7: "July ", 8: "August ", 9: "September ", 10: "October ",
+            11:"November ", 12:"December "}
+            year = int(startDate[0:4])
+            month = int(startDate[4:6])
+            day = int(startDate[6:8])
+            when = days[calendar.weekday(year, month, day)] + months[month] + str(day) + ", " + str(year) + " • " + startTime
+            where = arena + " • " + city + ", " + abbrv
+            text = data['basicGameData']['nugget']['text']
+            attendance = data['basicGameData']['attendance']
+            duration = int(data['basicGameData']['gameDuration']['hours']) * 60 + int(data['basicGameData']['gameDuration']['minutes'])
+            
+            t1 = []
+            t2 = []
+            team1 = teamMapping[data['basicGameData']['vTeam']['teamId']]
+            logo1 = teams[team1][0]
+            miniLogo1 = teams[team1][1]
+            triCode1 = data['basicGameData']['vTeam']['triCode']
+            record1 = "(" + data['basicGameData']['vTeam']['win'] + " - " + data['basicGameData']['vTeam']['loss'] + ")"
+            score1 = data['basicGameData']['vTeam']['score']
+            quarters1 = []
+            for i in data['basicGameData']['vTeam']['linescore']:
+                quarters1.append(i['score'])
 
-        team2 = teamMapping[data['basicGameData']['hTeam']['teamId']]
-        triCode2 = data['basicGameData']['hTeam']['triCode']
-        record2 = "(" + data['basicGameData']['hTeam']['win'] + "-" + data['basicGameData']['hTeam']['loss'] + ")"
-        score2 = data['basicGameData']['hTeam']['score']
-        quarters2 = []
-        for i in data['basicGameData']['hTeam']['linescore']:
-            quarters2.append(i['score'])
+            team2 = teamMapping[data['basicGameData']['hTeam']['teamId']]
+            logo2 = teams[team2][0]
+            miniLogo2 = teams[team2][1]
+            triCode2 = data['basicGameData']['hTeam']['triCode']
+            record2 = "(" + data['basicGameData']['hTeam']['win'] + " - " + data['basicGameData']['hTeam']['loss'] + ")"
+            score2 = data['basicGameData']['hTeam']['score']
+            quarters2 = []
+            for i in data['basicGameData']['hTeam']['linescore']:
+                quarters2.append(i['score'])
 
-        timesTied = data['stats']['timesTied']
-        leadChanges = data['stats']['leadChanges']
-        both = [when, where, text, attendance, duration, timesTied, leadChanges]
+            timesTied = data['stats']['timesTied']
+            leadChanges = data['stats']['leadChanges']
+            both = [when, where, text, attendance, duration, timesTied, leadChanges]
 
-        fastBreakPoints1 = data['stats']['vTeam']['fastBreakPoints']
-        pointsInPaint1 = data['stats']['vTeam']['pointsInPaint']
-        biggestLead1 = data['stats']['vTeam']['biggestLead']
-        secondChancePoints1 = data['stats']['vTeam']['secondChancePoints']
-        pointsOffTurnovers1 = data['stats']['vTeam']['pointsOffTurnovers']
-        longestRun1 = data['stats']['vTeam']['longestRun']
-        totalPoints1 = data['stats']['vTeam']['totals']['points']
-        fieldGoalsMade1 = data['stats']['vTeam']['totals']['fgm']
-        fieldGoalsAttempted1 = data['stats']['vTeam']['totals']['fga']
-        fieldGoalPercentage1 = data['stats']['vTeam']['totals']['fgp']
-        freeThrowsMade1 = data['stats']['vTeam']['totals']['ftm']
-        freeThrowsAttempted1 = data['stats']['vTeam']['totals']['fta']
-        freeThrowPercentage1 = data['stats']['vTeam']['totals']['ftp']
-        threePointsMade1 = data['stats']['vTeam']['totals']['tpm']
-        threePointsAttempted1 = data['stats']['vTeam']['totals']['tpa']
-        threePointPercentage1 = data['stats']['vTeam']['totals']['tpp']
-        offensiveRebounds1 = data['stats']['vTeam']['totals']['offReb']
-        defensiveRebounds1 = data['stats']['vTeam']['totals']['defReb']
-        totalRebounds1 = data['stats']['vTeam']['totals']['totReb']
-        assists1 = data['stats']['vTeam']['totals']['assists']
-        steals1 = data['stats']['vTeam']['totals']['steals']
-        turnovers1 = data['stats']['vTeam']['totals']['turnovers']
-        blocks1 = data['stats']['vTeam']['totals']['blocks']
-        personalFouls1 = data['stats']['vTeam']['totals']['pFouls']
-        pointsLeader1 = data['stats']['vTeam']['leaders']['points']['value']
-        assistsLeader1 = data['stats']['vTeam']['leaders']['assists']['value']
-        reboundsLeader1 = data['stats']['vTeam']['leaders']['rebounds']['value']
-        t1 = [team1, triCode1, record1, score1, quarters1, fastBreakPoints1, pointsInPaint1,
-        biggestLead1, secondChancePoints1, pointsOffTurnovers1, longestRun1, totalPoints1,
-        fieldGoalsMade1, fieldGoalsAttempted1, fieldGoalPercentage1, freeThrowsMade1,
-        freeThrowsAttempted1, freeThrowPercentage1, threePointsMade1, threePointsAttempted1,
-        threePointPercentage1, offensiveRebounds1, defensiveRebounds1, totalRebounds1,
-        assists1, steals1, turnovers1, blocks1, personalFouls1, pointsLeader1, assistsLeader1,
-        reboundsLeader1]
+            fastBreakPoints1 = data['stats']['vTeam']['fastBreakPoints']
+            pointsInPaint1 = data['stats']['vTeam']['pointsInPaint']
+            biggestLead1 = data['stats']['vTeam']['biggestLead']
+            secondChancePoints1 = data['stats']['vTeam']['secondChancePoints']
+            pointsOffTurnovers1 = data['stats']['vTeam']['pointsOffTurnovers']
+            longestRun1 = data['stats']['vTeam']['longestRun']
+            totalPoints1 = data['stats']['vTeam']['totals']['points']
+            fieldGoalsMade1 = data['stats']['vTeam']['totals']['fgm']
+            fieldGoalsAttempted1 = data['stats']['vTeam']['totals']['fga']
+            fieldGoalPercentage1 = data['stats']['vTeam']['totals']['fgp']
+            freeThrowsMade1 = data['stats']['vTeam']['totals']['ftm']
+            freeThrowsAttempted1 = data['stats']['vTeam']['totals']['fta']
+            freeThrowPercentage1 = data['stats']['vTeam']['totals']['ftp']
+            threePointsMade1 = data['stats']['vTeam']['totals']['tpm']
+            threePointsAttempted1 = data['stats']['vTeam']['totals']['tpa']
+            threePointPercentage1 = data['stats']['vTeam']['totals']['tpp']
+            offensiveRebounds1 = data['stats']['vTeam']['totals']['offReb']
+            defensiveRebounds1 = data['stats']['vTeam']['totals']['defReb']
+            totalRebounds1 = data['stats']['vTeam']['totals']['totReb']
+            assists1 = data['stats']['vTeam']['totals']['assists']
+            steals1 = data['stats']['vTeam']['totals']['steals']
+            turnovers1 = data['stats']['vTeam']['totals']['turnovers']
+            blocks1 = data['stats']['vTeam']['totals']['blocks']
+            personalFouls1 = data['stats']['vTeam']['totals']['pFouls']
+            pointsLeader1 = data['stats']['vTeam']['leaders']['points']['value']
+            assistsLeader1 = data['stats']['vTeam']['leaders']['assists']['value']
+            reboundsLeader1 = data['stats']['vTeam']['leaders']['rebounds']['value']
+            t1 = [team1, logo1, miniLogo1, triCode1, record1, score1, quarters1, fastBreakPoints1, pointsInPaint1,
+            biggestLead1, secondChancePoints1, pointsOffTurnovers1, longestRun1, totalPoints1,
+            fieldGoalsMade1, fieldGoalsAttempted1, fieldGoalPercentage1, freeThrowsMade1,
+            freeThrowsAttempted1, freeThrowPercentage1, threePointsMade1, threePointsAttempted1,
+            threePointPercentage1, offensiveRebounds1, defensiveRebounds1, totalRebounds1,
+            assists1, steals1, turnovers1, blocks1, personalFouls1, pointsLeader1, assistsLeader1,
+            reboundsLeader1]
 
-        fastBreakPoints2 = data['stats']['hTeam']['fastBreakPoints']
-        pointsInPaint2 = data['stats']['hTeam']['pointsInPaint']
-        biggestLead2 = data['stats']['hTeam']['biggestLead']
-        secondChancePoints2 = data['stats']['hTeam']['secondChancePoints']
-        pointsOffTurnovers2 = data['stats']['hTeam']['pointsOffTurnovers']
-        longestRun2 = data['stats']['hTeam']['longestRun']
-        totalPoints2 = data['stats']['hTeam']['totals']['points']
-        fieldGoalsMade2 = data['stats']['hTeam']['totals']['fgm']
-        fieldGoalsAttempted2 = data['stats']['hTeam']['totals']['fga']
-        fieldGoalPercentage2 = data['stats']['hTeam']['totals']['fgp']
-        freeThrowsMade2 = data['stats']['hTeam']['totals']['ftm']
-        freeThrowsAttempted2 = data['stats']['hTeam']['totals']['fta']
-        freeThrowPercentage2 = data['stats']['hTeam']['totals']['ftp']
-        threePointsMade2 = data['stats']['hTeam']['totals']['tpm']
-        threePointsAttempted2 = data['stats']['hTeam']['totals']['tpa']
-        threePointPercentage2 = data['stats']['hTeam']['totals']['tpp']
-        offensiveRebounds2 = data['stats']['hTeam']['totals']['offReb']
-        defensiveRebounds2 = data['stats']['hTeam']['totals']['defReb']
-        totalRebounds2 = data['stats']['hTeam']['totals']['totReb']
-        assists2 = data['stats']['hTeam']['totals']['assists']
-        steals2 = data['stats']['hTeam']['totals']['steals']
-        turnovers2 = data['stats']['hTeam']['totals']['turnovers']
-        blocks2 = data['stats']['hTeam']['totals']['blocks']
-        personalFouls2 = data['stats']['hTeam']['totals']['pFouls']
-        pointsLeader2 = data['stats']['hTeam']['leaders']['points']['value']
-        assistsLeader2 = data['stats']['hTeam']['leaders']['assists']['value']
-        reboundsLeader2 = data['stats']['hTeam']['leaders']['rebounds']['value']
-        t2 = [team2, triCode2, record2, score2, quarters2, fastBreakPoints2, pointsInPaint2,
-        biggestLead2, secondChancePoints2, pointsOffTurnovers2, longestRun2, totalPoints2,
-        fieldGoalsMade2, fieldGoalsAttempted2, fieldGoalPercentage2, freeThrowsMade2,
-        freeThrowsAttempted2, freeThrowPercentage2, threePointsMade2, threePointsAttempted2,
-        threePointPercentage2, offensiveRebounds2, defensiveRebounds2, totalRebounds2,
-        assists2, steals2, turnovers2, blocks2, personalFouls2, pointsLeader2, assistsLeader2,
-        reboundsLeader2]
+            fastBreakPoints2 = data['stats']['hTeam']['fastBreakPoints']
+            pointsInPaint2 = data['stats']['hTeam']['pointsInPaint']
+            biggestLead2 = data['stats']['hTeam']['biggestLead']
+            secondChancePoints2 = data['stats']['hTeam']['secondChancePoints']
+            pointsOffTurnovers2 = data['stats']['hTeam']['pointsOffTurnovers']
+            longestRun2 = data['stats']['hTeam']['longestRun']
+            totalPoints2 = data['stats']['hTeam']['totals']['points']
+            fieldGoalsMade2 = data['stats']['hTeam']['totals']['fgm']
+            fieldGoalsAttempted2 = data['stats']['hTeam']['totals']['fga']
+            fieldGoalPercentage2 = data['stats']['hTeam']['totals']['fgp']
+            freeThrowsMade2 = data['stats']['hTeam']['totals']['ftm']
+            freeThrowsAttempted2 = data['stats']['hTeam']['totals']['fta']
+            freeThrowPercentage2 = data['stats']['hTeam']['totals']['ftp']
+            threePointsMade2 = data['stats']['hTeam']['totals']['tpm']
+            threePointsAttempted2 = data['stats']['hTeam']['totals']['tpa']
+            threePointPercentage2 = data['stats']['hTeam']['totals']['tpp']
+            offensiveRebounds2 = data['stats']['hTeam']['totals']['offReb']
+            defensiveRebounds2 = data['stats']['hTeam']['totals']['defReb']
+            totalRebounds2 = data['stats']['hTeam']['totals']['totReb']
+            assists2 = data['stats']['hTeam']['totals']['assists']
+            steals2 = data['stats']['hTeam']['totals']['steals']
+            turnovers2 = data['stats']['hTeam']['totals']['turnovers']
+            blocks2 = data['stats']['hTeam']['totals']['blocks']
+            personalFouls2 = data['stats']['hTeam']['totals']['pFouls']
+            pointsLeader2 = data['stats']['hTeam']['leaders']['points']['value']
+            assistsLeader2 = data['stats']['hTeam']['leaders']['assists']['value']
+            reboundsLeader2 = data['stats']['hTeam']['leaders']['rebounds']['value']
+            t2 = [team2, logo2, miniLogo2, triCode2, record2, score2, quarters2, fastBreakPoints2, pointsInPaint2,
+            biggestLead2, secondChancePoints2, pointsOffTurnovers2, longestRun2, totalPoints2,
+            fieldGoalsMade2, fieldGoalsAttempted2, fieldGoalPercentage2, freeThrowsMade2,
+            freeThrowsAttempted2, freeThrowPercentage2, threePointsMade2, threePointsAttempted2,
+            threePointPercentage2, offensiveRebounds2, defensiveRebounds2, totalRebounds2,
+            assists2, steals2, turnovers2, blocks2, personalFouls2, pointsLeader2, assistsLeader2,
+            reboundsLeader2]
 
-        players1 = []
-        players2 = []
-        for i in data['stats']['activePlayers']:
-            playerName = i['personId']
-            playerPoints = i['points']
-            playerPosition = i['pos']
-            playerMinutes = i['min']
-            playerFieldGoalsMade = i['fgm']
-            playerFieldGoalsAttempted = i['fga']
-            playerFieldGoalPercentage = i['fgp']
-            playerFreeThrowsMade = i['ftm']
-            playerFreeThrowsAttempted = i['fta']
-            playerFreeThrowPercentage = i['ftp']
-            playerThreePointsMade = i['tpm']
-            playerThreePointsAttempted = i['tpa']
-            playerThreePointPercentage = i['tpp']
-            playerOffensiveRebounds = i['offReb']
-            playerDefensiveRebounds = i['defReb']
-            playerTotalRebounds = i['totReb']
-            playerAssists = i['assists']
-            playerSteals = i['steals']
-            playerTurnovers = i['turnovers']
-            playerBlocks = i['blocks']
-            playerPersonalFouls = i['pFouls']
+            players1 = []
+            players2 = []
+            for i in data['stats']['activePlayers']:
+                playerName = ""
+                for j in people:
+                    if people[j][0] == i['personId']:
+                        playerName = j
+                playerPoints = i['points']
+                playerPosition = i['pos']
+                playerMinutes = i['min']
+                playerFieldGoalsMade = i['fgm']
+                playerFieldGoalsAttempted = i['fga']
+                playerFieldGoalPercentage = i['fgp']
+                playerFreeThrowsMade = i['ftm']
+                playerFreeThrowsAttempted = i['fta']
+                playerFreeThrowPercentage = i['ftp']
+                playerThreePointsMade = i['tpm']
+                playerThreePointsAttempted = i['tpa']
+                playerThreePointPercentage = i['tpp']
+                playerOffensiveRebounds = i['offReb']
+                playerDefensiveRebounds = i['defReb']
+                playerTotalRebounds = i['totReb']
+                playerAssists = i['assists']
+                playerSteals = i['steals']
+                playerTurnovers = i['turnovers']
+                playerBlocks = i['blocks']
+                playerPersonalFouls = i['pFouls']
 
-            if i['teamId'] == data['basicGameData']['vTeam']['teamId']:
-                players1.append([playerName, playerPoints, playerPosition, playerMinutes, 
-                playerFieldGoalsMade, playerFieldGoalsAttempted, playerFieldGoalPercentage,
-                playerFreeThrowsMade, playerFreeThrowsAttempted, playerFreeThrowPercentage,
-                playerThreePointsMade, playerThreePointsAttempted, playerThreePointPercentage,
-                playerOffensiveRebounds, playerDefensiveRebounds, playerTotalRebounds,
-                playerAssists, playerSteals, playerTurnovers, playerBlocks, playerPersonalFouls])
-            else:
-                players2.append([playerName, playerPoints, playerPosition, playerMinutes, 
-                playerFieldGoalsMade, playerFieldGoalsAttempted, playerFieldGoalPercentage,
-                playerFreeThrowsMade, playerFreeThrowsAttempted, playerFreeThrowPercentage,
-                playerThreePointsMade, playerThreePointsAttempted, playerThreePointPercentage,
-                playerOffensiveRebounds, playerDefensiveRebounds, playerTotalRebounds,
-                playerAssists, playerSteals, playerTurnovers, playerBlocks, playerPersonalFouls])
-        
-        t1.append(players1)
-        t2.append(players2)
-        info = [both, t1, t2]
+                if i['teamId'] == data['basicGameData']['vTeam']['teamId']:
+                    players1.append([playerName, playerPoints, playerPosition, playerMinutes, 
+                    playerFieldGoalsMade, playerFieldGoalsAttempted, playerFieldGoalPercentage,
+                    playerFreeThrowsMade, playerFreeThrowsAttempted, playerFreeThrowPercentage,
+                    playerThreePointsMade, playerThreePointsAttempted, playerThreePointPercentage,
+                    playerOffensiveRebounds, playerDefensiveRebounds, playerTotalRebounds,
+                    playerAssists, playerSteals, playerTurnovers, playerBlocks, playerPersonalFouls])
+                else:
+                    players2.append([playerName, playerPoints, playerPosition, playerMinutes, 
+                    playerFieldGoalsMade, playerFieldGoalsAttempted, playerFieldGoalPercentage,
+                    playerFreeThrowsMade, playerFreeThrowsAttempted, playerFreeThrowPercentage,
+                    playerThreePointsMade, playerThreePointsAttempted, playerThreePointPercentage,
+                    playerOffensiveRebounds, playerDefensiveRebounds, playerTotalRebounds,
+                    playerAssists, playerSteals, playerTurnovers, playerBlocks, playerPersonalFouls])
+            
+            t1.append(players1)
+            t2.append(players2)
+            info = [both, t1, t2, recap]
 
+    except urllib.error.HTTPError:
+        info = "NO DATA"
     return jsonify(info)
-
 
 @app.route('/scores/<gameID>/')
 def gameInfo(gameID):
@@ -915,7 +947,9 @@ def recent():
 
 @app.route("/gameDate", methods = ["POST"])
 def gameDate():
+    global theDate
     date = request.get_json()
+    theDate = date
     info = []
     try:
         with urllib.request.urlopen("http://data.nba.net/prod/v1/" + date + "/scoreboard.json") as url:

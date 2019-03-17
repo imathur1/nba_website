@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>NBA Stats | CHANGE</title>
+        <title>NBA Stats | Game</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" >
@@ -42,6 +42,232 @@
                 </form>
             </div>
         </nav>
+
+        <div class="container">
+
+            <div class="col-12 card rounded">
+                <div class="row">
+                    <div class="col-3 align-self-center">
+                        <img class="img-fluid mx-auto d-block logo" src="" height="60%" width="60%">
+                    </div>
+                    <div class="col-2">
+                        <p class="score text-left"></p>
+                    </div>
+                    <div class="col-2">
+                        <p class="dash text-center">-</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="score text-right"></p>
+                    </div>
+                    <div class="col-3 align-self-center">
+                        <img class="img-fluid mx-auto d-block logo" src=""  height="60%" width="60%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-center">
+                        <p class="name"></p>
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-3 text-center">
+                        <p class="name"></p>
+                    </div>
+                    <div class="col-3 text-center">
+                        <p class="record text-muted"></p>
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-3 text-center">
+                        <p class="record text-muted"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p id="mar" class="event"></p>
+                    </div>
+                    <div class="col-12 text-center">
+                        <p class="event"></p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="head">SUMMARY</p>
+            <p class="quote text-center"></p>
+            <div class="row text-center sum">
+                <div class="col-3">
+                    <p class="big"></p>
+                    <p class="small">ATTENDED</p>
+                </div>
+                <div class="col-3">
+                    <p class="big"></p>
+                    <p class="small">MINUTES</p>
+                </div>
+                <div class="col-3">
+                    <p class="big"></p>
+                    <p class="small">TIMES TIED</p>
+                </div>
+                <div class="col-3">
+                    <p class="big"></p>
+                    <p class="small">LEAD CHANGES</p>
+                </div>
+            </div>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr id="quarterHead">
+                        <th scope="col"></th>
+                        <th class="text-left" scope="col">Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="t1">
+                        <td><img class="miniLogo" src="" scope="row"></td>
+                        <th class="left align-middle"></th>
+                    </tr>
+                    <tr id="t2">
+                        <td><img class="miniLogo" src="" scope="row"></td>
+                        <th class="left align-middle"></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="head">TEAM STATS</p>
+            <div class="row tog">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="flip btn btn-lg">
+                            <img class="img1" src="">
+                        </button>
+                        <button type="button" class="flip btn btn-lg">
+                            <img class="img1" src="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center cir">
+                <div class="col-4">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#007bff" stroke-width="12"
+                            stroke-dasharray="339.292" stroke-dashoffset="135.717" />
+                        <text x="50%" y="45%" text-anchor="middle" class="inner"></text>
+                        <text x="50%" y="65%" text-anchor="middle" class="inner"></text>
+                    </svg>
+                    </div>
+                <div class="col-4">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#007bff" stroke-width="12"
+                            stroke-dasharray="339.292" stroke-dashoffset="135.717" />
+                        <text x="50%" y="45%" text-anchor="middle" class="inner"></text>
+                        <text x="50%" y="65%" text-anchor="middle" class="inner"></text>
+                    </svg>
+                </div>
+                <div class="col-4">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#007bff" stroke-width="12"
+                            stroke-dasharray="339.292" stroke-dashoffset="135.717" />
+                        <text x="50%" y="45%" text-anchor="middle" class="inner"></text>
+                        <text x="50%" y="65%" text-anchor="middle" class="inner"></text>
+                    </svg>
+                </div>
+            </div>
+            <div class="row text-center sub">
+                <div class="col-4">
+                    <p> Field Goal %</p>
+                </div>
+                <div class="col-4">
+                    <p> Free Throw %</p>
+                </div>
+                <div class="col-4">
+                    <p> Three Point %</p>
+                </div>
+            </div>
+
+            <table class="table table-hover">
+                <caption>
+                    <div class="row cap">
+                        <div class="col text-center">P - Position</div>
+                        <div class="col text-center">MIN - Minutes</div>
+                        <div class="col text-center">PTS - Points</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">FGM - Field Goals Made</div>
+                        <div class="col text-center">FGA- Field Goals Attempted</div>
+                        <div class="col text-center">FGP - Field Goal Percentage</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">FTM - Free Throws Made</div>
+                        <div class="col text-center">FTA - Free Throws Attempted</div>
+                        <div class="col text-center">FTP - Free Throw Percentage</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">TPM - 3-Pointers Made</div>
+                        <div class="col text-center">TPA - 3-Pointers Attempted</div>
+                        <div class="col text-center">TPP - 3-Point Percentage</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">OREB - Offensive Rebounds</div>
+                        <div class="col text-center">DREB - Defensive Rebunds</div>
+                        <div class="col text-center">REB - Rebounds</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">AST - Assists</div>
+                        <div class="col text-center">STL - Steals</div>
+                        <div class="col text-center">TOV - Turnovers</div>
+                    </div>
+                    <div class="row cap">
+                        <div class="col text-center">BLK - Blocks</div>
+                        <div class="col text-center">PF - Personal Fouls</div>
+                    </div>
+                </caption>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">P</th>
+                        <th class="text-left" scope="col">Player</th>
+                        <th scope="col">MIN</th>
+                        <th scope="col">PTS</th>
+                        <th scope="col">FGM</th>
+                        <th scope="col">FGA</th>
+                        <th scope="col">FGP</th>
+                        <th scope="col">FTM</th>
+                        <th scope="col">FTA</th>
+                        <th scope="col">FTP</th>
+                        <th scope="col">TPM</th>
+                        <th scope="col">TPA</th>
+                        <th scope="col">TPP</th>
+                        <th scope="col">OREB</th>
+                        <th scope="col">DREB</th>
+                        <th scope="col">REB</th>
+                        <th scope="col">AST</th>
+                        <th scope="col">STL</th>
+                        <th scope="col">TOV</th>
+                        <th scope="col">BLK</th>
+                        <th scope="col">PF</th>
+                    </tr>
+                </thead>
+                <tbody id="playersTable">
+                </tbody>
+            </table>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Game Recap</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <a role="button" href="/news" class="btn btn-primary">View More Articles</a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 		<footer class="footer-distributed">
 			<div class="footer-right">

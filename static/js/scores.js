@@ -26,6 +26,7 @@ if (Number(minutes) < 10) {
 var date = year + "-" + month + "-" + day + "T" + hours + ":" + minutes + ":00+00:00";
 var info = [Number(offset), date];
 
+var correctDates = [];
 var links = [];
 var other = [];
 var playerNames = [];
@@ -130,10 +131,11 @@ $(document).ready(function(){
         scores[i * 2].innerHTML = data[i][3];
         scores[i * 2 + 1].innerHTML = data[i][7];
         links.push(data[i][8]);
+        correctDates.push(data[i][data[i].length - 1]);
         if (Number(data[i][3]) > data[i][7]) {
-          scores[i * 2].style.color = "#FF0043";
+          scores[i * 2].style.color = "#007bff";
         } else if (Number(data[i][3]) < data[i][7]) {
-          scores[i * 2 + 1].style.color = "#FF0043";
+          scores[i * 2 + 1].style.color = "#007bff";
         }
       }
     });
@@ -297,9 +299,9 @@ $(document).ready(function(){
             scores[i * 2].innerHTML = data[i][3];
             scores[i * 2 + 1].innerHTML = data[i][7];
             other.push(data[i][8]);
-            if (Number(data[i][3]) > data[i][7]) {
+            if (Number(data[i][3]) > Number(data[i][7])) {
               scores[i * 2].style.color = "#FF0043";
-            } else if (Number(data[i][3]) < data[i][7]) {
+            } else if (Number(data[i][3]) < Number(data[i][7])) {
               scores[i * 2 + 1].style.color = "#FF0043";
             }
           }
@@ -324,11 +326,12 @@ $(document).ready(function(){
 const cards = document.getElementsByClassName('card');
 for (let i = 0; i < cards.length; i++) {
   cards[i].onclick = function() {
+  
     $.ajax({
         type : 'POST',
         url : "/gameID",
         contentType: 'application/json;charset=UTF-8',
-        data : JSON.stringify(links[i])
+        data : JSON.stringify([links[i], correctDates[i]])
     });
     window.location = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + "/scores/" + links[i] + "/";
   }

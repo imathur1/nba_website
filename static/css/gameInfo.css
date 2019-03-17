@@ -6,6 +6,125 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+.modal-header .close {
+  font-size: 40px;
+}
+.modal-title {
+  font-size: 30px;
+}
+.modal-body {
+  font-size: 20px;
+}
+.noData {
+  text-align: center;
+  font-size: 80px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+table {
+  font-size: 18px;
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.score {
+  font-size: 70px;
+  margin-top: 5vh;
+}
+.name {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.record {
+  font-size: 18px;
+  margin-top: 0;
+}
+.dash {
+  font-size: 70px;
+  margin-top: 5vh;
+}
+.event {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#mar {
+  margin-bottom: 0;
+}
+.container {
+  margin-top: 2.5%;
+  max-width: 80%;
+}
+.bottomO {
+  text-align: right;
+}
+.quote {
+  margin-top: -1%;
+  font-size: 40px;
+}
+.cap {
+  margin-bottom: 1%;
+}
+
+.inner, .sub {
+  font-size: 20px;
+}
+.sub {
+  margin-top: 1%;
+  margin-bottom: 2.5%;
+}
+.cir {
+  margin-top: 4%;
+}
+
+.head {
+  margin-top: 2.5%;
+  font-size: 50px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 2.5%;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.tog {
+  margin-bottom: 2.5%;
+}
+.big {
+  font-size: 80px;
+  display: inline-block;
+}
+.small {
+  font-size: 18px;
+  display: inline-block;
+}
+.sum {
+  margin-bottom: 2.5%;
+}
+.card {
+  transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.19), 0 9px 9px rgba(0, 0, 0, 0.23);
+}
+
 .navbar-brand {
     margin-left: 5%;
     cursor: pointer;
@@ -34,7 +153,7 @@ nav ul .nav-item .nav-link:before {
     transition: all .5s;
 }
 nav ul .nav-item .nav-link:hover {
-    color: #000;
+    color: #007bff;
 }
 .stroke ul .nav-item .nav-link {
   position: relative;
@@ -48,7 +167,7 @@ nav ul .nav-item .nav-link:hover {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #000;
+  background: #007bff;
   height: 1px;
 }
 .stroke ul .nav-item .nav-link:hover:after {

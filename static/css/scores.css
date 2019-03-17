@@ -111,7 +111,7 @@ nav ul .nav-item .nav-link:before {
     transition: all .5s;
 }
 nav ul .nav-item .nav-link:hover {
-    color: #6c757d;
+    color: #007bff;
 }
 .stroke ul .nav-item .nav-link {
   position: relative;
@@ -125,7 +125,7 @@ nav ul .nav-item .nav-link:hover {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #6c757d;
+  background: #007bff;
   height: 1px;
 }
 .stroke ul .nav-item .nav-link:hover:after {
