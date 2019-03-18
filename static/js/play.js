@@ -165,6 +165,9 @@ $(document).ready(function(){
             tr.appendChild(td6);
             tr.appendChild(td7);
             tr.appendChild(td8);
+            if (i == data.length - 3) {
+              tr.style.backgroundColor = "#d6d8db";
+            }
             hover[0].appendChild(tr);
             total.appendChild(hover[0]);
           }
@@ -224,6 +227,9 @@ $(document).ready(function(){
             tr.appendChild(td6);
             tr.appendChild(td7);
             tr.appendChild(td8);
+            if (i == data.length - 3) {
+              tr.style.backgroundColor = "#d6d8db";
+            }
             hover[1].appendChild(tr);
             average.appendChild(hover[1]);
           }
@@ -284,6 +290,9 @@ $(document).ready(function(){
             tr.appendChild(td8);
             tr.appendChild(td9);
             tr.appendChild(td10);
+            if (i == data.length - 3) {
+              tr.style.backgroundColor = "#d6d8db";
+            }
             hover[2].appendChild(tr);
             scoring.appendChild(hover[2]);
           }
@@ -328,6 +337,9 @@ $(document).ready(function(){
             tr.appendChild(td4);
             tr.appendChild(td5);
             tr.appendChild(td6);
+            if (i == data.length - 3) {
+              tr.style.backgroundColor = "#d6d8db";
+            }
             hover[3].appendChild(tr);
             games.appendChild(hover[3]);
           }

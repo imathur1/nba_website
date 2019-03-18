@@ -174,32 +174,39 @@ function autocomplete(inp, arr) {
             t2.appendChild(total2);
 
             var first = document.getElementsByClassName('first');
-            first[0].style.height = Number(data[1][31]) * 3 + "px";
-            first[1].style.height = Number(data[1][32]) * 3 + "px";
-            first[2].style.height = Number(data[1][33]) * 3 + "px";
+            var tp = document.getElementsByClassName('tp');
+            first[0].style.height = Number(data[1][32]) * 3 + "px";
+            tp[0].innerHTML = Number(data[1][32]);
+            first[1].style.height = Number(data[1][33]) * 3 + "px";
+            tp[2].innerHTML = Number(data[1][33]);
+            first[2].style.height = Number(data[1][34]) * 3 + "px";
+            tp[4].innerHTML = Number(data[1][34]);
             var second = document.getElementsByClassName('second');
-            second[0].style.height = Number(data[2][31]) * 3 + "px";
-            second[1].style.height = Number(data[2][32]) * 3 + "px";
-            second[2].style.height = Number(data[2][33]) * 3 + "px";
-            if (Number(data[1][31]) > Number(data[2][31])) {
-                first[0].style.backgroundColor = "#007bff";
-            } else if (Number(data[1][31]) < Number(data[2][31])) {
-                second[0].style.backgroundColor = "#007bff";
-            } else {
-                first[0].style.backgroundColor = "#007bff";
-                second[0].style.backgroundColor = "#007bff";
-            }
+            second[0].style.height = Number(data[2][32]) * 3 + "px";
+            tp[1].innerHTML = Number(data[2][32]);
+            second[1].style.height = Number(data[2][33]) * 3 + "px";
+            tp[3].innerHTML = Number(data[2][33]);
+            second[2].style.height = Number(data[2][34]) * 3 + "px";
+            tp[5].innerHTML = Number(data[2][34]);
             if (Number(data[1][32]) > Number(data[2][32])) {
-                first[1].style.backgroundColor = "#007bff";
+                first[0].style.backgroundColor = "#007bff";
             } else if (Number(data[1][32]) < Number(data[2][32])) {
-                second[1].style.backgroundColor = "#007bff";
+                second[0].style.backgroundColor = "#007bff";
             } else {
-                first[1].style.backgroundColor = "#007bff";
-                second[1].style.backgroundColor = "#007bff";
+                first[0].style.backgroundColor = "#007bff";
+                second[0].style.backgroundColor = "#007bff";
             }
             if (Number(data[1][33]) > Number(data[2][33])) {
-                first[2].style.backgroundColor = "#007bff";
+                first[1].style.backgroundColor = "#007bff";
             } else if (Number(data[1][33]) < Number(data[2][33])) {
+                second[1].style.backgroundColor = "#007bff";
+            } else {
+                first[1].style.backgroundColor = "#007bff";
+                second[1].style.backgroundColor = "#007bff";
+            }
+            if (Number(data[1][34]) > Number(data[2][34])) {
+                first[2].style.backgroundColor = "#007bff";
+            } else if (Number(data[1][34]) < Number(data[2][34])) {
                 second[2].style.backgroundColor = "#007bff";
             } else {
                 first[2].style.backgroundColor = "#007bff";
@@ -237,6 +244,14 @@ function autocomplete(inp, arr) {
             circles[1].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(data[1][16])) / 100 + "px");
             circles[3].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(data[1][19])) / 100 + "px");
             circles[5].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(data[1][22])) / 100 + "px");
+
+            var stats = document.getElementsByClassName('stat');
+            stats[0].innerHTML = data[1][7];
+            stats[1].innerHTML = data[1][8];
+            stats[2].innerHTML = data[1][10];
+            stats[3].innerHTML = data[1][11];
+            stats[4].innerHTML = data[1][9];
+            stats[5].innerHTML = data[1][12];
 
             var playersTable = document.getElementById('playersTable');
             for (var i = 0; i < data[1][data[1].length - 1].length; i++) {
@@ -333,8 +348,105 @@ function autocomplete(inp, arr) {
                 tr.appendChild(tov);
                 tr.appendChild(blk);
                 tr.appendChild(pf);
+                
                 playersTable.appendChild(tr);
             }
+            var tr = document.createElement('tr');
+            var position = document.createElement('td');
+            position.setAttribute('scope', 'row');
+            position.setAttribute('class', 'align-middle');
+
+            var name = document.createElement('td');
+            name.setAttribute('class', 'align-middle text-left');
+            name.innerHTML = "Total";
+
+            var min = document.createElement('td');
+            min.setAttribute('class', 'align-middle');
+            min.innerHTML = data[1][23];
+
+            var pt = document.createElement('td');
+            pt.setAttribute('class', 'align-middle');
+            pt.innerHTML = data[1][13];
+
+            var fgm = document.createElement('td');
+            fgm.setAttribute('class', 'align-middle');
+            fgm.innerHTML = data[1][14];
+            var fga = document.createElement('td');
+            fga.setAttribute('class', 'align-middle');
+            fga.innerHTML = data[1][15];
+            var fgp = document.createElement('td');
+            fgp.setAttribute('class', 'align-middle');
+            fgp.innerHTML = data[1][16];
+
+            var ftm = document.createElement('td');
+            ftm.setAttribute('class', 'align-middle');
+            ftm.innerHTML = data[1][17];
+            var fta = document.createElement('td');
+            fta.setAttribute('class', 'align-middle');
+            fta.innerHTML = data[1][18];
+            var ftp = document.createElement('td');
+            ftp.setAttribute('class', 'align-middle');
+            ftp.innerHTML = data[1][19];
+
+            var tpm = document.createElement('td');
+            tpm.setAttribute('class', 'align-middle');
+            tpm.innerHTML = data[1][20];
+            var tpa = document.createElement('td');
+            tpa.setAttribute('class', 'align-middle');
+            tpa.innerHTML = data[1][21];
+            var tpp = document.createElement('td');
+            tpp.setAttribute('class', 'align-middle');
+            tpp.innerHTML = data[1][22];
+
+            var oreb = document.createElement('td');
+            oreb.setAttribute('class', 'align-middle');
+            oreb.innerHTML = data[1][24];
+            var dreb = document.createElement('td');
+            dreb.setAttribute('class', 'align-middle');
+            dreb.innerHTML = data[1][25];
+            var reb = document.createElement('td');
+            reb.setAttribute('class', 'align-middle');
+            reb.innerHTML = data[1][26];
+
+            var ast = document.createElement('td');
+            ast.setAttribute('class', 'align-middle');
+            ast.innerHTML = data[1][27];
+            var stl = document.createElement('td');
+            stl.setAttribute('class', 'align-middle');
+            stl.innerHTML = data[1][28];
+            var tov = document.createElement('td');
+            tov.setAttribute('class', 'align-middle');
+            tov.innerHTML = data[1][29];
+            var blk = document.createElement('td');
+            blk.setAttribute('class', 'align-middle');
+            blk.innerHTML = data[1][30];
+            var pf = document.createElement('td');
+            pf.setAttribute('class', 'align-middle');
+            pf.innerHTML = data[1][31];
+
+            tr.appendChild(position);
+            tr.appendChild(name);
+            tr.appendChild(min);
+            tr.appendChild(pt);
+            tr.appendChild(fgm);
+            tr.appendChild(fga);
+            tr.appendChild(fgp);
+            tr.appendChild(ftm);
+            tr.appendChild(fta);
+            tr.appendChild(ftp);
+            tr.appendChild(tpm);
+            tr.appendChild(tpa);
+            tr.appendChild(tpp);
+            tr.appendChild(oreb);
+            tr.appendChild(dreb);
+            tr.appendChild(reb);
+            tr.appendChild(ast);
+            tr.appendChild(stl);
+            tr.appendChild(tov);
+            tr.appendChild(blk);
+            tr.appendChild(pf);
+            tr.style.backgroundColor = "#d6d8db";
+            playersTable.appendChild(tr);
         }
     });
 });
@@ -353,6 +465,15 @@ buttons[0].onclick = function() {
         circles[1].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[1][16])) / 100 + "px");
         circles[3].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[1][19])) / 100 + "px");
         circles[5].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[1][22])) / 100 + "px");
+        
+        var stats = document.getElementsByClassName('stat');
+        stats[0].innerHTML = allData[1][7];
+        stats[1].innerHTML = allData[1][8];
+        stats[2].innerHTML = allData[1][10];
+        stats[3].innerHTML = allData[1][11];
+        stats[4].innerHTML = allData[1][9];
+        stats[5].innerHTML = allData[1][12];
+
         var inner = document.getElementsByClassName('inner');
         inner[0].innerHTML = allData[1][14] + "/" + allData[1][15];
         inner[1].innerHTML = allData[1][16] + "%";
@@ -456,6 +577,102 @@ buttons[0].onclick = function() {
             tr.appendChild(pf);
             playersTable.appendChild(tr);
         }
+        var tr = document.createElement('tr');
+        var position = document.createElement('td');
+        position.setAttribute('scope', 'row');
+        position.setAttribute('class', 'align-middle');
+
+        var name = document.createElement('td');
+        name.setAttribute('class', 'align-middle text-left');
+        name.innerHTML = "Total";
+
+        var min = document.createElement('td');
+        min.setAttribute('class', 'align-middle');
+        min.innerHTML = allData[1][23];
+
+        var pt = document.createElement('td');
+        pt.setAttribute('class', 'align-middle');
+        pt.innerHTML = allData[1][13];
+
+        var fgm = document.createElement('td');
+        fgm.setAttribute('class', 'align-middle');
+        fgm.innerHTML = allData[1][14];
+        var fga = document.createElement('td');
+        fga.setAttribute('class', 'align-middle');
+        fga.innerHTML = allData[1][15];
+        var fgp = document.createElement('td');
+        fgp.setAttribute('class', 'align-middle');
+        fgp.innerHTML = allData[1][16];
+
+        var ftm = document.createElement('td');
+        ftm.setAttribute('class', 'align-middle');
+        ftm.innerHTML = allData[1][17];
+        var fta = document.createElement('td');
+        fta.setAttribute('class', 'align-middle');
+        fta.innerHTML = allData[1][18];
+        var ftp = document.createElement('td');
+        ftp.setAttribute('class', 'align-middle');
+        ftp.innerHTML = allData[1][19];
+
+        var tpm = document.createElement('td');
+        tpm.setAttribute('class', 'align-middle');
+        tpm.innerHTML = allData[1][20];
+        var tpa = document.createElement('td');
+        tpa.setAttribute('class', 'align-middle');
+        tpa.innerHTML = allData[1][21];
+        var tpp = document.createElement('td');
+        tpp.setAttribute('class', 'align-middle');
+        tpp.innerHTML = allData[1][22];
+
+        var oreb = document.createElement('td');
+        oreb.setAttribute('class', 'align-middle');
+        oreb.innerHTML = allData[1][24];
+        var dreb = document.createElement('td');
+        dreb.setAttribute('class', 'align-middle');
+        dreb.innerHTML = allData[1][25];
+        var reb = document.createElement('td');
+        reb.setAttribute('class', 'align-middle');
+        reb.innerHTML = allData[1][26];
+
+        var ast = document.createElement('td');
+        ast.setAttribute('class', 'align-middle');
+        ast.innerHTML = allData[1][27];
+        var stl = document.createElement('td');
+        stl.setAttribute('class', 'align-middle');
+        stl.innerHTML = allData[1][28];
+        var tov = document.createElement('td');
+        tov.setAttribute('class', 'align-middle');
+        tov.innerHTML = allData[1][29];
+        var blk = document.createElement('td');
+        blk.setAttribute('class', 'align-middle');
+        blk.innerHTML = allData[1][30];
+        var pf = document.createElement('td');
+        pf.setAttribute('class', 'align-middle');
+        pf.innerHTML = allData[1][31];
+
+        tr.appendChild(position);
+        tr.appendChild(name);
+        tr.appendChild(min);
+        tr.appendChild(pt);
+        tr.appendChild(fgm);
+        tr.appendChild(fga);
+        tr.appendChild(fgp);
+        tr.appendChild(ftm);
+        tr.appendChild(fta);
+        tr.appendChild(ftp);
+        tr.appendChild(tpm);
+        tr.appendChild(tpa);
+        tr.appendChild(tpp);
+        tr.appendChild(oreb);
+        tr.appendChild(dreb);
+        tr.appendChild(reb);
+        tr.appendChild(ast);
+        tr.appendChild(stl);
+        tr.appendChild(tov);
+        tr.appendChild(blk);
+        tr.appendChild(pf);
+        tr.style.backgroundColor = "#d6d8db";
+        playersTable.appendChild(tr);
     }
 }
 buttons[1].onclick = function() {
@@ -470,6 +687,14 @@ buttons[1].onclick = function() {
         circles[1].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[2][16])) / 100 + "px");
         circles[3].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[2][19])) / 100 + "px");
         circles[5].setAttribute('stroke-dashoffset', '339.292' * (100 - Number(allData[2][22])) / 100 + "px");
+
+        var stats = document.getElementsByClassName('stat');
+        stats[0].innerHTML = allData[2][7];
+        stats[1].innerHTML = allData[2][8];
+        stats[2].innerHTML = allData[2][10];
+        stats[3].innerHTML = allData[2][11];
+        stats[4].innerHTML = allData[2][9];
+        stats[5].innerHTML = allData[2][12];
 
         var inner = document.getElementsByClassName('inner');
         inner[0].innerHTML = allData[2][14] + "/" + allData[2][15];
@@ -574,6 +799,102 @@ buttons[1].onclick = function() {
             tr.appendChild(pf);
             playersTable.appendChild(tr);
         }
+        var tr = document.createElement('tr');
+        var position = document.createElement('td');
+        position.setAttribute('scope', 'row');
+        position.setAttribute('class', 'align-middle');
+
+        var name = document.createElement('td');
+        name.setAttribute('class', 'align-middle text-left');
+        name.innerHTML = "Total";
+
+        var min = document.createElement('td');
+        min.setAttribute('class', 'align-middle');
+        min.innerHTML = allData[2][23];
+
+        var pt = document.createElement('td');
+        pt.setAttribute('class', 'align-middle');
+        pt.innerHTML = allData[2][13];
+
+        var fgm = document.createElement('td');
+        fgm.setAttribute('class', 'align-middle');
+        fgm.innerHTML = allData[2][14];
+        var fga = document.createElement('td');
+        fga.setAttribute('class', 'align-middle');
+        fga.innerHTML = allData[2][15];
+        var fgp = document.createElement('td');
+        fgp.setAttribute('class', 'align-middle');
+        fgp.innerHTML = allData[2][16];
+
+        var ftm = document.createElement('td');
+        ftm.setAttribute('class', 'align-middle');
+        ftm.innerHTML = allData[2][17];
+        var fta = document.createElement('td');
+        fta.setAttribute('class', 'align-middle');
+        fta.innerHTML = allData[2][18];
+        var ftp = document.createElement('td');
+        ftp.setAttribute('class', 'align-middle');
+        ftp.innerHTML = allData[2][19];
+
+        var tpm = document.createElement('td');
+        tpm.setAttribute('class', 'align-middle');
+        tpm.innerHTML = allData[2][20];
+        var tpa = document.createElement('td');
+        tpa.setAttribute('class', 'align-middle');
+        tpa.innerHTML = allData[2][21];
+        var tpp = document.createElement('td');
+        tpp.setAttribute('class', 'align-middle');
+        tpp.innerHTML = allData[2][22];
+
+        var oreb = document.createElement('td');
+        oreb.setAttribute('class', 'align-middle');
+        oreb.innerHTML = allData[2][24];
+        var dreb = document.createElement('td');
+        dreb.setAttribute('class', 'align-middle');
+        dreb.innerHTML = allData[2][25];
+        var reb = document.createElement('td');
+        reb.setAttribute('class', 'align-middle');
+        reb.innerHTML = allData[2][26];
+
+        var ast = document.createElement('td');
+        ast.setAttribute('class', 'align-middle');
+        ast.innerHTML = allData[2][27];
+        var stl = document.createElement('td');
+        stl.setAttribute('class', 'align-middle');
+        stl.innerHTML = allData[2][28];
+        var tov = document.createElement('td');
+        tov.setAttribute('class', 'align-middle');
+        tov.innerHTML = allData[2][29];
+        var blk = document.createElement('td');
+        blk.setAttribute('class', 'align-middle');
+        blk.innerHTML = allData[2][30];
+        var pf = document.createElement('td');
+        pf.setAttribute('class', 'align-middle');
+        pf.innerHTML = allData[2][31];
+
+        tr.appendChild(position);
+        tr.appendChild(name);
+        tr.appendChild(min);
+        tr.appendChild(pt);
+        tr.appendChild(fgm);
+        tr.appendChild(fga);
+        tr.appendChild(fgp);
+        tr.appendChild(ftm);
+        tr.appendChild(fta);
+        tr.appendChild(ftp);
+        tr.appendChild(tpm);
+        tr.appendChild(tpa);
+        tr.appendChild(tpp);
+        tr.appendChild(oreb);
+        tr.appendChild(dreb);
+        tr.appendChild(reb);
+        tr.appendChild(ast);
+        tr.appendChild(stl);
+        tr.appendChild(tov);
+        tr.appendChild(blk);
+        tr.appendChild(pf);
+        tr.style.backgroundColor = "#d6d8db";
+        playersTable.appendChild(tr);
     }
 }
 

@@ -837,6 +837,7 @@ def gameUpdate():
             steals1 = data['stats']['vTeam']['totals']['steals']
             turnovers1 = data['stats']['vTeam']['totals']['turnovers']
             blocks1 = data['stats']['vTeam']['totals']['blocks']
+            minutes1 = data['stats']['vTeam']['totals']['min']
             personalFouls1 = data['stats']['vTeam']['totals']['pFouls']
             pointsLeader1 = data['stats']['vTeam']['leaders']['points']['value']
             assistsLeader1 = data['stats']['vTeam']['leaders']['assists']['value']
@@ -845,7 +846,7 @@ def gameUpdate():
             biggestLead1, secondChancePoints1, pointsOffTurnovers1, longestRun1, totalPoints1,
             fieldGoalsMade1, fieldGoalsAttempted1, fieldGoalPercentage1, freeThrowsMade1,
             freeThrowsAttempted1, freeThrowPercentage1, threePointsMade1, threePointsAttempted1,
-            threePointPercentage1, offensiveRebounds1, defensiveRebounds1, totalRebounds1,
+            threePointPercentage1, minutes1, offensiveRebounds1, defensiveRebounds1, totalRebounds1,
             assists1, steals1, turnovers1, blocks1, personalFouls1, pointsLeader1, assistsLeader1,
             reboundsLeader1]
 
@@ -872,6 +873,7 @@ def gameUpdate():
             steals2 = data['stats']['hTeam']['totals']['steals']
             turnovers2 = data['stats']['hTeam']['totals']['turnovers']
             blocks2 = data['stats']['hTeam']['totals']['blocks']
+            minutes2 = data['stats']['vTeam']['totals']['min']
             personalFouls2 = data['stats']['hTeam']['totals']['pFouls']
             pointsLeader2 = data['stats']['hTeam']['leaders']['points']['value']
             assistsLeader2 = data['stats']['hTeam']['leaders']['assists']['value']
@@ -880,7 +882,7 @@ def gameUpdate():
             biggestLead2, secondChancePoints2, pointsOffTurnovers2, longestRun2, totalPoints2,
             fieldGoalsMade2, fieldGoalsAttempted2, fieldGoalPercentage2, freeThrowsMade2,
             freeThrowsAttempted2, freeThrowPercentage2, threePointsMade2, threePointsAttempted2,
-            threePointPercentage2, offensiveRebounds2, defensiveRebounds2, totalRebounds2,
+            threePointPercentage2, minutes2, offensiveRebounds2, defensiveRebounds2, totalRebounds2,
             assists2, steals2, turnovers2, blocks2, personalFouls2, pointsLeader2, assistsLeader2,
             reboundsLeader2]
 
