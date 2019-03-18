@@ -173,6 +173,39 @@ function autocomplete(inp, arr) {
             total2.innerHTML = data[2][5];
             t2.appendChild(total2);
 
+            var first = document.getElementsByClassName('first');
+            first[0].style.height = Number(data[1][31]) * 3 + "px";
+            first[1].style.height = Number(data[1][32]) * 3 + "px";
+            first[2].style.height = Number(data[1][33]) * 3 + "px";
+            var second = document.getElementsByClassName('second');
+            second[0].style.height = Number(data[2][31]) * 3 + "px";
+            second[1].style.height = Number(data[2][32]) * 3 + "px";
+            second[2].style.height = Number(data[2][33]) * 3 + "px";
+            if (Number(data[1][31]) > Number(data[2][31])) {
+                first[0].style.backgroundColor = "#007bff";
+            } else if (Number(data[1][31]) < Number(data[2][31])) {
+                second[0].style.backgroundColor = "#007bff";
+            } else {
+                first[0].style.backgroundColor = "#007bff";
+                second[0].style.backgroundColor = "#007bff";
+            }
+            if (Number(data[1][32]) > Number(data[2][32])) {
+                first[1].style.backgroundColor = "#007bff";
+            } else if (Number(data[1][32]) < Number(data[2][32])) {
+                second[1].style.backgroundColor = "#007bff";
+            } else {
+                first[1].style.backgroundColor = "#007bff";
+                second[1].style.backgroundColor = "#007bff";
+            }
+            if (Number(data[1][33]) > Number(data[2][33])) {
+                first[2].style.backgroundColor = "#007bff";
+            } else if (Number(data[1][33]) < Number(data[2][33])) {
+                second[2].style.backgroundColor = "#007bff";
+            } else {
+                first[2].style.backgroundColor = "#007bff";
+                second[2].style.backgroundColor = "#007bff";
+            }
+
             var buttons = document.getElementsByClassName('flip');
             buttons[0].setAttribute('class', 'flip btn btn-lg btn-primary');
             buttons[1].setAttribute('class', 'flip btn btn-lg border-dark');
