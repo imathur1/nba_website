@@ -52,7 +52,7 @@ form {
 }
 
 .score, .newScore {
-  font-size: 70px;
+  font-size: 45px;
 }
 
 .record, .newRecord {
@@ -61,16 +61,16 @@ form {
 }
 
 .higher {
-  height: 35%;
-}
-.top {
-  height: 40%;
-}
-.middle {
   height: 15%;
 }
+.top {
+  height: 55%;
+}
+.middle {
+  height: 20%;
+}
 .dash, .newDash {
-  font-size: 70px;
+  font-size: 45px;
 }
 .card {
   height: 300px;

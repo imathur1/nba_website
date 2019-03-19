@@ -174,7 +174,7 @@ $(document).ready(function(){
           var cards = [];
           for (var i = 0; i < data.length; i++) {
             var first = document.createElement('div');
-            first.setAttribute('class', 'col-3 card cardO rounded');
+            first.setAttribute('class', 'col-xs-12 col-sm-12 col-md-8 col-lg-5 col-xl-3 card cardO rounded');
 
             var second = document.createElement('div');
             second.setAttribute('class', 'row higher');
@@ -300,9 +300,9 @@ $(document).ready(function(){
             scores[i * 2 + 1].innerHTML = data[i][7];
             other.push(data[i][8]);
             if (Number(data[i][3]) > Number(data[i][7])) {
-              scores[i * 2].style.color = "#FF0043";
+              scores[i * 2].style.color = "#007bff";
             } else if (Number(data[i][3]) < Number(data[i][7])) {
-              scores[i * 2 + 1].style.color = "#FF0043";
+              scores[i * 2 + 1].style.color = "#007bff";
             }
           }
         }

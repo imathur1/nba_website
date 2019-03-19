@@ -89,7 +89,7 @@ $(document).ready(function(){
       var group1 = document.getElementsByClassName('row justify-content-around')[0];
       for (var i = 0; i < data[0]; i++) {
         var div = document.createElement("div");
-        div.setAttribute('class', 'card col-7');
+        div.setAttribute('class', 'card col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10');
         let url = data[i + 1][5];
         div.addEventListener('click', function() {
           window.open(url, '_blank');
@@ -125,7 +125,7 @@ $(document).ready(function(){
       index = 5;
       for (var i = data[0]; i < data.length - data[0]; i++) {
         var div = document.createElement("div");
-        div.setAttribute('class', 'card col-4');
+        div.setAttribute('class', 'card card col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5');
         let url = data[i + 1][5];
         div.addEventListener('click', function() {
           window.open(url, '_blank');
