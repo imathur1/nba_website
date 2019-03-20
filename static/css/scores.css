@@ -61,19 +61,18 @@ form {
 }
 
 .higher {
-  height: 15%;
+  height: 20%;
 }
 .top {
   height: 55%;
 }
 .middle {
-  height: 20%;
+  height: 15%;
 }
 .dash, .newDash {
   font-size: 45px;
 }
 .card {
-  height: 300px;
   margin-bottom: 5%;
   transition: 0.4s;
   -moz-transition: 0.4s;

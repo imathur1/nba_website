@@ -19,7 +19,16 @@ table {
 .cap {
     margin-bottom: 1%;
 }
-
+@media (max-width: 576px) {
+    #eastern, #western {
+      margin-top: 2.5%;
+      font-size: 40px !important;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 2.5%;
+      color: #000;
+    }
+  }
 .autocomplete {
     position: relative;
     display: inline-block;

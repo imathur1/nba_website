@@ -271,6 +271,16 @@ nav ul .nav-item .nav-link:hover {
     margin-bottom: 2.5%;
     color: #000;
 }
+@media (max-width: 576px) {
+    #upcomingHeader {
+        margin-top: 2.5%;
+        font-size: 40px !important;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin-bottom: 2.5%;
+        color: #000;
+    }
+}
 
 .team {
     font-size: 20px;
@@ -288,11 +298,10 @@ nav ul .nav-item .nav-link:hover {
     height: 60%;
 }
 .middle {
-    height: 20%;
+    height: 15%;
 }
 .bottom {
-    height: 10%;
-    margin-bottom: 5%;
+    height: 30%;
 }
 .bottomO {
     text-align: right;
@@ -305,7 +314,6 @@ nav ul .nav-item .nav-link:hover {
 }
 
 .card {
-    height: 300px;
     margin-bottom: 5%;
     transition: 0.4s;
     -moz-transition: 0.4s;

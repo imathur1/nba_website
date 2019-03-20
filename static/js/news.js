@@ -89,7 +89,7 @@ $(document).ready(function(){
       var group1 = document.getElementsByClassName('row justify-content-around')[0];
       for (var i = 0; i < data[0]; i++) {
         var div = document.createElement("div");
-        div.setAttribute('class', 'card col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10');
+        div.setAttribute('class', 'card col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-8');
         let url = data[i + 1][5];
         div.addEventListener('click', function() {
           window.open(url, '_blank');

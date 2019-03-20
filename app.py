@@ -1026,4 +1026,4 @@ def players(modified):
 
 if __name__ == '__main__':
     app.run("0.0.0.0", "16") 
-    # get safari to work, fix navbar, fix gamesInfo, test on devices
+    # get safari to work, fix navbar

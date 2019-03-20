@@ -61,17 +61,18 @@ table {
 }
 .quote {
   margin-top: -1%;
-  font-size: 40px;
+  font-size: 30px;
 }
 .cap {
   margin-bottom: 1%;
 }
 
-.inner, .sub {
+.inner {
   font-size: 20px;
 }
 .sub {
-  margin-top: 1%;
+  margin-top: 0;
+  font-size: 20px;
   margin-bottom: 2.5%;
 }
 .cir {
@@ -106,6 +107,28 @@ table {
 .otherStats {
   margin-bottom: 2.5%;
 }
+.subInfo {
+  margin-top: 2.5%;
+}
+
+@media (max-width: 576px) {
+  .score {
+    font-size: 70px;
+    margin-top: 5vh;
+    text-align: center !important;
+  }
+  .head {
+    margin-top: 2.5%;
+    font-size: 40px !important;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
 
 .head {
   margin-top: 2.5%;
@@ -126,7 +149,7 @@ table {
   margin-bottom: 2.5%;
 }
 .big {
-  font-size: 80px;
+  font-size: 60px;
   display: inline-block;
 }
 .small {

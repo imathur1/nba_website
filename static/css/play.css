@@ -259,6 +259,18 @@ table {
     text-align: center;
 }
 
+@media (max-width: 576px) {
+    .head {
+      margin-top: 2.5%;
+      font-size: 40px !important;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 2.5%;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+
 .head {
     margin-top: 2.5%;
     font-size: 50px;
