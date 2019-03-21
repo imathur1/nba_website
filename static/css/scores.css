@@ -76,6 +76,7 @@ form {
 }
 .card {
   margin-bottom: 5%;
+  padding-bottom: 1.5%;
   transition: 0.4s;
   -moz-transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -364,15 +365,6 @@ width: 100%;
     font-weight: bold;
     margin-bottom: 2.5%;
     color: #000; 
-  }
-  .card {
-    margin-bottom: 5%;
-    padding-bottom: 7.5%;
-    transition: 0.4s;
-    -moz-transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -ms-transition: 0.4s;
-    -o-transition: 0.4s;
   }
 }
 .footer-distributed {
