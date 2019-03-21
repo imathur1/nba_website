@@ -1025,5 +1025,4 @@ def players(modified):
     return render_template("players.html")
 
 if __name__ == '__main__':
-    app.run("0.0.0.0", "16") 
-    # get safari to work, fix navbar
+    app.run("0.0.0.0") 

@@ -110,23 +110,8 @@ table {
 .subInfo {
   margin-top: 2.5%;
 }
-
-@media (max-width: 576px) {
-  .score {
-    font-size: 70px;
-    margin-top: 5vh;
-    text-align: center !important;
-  }
-  .head {
-    margin-top: 2.5%;
-    font-size: 40px !important;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 2.5%;
-    color: #000;
-    text-transform: uppercase;
-    text-align: center;
-  }
+.container-fluid {
+  margin-top: 2.5%;
 }
 
 
@@ -423,6 +408,52 @@ nav ul .nav-item .nav-link:hover {
     top: -20px;
     opacity: 1;
     visibility: visible !important;
+}
+
+@media (max-width: 576px) {
+  .score {
+    font-size: 70px;
+    margin-top: 5vh;
+    text-align: center !important;
+  }
+  .head {
+    margin-top: 2.5%;
+    font-size: 30px !important;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  #links {
+      width: 75px;
+  }
+  .search {
+      position: absolute;
+      z-index: 9999;
+      top: 90%;
+      left: 95%;
+      -webkit-transform: translateX(-100%) translateY(-50%);
+      transform: translateX(-100%) translateY(-50%);
+  }
+  #newsSpecial {
+      margin-bottom: 30px;
+  }
+  .search__field:focus {
+      width: 90vw;
+      color: #fff;
+      cursor: default;
+  }
+}
+
+.menuButton {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 6px 0;
 }
 
 .footer-distributed {
