@@ -29,4 +29,6 @@ Displays many statistics about the games and players in the National Basketball 
   - Javascript
   - Python
  
- To view the website clone this repository and run app.py. Then, visit http://127.0.0.1:5000/ in your browser.
+To view the website clone this repository and run app.py. Then, visit http://127.0.0.1:5000/ in your browser.
+ 
+If you want to access the website on different devices, make sure they are connected to the same network. Then, type in the private IP address of your network and the default port 5000 into your browser (i.e. 192.168.1.11:5000).
