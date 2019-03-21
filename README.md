@@ -4,6 +4,8 @@ Displays many statistics about the games and players in the National Basketball 
 **Features**
   - Upcoming 6 games
   - Previous 6 games
+  - Game Preview Articles
+  - Game Recap Articles
   - Catalog of games and scores for the past 2 years
   - In-depth statistics about each game
   - Current standings of all 30 teams
