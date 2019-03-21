@@ -1,5 +1,5 @@
 # NBA_Website
-Displays many statistics about the games and players in the National Basketball Association.
+Displays statistics about the games and players in the National Basketball Association.
 
 **Features**
   - Upcoming 6 games
