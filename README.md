@@ -27,8 +27,18 @@ Displays statistics about the games and players in the National Basketball Assoc
   - HTML
   - CSS
   - Javascript
-  - Python
- 
-To view the website clone this repository and run app.py. Then, visit http://127.0.0.1:5000/ in your browser.
+  - Python 3
+
+**Installations**
+  - pip3 install httpclient
+  - pip3 install bs4
+  - pip3 install newsapi-python
+  - pip3 install flask
+
+**Directions**
+1. Clone this repository
+2. Install all the libraries listed under installations via the terminal
+3. Run app.py
+4. Visit http://127.0.0.1:5000/ in your browser
  
 If you want to access the website on different devices, make sure they are connected to the same network. Then, type in the private IP address of your network and the default port 5000 into your browser (i.e. 192.168.1.11:5000).
