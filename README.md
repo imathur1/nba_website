@@ -27,18 +27,20 @@ Displays statistics about the games and players in the National Basketball Assoc
   - HTML
   - CSS
   - Javascript
-  - Python 3
+  - Python
 
 **Installations**
-  - pip3 install httpclient
   - pip3 install bs4
   - pip3 install newsapi-python
   - pip3 install flask
 
 **Directions**
 1. Clone this repository
-2. Install all the libraries listed under installations via the terminal
-3. Run app.py
-4. Visit http://127.0.0.1:5000/ in your browser
- 
+2. Install all the modules listed under Installations in the terminal
+3. Make sure Python 3.7 or higher is installed on your computer 
+4. Run app.py
+5. Visit http://127.0.0.1:5000/ in your browser
+
+If you are getting an error about datetime.datetime.fromisoformat(), make sure you have Python 3.7 or higher installed. Then in the terminal change the directory to the location of this repository. To run app.py type 'python3 app.py' or 'py app.py' or 'py-3 app.py'.
+
 If you want to access the website on different devices, make sure they are connected to the same network. Then, type in the private IP address of your network and the default port 5000 into your browser (i.e. 192.168.1.11:5000).
