@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" charset="UTF-8" href="/xslt/basketball/schedule-v5.0.xsl"?>
+<!-- Generation started @ 2019-03-22 23:50:59 +0000 -->
+<league xmlns="http://feed.elasticstats.com/schema/basketball/schedule-v5.0.xsd" id="4353138d-4c22-4396-95d8-5f587d2df25c" name="NBA" alias="NBA">
+  <daily-schedule date="2019-03-23">
+    <games>
+      <game id="96bfcbcc-08b6-4001-afb3-1e041533318d" status="scheduled" coverage="full" scheduled="2019-03-23T22:00:00+00:00" track_on_court="true" sr_id="sr:match:15330082" reference="0021801087" home_team="583ec97e-fb46-11e1-82cb-f4ce4684ea4c" away_team="583eccfa-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="a380f011-6e5d-5430-9f37-209e1e8a9b6f" name="Spectrum Center" capacity="19077" address="330 E. Trade Street" city="Charlotte" state="NC" zip="28202" country="USA" sr_id="sr:venue:6146"/>
+        <home name="Charlotte Hornets" alias="CHA" id="583ec97e-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3430" reference="1610612766">
+        </home>
+        <away name="Boston Celtics" alias="BOS" id="583eccfa-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3422" reference="1610612738">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-SE" type="TV" locale="Home" channel="649"/>
+          <broadcast network="NBCS-BOS" type="TV" locale="Away" channel="630"/>
+        </broadcasts>
+      </game>
+      <game id="6a403f96-f5df-41ab-b2c8-59daaee0338a" status="scheduled" coverage="full" scheduled="2019-03-23T23:00:00+00:00" track_on_court="true" sr_id="sr:match:15330374" reference="0021801089" home_team="583ec8d4-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecea6-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="f62d5b49-d646-56e9-ba60-a875a00830f8" name="Capital One Arena" capacity="20356" address="601 F Street NW" city="Washington" state="DC" zip="20004" country="USA"/>
+        <home name="Washington Wizards" alias="WAS" id="583ec8d4-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3431" reference="1610612764">
+        </home>
+        <away name="Miami Heat" alias="MIA" id="583ecea6-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3435" reference="1610612748">
+        </away>
+        <broadcasts>
+          <broadcast network="NBCS-DC" type="TV" locale="Home" channel="642"/>
+          <broadcast network="SUN" type="TV" locale="Away" channel="653"/>
+        </broadcasts>
+      </game>
+      <game id="90f5f9d6-7087-40c3-b096-6068963fe08e" status="scheduled" coverage="full" scheduled="2019-03-23T23:30:00+00:00" track_on_court="true" sr_id="sr:match:15329888" reference="0021801088" home_team="583ecb8f-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec87d-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Eastern"/>
+        <venue id="fd21f639-8a47-51ac-a5dd-590629d445cf" name="State Farm Arena" capacity="18118" address="One Philips Drive" city="Atlanta" state="GA" zip="30303" country="USA" sr_id="sr:venue:6916"/>
+        <home name="Atlanta Hawks" alias="ATL" id="583ecb8f-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3423" reference="1610612737">
+        </home>
+        <away name="Philadelphia 76ers" alias="PHI" id="583ec87d-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3420" reference="1610612755">
+        </away>
+        <broadcasts>
+          <broadcast network="NBA TV" type="TV" locale="National" channel="216"/>
+          <broadcast network="FS-SE" type="TV" locale="Home" channel="649"/>
+          <broadcast network="NBCS-PH" type="TV" locale="Away"/>
+        </broadcasts>
+      </game>
+      <game id="ec9a1021-bc11-440f-8d67-9c1a76085b15" status="scheduled" coverage="full" scheduled="2019-03-24T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15331056" reference="0021801091" home_team="583eca88-fb46-11e1-82cb-f4ce4684ea4c" away_team="583eca2f-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Eastern" home="US/Eastern" away="US/Central"/>
+        <venue id="7657c204-a20b-527a-99cb-dc29218462aa" name="FedExForum" capacity="18119" address="191 Beale Street" city="Memphis" state="TN" zip="38103" country="USA" sr_id="sr:venue:6926"/>
+        <home name="Memphis Grizzlies" alias="MEM" id="583eca88-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3415" reference="1610612763">
+        </home>
+        <away name="Minnesota Timberwolves" alias="MIN" id="583eca2f-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3426" reference="1610612750">
+        </away>
+        <broadcasts>
+          <broadcast network="FS-N+" type="TV" locale="Away" channel="668-1"/>
+          <broadcast network="FS-SE" type="TV" locale="Home" channel="649"/>
+        </broadcasts>
+      </game>
+      <game id="f1565859-cbe1-4c19-9790-3202da56be0a" status="scheduled" coverage="full" scheduled="2019-03-24T00:00:00+00:00" track_on_court="true" sr_id="sr:match:15331532" reference="0021801090" home_team="583ec5fd-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ece50-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Central" home="US/Central" away="US/Mountain"/>
+        <venue id="38911649-acfd-551a-949b-68f0fcaa44e7" name="United Center" capacity="20917" address="1901 W Madison Street" city="Chicago" state="IL" zip="60612" country="USA" sr_id="sr:venue:5964"/>
+        <home name="Chicago Bulls" alias="CHI" id="583ec5fd-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3409" reference="1610612741">
+        </home>
+        <away name="Utah Jazz" alias="UTA" id="583ece50-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3434" reference="1610612762">
+        </away>
+        <broadcasts>
+          <broadcast network="SportsNet RM" type="TV" locale="Away" channel="683"/>
+          <broadcast network="WGN" type="TV" locale="Home"/>
+        </broadcasts>
+      </game>
+      <game id="f7ef8254-e164-49f8-88e8-e250543cc8e3" status="scheduled" coverage="full" scheduled="2019-03-24T00:30:00+00:00" track_on_court="true" sr_id="sr:match:15331178" reference="0021801092" home_team="583ec825-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecf50-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Pacific" home="US/Pacific" away="US/Central"/>
+        <venue id="e25e21f2-1d67-5f13-910b-81fc8629eea7" name="Oracle Arena" capacity="19596" address="7000 Coliseum Way" city="Oakland" state="CA" zip="94621" country="USA" sr_id="sr:venue:6922"/>
+        <home name="Golden State Warriors" alias="GSW" id="583ec825-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3428" reference="1610612744">
+        </home>
+        <away name="Dallas Mavericks" alias="DAL" id="583ecf50-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3411" reference="1610612742">
+        </away>
+        <broadcasts>
+          <broadcast network="NBCS-BA" type="TV" locale="Home" channel="696"/>
+          <broadcast network="FS-SW" type="TV" locale="Away" channel="676"/>
+        </broadcasts>
+      </game>
+      <game id="9e196b6b-71a1-457f-bb5b-00440be8fbf6" status="scheduled" coverage="full" scheduled="2019-03-24T02:00:00+00:00" track_on_court="true" sr_id="sr:match:15329942" reference="0021801093" home_team="583ed056-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ec928-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Pacific" home="US/Pacific" away="US/Eastern"/>
+        <venue id="1d1f74a2-7b35-56f0-8cbd-552c51cb2c14" name="Moda Center" capacity="19393" address="1 Center Court" city="Portland" state="OR" zip="97227" country="USA" sr_id="sr:venue:6940"/>
+        <home name="Portland Trail Blazers" alias="POR" id="583ed056-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3414" reference="1610612757">
+        </home>
+        <away name="Detroit Pistons" alias="DET" id="583ec928-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3424" reference="1610612765">
+        </away>
+        <broadcasts>
+          <broadcast network="NBA TV" type="TV" locale="National" channel="216"/>
+          <broadcast network="NBCS-NW" type="TV" locale="Home"/>
+          <broadcast network="FS-DET+" type="TV" locale="Away" channel="663-1"/>
+        </broadcasts>
+      </game>
+      <game id="e41d9543-42c3-4800-8b6f-b6242983cc6a" status="scheduled" coverage="full" scheduled="2019-03-24T02:00:00+00:00" track_on_court="true" sr_id="sr:match:15331338" reference="0021801094" home_team="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" away_team="583ecfa8-fb46-11e1-82cb-f4ce4684ea4c">
+        <time_zones venue="US/Pacific" home="US/Pacific" away="US/Arizona"/>
+        <venue id="2e687b9a-c7a7-487c-85b4-43479abc8458" name="Golden 1 Center" capacity="17608" address="500 David J. Stern Walkway" city="Sacramento" state="CA" zip="95814" country="USA" sr_id="sr:venue:18976"/>
+        <home name="Sacramento Kings" alias="SAC" id="583ed0ac-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3413" reference="1610612758">
+        </home>
+        <away name="Phoenix Suns" alias="PHX" id="583ecfa8-fb46-11e1-82cb-f4ce4684ea4c" sr_id="sr:team:3416" reference="1610612756">
+        </away>
+        <broadcasts>
+          <broadcast network="NBCS-CA" type="TV" locale="Home" channel="698"/>
+          <broadcast network="FS-SE" type="TV" locale="Away" channel="649"/>
+        </broadcasts>
+      </game>
+    </games>
+  </daily-schedule>
+</league>
+<!-- Generation ended @ 2019-03-22 23:50:59 +0000 -->

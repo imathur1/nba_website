@@ -771,7 +771,10 @@ def gameUpdate():
             arena = data['basicGameData']['arena']['name']
             city = data['basicGameData']['arena']['city']
             abbrv = data['basicGameData']['arena']['stateAbbr']
-            startTime = data['basicGameData']['startTimeEastern']
+            try:
+                startTime = data['basicGameData']['startTimeEastern']
+            except:
+                startTime = ""
             startDate = data['basicGameData']['startDateEastern']
 
             days = {0: "Monday, ", 1: "Tuesday, ", 2: "Wednesday, ", 3: "Thursday, ", 
