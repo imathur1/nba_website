@@ -1,5 +1,5 @@
-2019
-1022
+2020
+1090
 Alex Abrines
 203518
 2017
@@ -11,7 +11,7 @@ Jordan Adams
 2015
 Steven Adams
 203500
-2018
+2019
 Arron Afflalo
 201167
 2017
@@ -23,7 +23,7 @@ Cole Aldrich
 2017
 LaMarcus Aldridge
 200746
-2018
+2019
 Cliff Alexander
 1626146
 2015
@@ -35,7 +35,7 @@ Tony Allen
 2016
 Al-Farouq Aminu
 202329
-2018
+2019
 Lou Amundson
 200811
 2015
@@ -50,16 +50,16 @@ James Anderson
 2015
 Justin Anderson
 1626147
-2018
+2019
 Kyle Anderson
 203937
-2018
+2019
 Ryan Anderson
 201583
-2018
+2019
 Giannis Antetokounmpo
 203507
-2018
+2019
 Carmelo Anthony
 2546
 2017
@@ -68,7 +68,7 @@ Joel Anthony
 2016
 Trevor Ariza
 2772
-2018
+2019
 Egehan Arna
 1962937124
 2015
@@ -83,7 +83,7 @@ Omer Asik
 2017
 D.J. Augustin
 201571
-2018
+2019
 Jeff Ayres
 201965
 2015
@@ -107,64 +107,64 @@ Jose Barea
 2015
 Harrison Barnes
 203084
-2018
+2019
 Matt Barnes
 2440
 2016
 Will Barton
 203115
-2018
+2019
 Brandon Bass
 101138
 2016
 Nicolas Batum
 201587
-2018
+2019
 Jerryd Bayless
 201573
-2018
+2019
 Aron Baynes
 203382
-2018
+2019
 Ercan Bayrak
 1962937125
 2015
 Kent Bazemore
 203145
-2018
+2019
 Bradley Beal
 203078
-2018
+2019
 Malik Beasley
 1627736
-2018
+2019
 Michael Beasley
 201563
 2017
 Marco Belinelli
 201158
-2018
+2019
 DeAndre' Bembry
 1627761
-2018
+2019
 Dragan Bender
 1627733
-2018
+2019
 Anthony Bennett
 203461
 2015
 Davis Bertans
 202722
-2018
+2019
 Patrick Beverley
 201976
-2018
+2019
 Bismack Biyombo
 202687
-2018
+2019
 Nemanja Bjelica
 202357
-2018
+2019
 Tarik Black
 204028
 2017
@@ -176,13 +176,13 @@ Oz Blayzer
 2017
 Eric Bledsoe
 202339
-2018
+2019
 Bojan Bogdanovic
 202711
-2018
+2019
 Andrew Bogut
 101106
-2018
+2019
 Joel Bolomboy
 1627762
 2016
@@ -191,7 +191,7 @@ Matt Bonner
 2015
 Devin Booker
 1626164
-2018
+2019
 Trevor Booker
 202344
 2017
@@ -203,16 +203,16 @@ Chris Bosh
 2016
 Avery Bradley
 202340
-2018
+2019
 Elton Brand
 1882
 2015
 Corey Brewer
 201147
-2018
+2019
 Malcolm Brogdon
 1627763
-2018
+2019
 Aaron Brooks
 201166
 2017
@@ -224,7 +224,7 @@ Bobby Brown
 2016
 Jaylen Brown
 1627759
-2018
+2019
 Lorenzo Brown
 203485
 2017
@@ -245,28 +245,28 @@ Chase Budinger
 2015
 Reggie Bullock
 203493
-2018
+2019
 Trey Burke
 203504
-2018
+2019
 Alec Burks
 202692
-2018
+2019
 Caron Butler
 2406
 2015
 Jimmy Butler
 202710
-2018
+2019
 Bruno Caboclo
 203998
-2018
+2019
 Jose Calderon
 101181
-2018
+2019
 Kentavious Caldwell-Pope
 203484
-2018
+2019
 Mathias Calfani
 52608
 2016
@@ -275,22 +275,22 @@ Isaiah Canaan
 2016
 Clint Capela
 203991
-2018
+2019
 DeMarre Carroll
 201960
-2018
+2019
 Vince Carter
 1713
-2018
+2019
 Michael Carter-Williams
 203487
-2017
+2019
 Omri Casspi
 201956
 2016
 Willie Cauley-Stein
 1626161
-2018
+2019
 Amir Celestin
 1962937160
 2015
@@ -302,16 +302,16 @@ Leandro Cerminato
 2016
 Tyson Chandler
 2199
-2018
+2019
 Wilson Chandler
 201163
-2018
+2019
 Orane Chin
 1962937164
 2015
 Marquese Chriss
 1627737
-2018
+2019
 Rakeem Christmas
 1626176
 2016
@@ -323,16 +323,16 @@ Andrea Cinciarini
 2015
 Ian Clark
 203546
-2018
+2019
 Jordan Clarkson
 203903
-2018
+2019
 Norris Cole
 202708
 2016
 Darren Collison
 201954
-2018
+2019
 Nick Collison
 2555
 2017
@@ -341,49 +341,49 @@ Chanan Colman
 2015
 Mike Conley
 201144
-2018
+2019
 Pat Connaughton
 1626192
-2018
+2019
 Bryce Cotton
 203955
 2015
 DeMarcus Cousins
 202326
-2018
+2019
 Robert Covington
 203496
-2018
+2019
 Allen Crabbe
 203459
-2018
+2019
 Jamal Crawford
 2037
-2018
+2019
 Jae Crowder
 203109
-2018
+2019
 Dante Cunningham
 201967
-2018
+2019
 Seth Curry
 203552
-2018
+2019
 Stephen Curry
 201939
-2018
+2019
 Troy Daniels
 203584
-2018
+2019
 Anthony Davis
 203076
-2018
+2019
 Deyonta Davis
 1627738
-2017
+2019
 Ed Davis
 202334
-2018
+2019
 Branden Dawson
 1626183
 2015
@@ -392,28 +392,28 @@ Robert Day
 2015
 Dewayne Dedmon
 203473
-2018
+2019
 Sam Dekker
 1626155
-2018
+2019
 Malcolm Delaney
 1627098
 2017
 Matthew Dellavedova
 203521
-2018
+2019
 Luol Deng
 2736
-2018
+2019
 DeMar DeRozan
 201942
-2018
+2019
 Atoumane Diagne
 1962937468
 2016
 Cheick Diallo
 1627767
-2018
+2019
 Boris Diaw
 2564
 2016
@@ -422,28 +422,28 @@ John DiBartolomeo
 2015
 Gorgui Dieng
 203476
-2018
+2019
 Spencer Dinwiddie
 203915
-2018
+2019
 Justin Doellman
 1962937457
 2016
 Luka Doncic
 1629029
-2018
+2019
 Toney Douglas
 201962
 2015
 Goran Dragic
 201609
-2018
+2019
 Andre Drummond
 203083
-2018
+2019
 Jared Dudley
 201162
-2018
+2019
 Duje Dukan
 1626251
 2015
@@ -455,10 +455,10 @@ Mike Dunleavy
 2016
 Kris Dunn
 1627739
-2018
+2019
 Kevin Durant
 201142
-2018
+2019
 Cleanthony Early
 203921
 2015
@@ -467,16 +467,16 @@ Jarell Eddie
 2017
 Henry Ellenson
 1627740
-2018
+2019
 Wayne Ellington
 201961
-2018
+2019
 Monta Ellis
 101145
 2016
 Joel Embiid
 203954
-2018
+2019
 James Ennis
 203516
 2015
@@ -491,7 +491,7 @@ Tyreke Evans
 2018
 Dante Exum
 203957
-2018
+2019
 Festus Ezeli
 203105
 2016
@@ -500,22 +500,22 @@ Pedro Faria
 2015
 Kenneth Faried
 202702
-2018
+2019
 Jordan Farmar
 200770
 2015
 Derrick Favors
 202324
-2018
+2019
 Kay Felder
 1627770
 2017
 Cristiano Felicio
 1626245
-2018
+2019
 Raymond Felton
 101109
-2018
+2019
 Lisandro Fernandez
 52605
 2016
@@ -524,40 +524,40 @@ Pol Figueras
 2016
 Dorian Finney-Smith
 1627827
-2018
+2019
 Bryn Forbes
 1627854
-2018
+2019
 Evan Fournier
 203095
-2018
+2019
 Randy Foye
 200751
 2016
 Tim Frazier
 204025
-2017
+2019
 Channing Frye
 101112
-2018
+2019
 Danilo Gallinari
 201568
-2018
+2019
 Langston Galloway
 204038
-2018
+2019
 Kevin Garnett
 708
 2015
 Marc Gasol
 201188
-2018
+2019
 Pau Gasol
 2200
-2018
+2019
 Rudy Gay
 200752
-2018
+2019
 Michael Gbinije
 1627771
 2016
@@ -566,16 +566,16 @@ Alonzo Gee
 2015
 Paul George
 202331
-2018
+2019
 Taj Gibson
 201959
-2018
+2019
 Manu Ginobili
 1938
 2017
 Rudy Gobert
 203497
-2018
+2019
 Drew Gooden
 2400
 2015
@@ -584,10 +584,10 @@ Archie Goodwin
 2016
 Aaron Gordon
 203932
-2018
+2019
 Eric Gordon
 201569
-2018
+2019
 Marcin Gortat
 101162
 2017
@@ -596,34 +596,34 @@ Andrew Goudelock
 2015
 Treveon Graham
 1626203
-2018
+2019
 Jerami Grant
 203924
-2018
+2019
 Jerian Grant
 1626170
-2018
+2019
 WILL GRAVES
 1962937545
 2017
 Danny Green
 201980
-2018
+2019
 Draymond Green
 203110
-2018
+2019
 Gerald Green
 101123
-2018
+2019
 JaMychal Green
 203210
-2018
+2019
 Jeff Green
 201145
-2018
+2019
 Blake Griffin
 201933
-2018
+2019
 Jorge Gutierrez
 203268
 2015
@@ -644,28 +644,28 @@ Tyler Hansbrough
 2017
 Tim Hardaway Jr.
 203501
-2018
+2019
 James Harden
 201935
-2018
+2019
 Maurice Harkless
 203090
-2018
+2019
 Montrezl Harrell
 1626149
-2018
+2019
 Devin Harris
 2734
-2018
+2019
 Gary Harris
 203914
-2018
+2019
 Joe Harris
 203925
-2018
+2019
 Tobias Harris
 202699
-2018
+2019
 Aaron Harrison
 1626151
 2017
@@ -674,28 +674,28 @@ Andrew Harrison
 2017
 Udonis Haslem
 2617
-2018
+2019
 Spencer Hawes
 201150
 2016
 Gordon Hayward
 202330
-2018
+2019
 Gerald Henderson
 201945
 2016
 John Henson
 203089
-2018
+2019
 Juan Hernangomez
 1627823
 2016
 Willy Hernangomez
 1626195
-2018
+2019
 Mario Hezonja
 1626209
-2018
+2019
 Roy Hibbert
 201579
 2016
@@ -707,10 +707,10 @@ JJ Hickson
 2015
 Buddy Hield
 1627741
-2018
+2019
 George Hill
 201588
-2018
+2019
 Jordan Hill
 201941
 2016
@@ -725,31 +725,31 @@ Kirk Hinrich
 2015
 Jrue Holiday
 201950
-2018
+2019
 Justin Holiday
 203200
-2018
+2019
 John Holland
 204066
 2015
 Rondae Hollis-Jefferson
 1626178
-2018
+2019
 Richaun Holmes
 1626158
-2018
+2019
 Rodney Hood
 203918
-2018
+2019
 Al Horford
 201143
-2018
+2019
 Danuel House
 1627863
 2017
 Dwight Howard
 2730
-2018
+2019
 Marcelo Huertas
 1626273
 2015
@@ -761,28 +761,28 @@ Kris Humphries
 2016
 RJ Hunter
 1626154
-2018
+2019
 Serge Ibaka
 201586
-2018
+2019
 Andre Iguodala
 2738
-2018
+2019
 Ersan Ilyasova
 101141
-2018
+2019
 Joe Ingles
 204060
-2018
+2019
 Damien Inglis
 203996
 2015
 Brandon Ingram
 1627742
-2018
+2019
 Kyrie Irving
 202681
-2018
+2019
 Jarrett Jack
 101127
 2017
@@ -791,10 +791,10 @@ Demetrius Jackson
 2017
 Reggie Jackson
 202704
-2018
+2019
 LeBron James
 2544
-2018
+2019
 Al Jefferson
 2744
 2017
@@ -803,16 +803,16 @@ Richard Jefferson
 2017
 John Jenkins
 203098
-2018
+2019
 Brandon Jennings
 201943
 2017
 Jonas Jerebko
 201973
-2018
+2019
 Amir Johnson
 101161
-2018
+2019
 Brice Johnson
 1627744
 2016
@@ -821,19 +821,19 @@ Chris Johnson
 2015
 James Johnson
 201949
-2018
+2019
 Joe Johnson
 2207
 2017
 Stanley Johnson
 1626169
-2018
+2019
 Tyler Johnson
 204020
-2018
+2019
 Wesley Johnson
 202325
-2018
+2019
 NIkola Jokic
 203999
 2015
@@ -842,7 +842,7 @@ Dahntay Jones
 2016
 Damian Jones
 1627745
-2018
+2019
 James Jones
 2592
 2016
@@ -854,13 +854,13 @@ Terrence Jones
 2018
 Tyus Jones
 1626145
-2018
+2019
 DeAndre Jordan
 201599
-2018
+2019
 Cory Joseph
 202709
-2018
+2019
 Nikola Kalinic
 1962937127
 2015
@@ -869,10 +869,10 @@ Chris Kaman
 2015
 Frank Kaminsky
 1626163
-2018
+2019
 Enes Kanter
 202683
-2018
+2019
 Sergey Karasev
 203508
 2015
@@ -884,31 +884,31 @@ Ryan Kelly
 2016
 Michael Kidd-Gilchrist
 203077
-2018
+2019
 Sean Kilpatrick
 203930
 2017
 Brandon Knight
 202688
-2018
+2019
 DANIEL KOPERBERG
 1962937546
 2017
 Kyle Korver
 2594
-2018
+2019
 Kosta Koufos
 201585
-2018
+2019
 Mindaugas Kuzminskas
 1627851
 2016
 Skal Labissiere
 1627746
-2018
+2019
 Jeremy Lamb
 203087
-2018
+2019
 Carl Landry
 201171
 2015
@@ -923,64 +923,64 @@ Joffrey Lauvergne
 2017
 Zach LaVine
 203897
-2018
+2019
 Ty Lawson
 201951
 2017
 Jake Layman
 1627774
-2018
+2019
 Courtney Lee
 201584
-2018
+2019
 David Lee
 101135
 2016
 Alex Len
 203458
-2018
+2019
 Kawhi Leonard
 202695
-2018
+2019
 Meyers Leonard
 203086
-2018
+2019
 Jon Leuer
 202720
-2018
+2019
 Caris LeVert
 1627747
-2018
+2019
 DeAndre Liggins
 202732
 2017
 Damian Lillard
 203081
-2018
+2019
 Jeremy Lin
 202391
-2018
+2019
 Shaun Livingston
 2733
-2018
+2019
 Kevon Looney
 1626172
-2018
+2019
 Brook Lopez
 201572
-2018
+2019
 Lautaro Lopez
 52602
 2016
 Robin Lopez
 201577
-2018
+2019
 Kevin Love
 201567
-2018
+2019
 Kyle Lowry
 200768
-2018
+2019
 John Lucas III
 101249
 2015
@@ -992,37 +992,37 @@ Rafael Luz
 2015
 Trey Lyles
 1626168
-2018
+2019
 Shelvin Mack
 202714
-2018
+2019
 Daniele Magro
 1962937064
 2015
 Ian Mahinmi
 101133
-2018
+2019
 Thon Maker
 1627748
-2018
+2019
 Devyn Marble
 203906
 2015
 Boban Marjanovic
 1626246
-2018
+2019
 Kendall Marshall
 203088
 2015
 Jarell Martin
 1626185
-2018
+2019
 Kevin Martin
 2755
 2015
 Wesley Matthews
 202083
-2018
+2019
 O.J. Mayo
 201564
 2015
@@ -1034,7 +1034,7 @@ James Michael McAdoo
 2016
 Patrick McCaw
 1627775
-2018
+2019
 Sheldon McClellan
 1627815
 2016
@@ -1052,37 +1052,37 @@ KJ McDaniels
 2016
 Doug McDermott
 203926
-2018
+2019
 Mitch McGary
 203956
 2015
 JaVale McGee
 201580
-2018
+2019
 Rodney McGruder
 203585
-2018
+2019
 Ben McLemore
 203463
 2017
 Jordan McRae
 203895
-2018
+2019
 Josh McRoberts
 201177
 2016
 Jodie Meeks
 201975
-2018
+2019
 Salah Mejri
 1626257
-2018
+2019
 Jordan Mickey
 1626175
 2017
 Khris Middleton
 203114
-2018
+2019
 C.J. Miles
 101139
 2015
@@ -1094,46 +1094,46 @@ Mike Miller
 2016
 Patty Mills
 201988
-2018
+2019
 Paul Millsap
 200794
-2018
+2019
 Nikola Mirotic
 202703
-2018
+2019
 Nazr Mohammed
 1737
 2015
 Greg Monroe
 202328
-2017
+2019
 Luis Montero
 1626242
 2015
 E'Twaun Moore
 202734
-2018
+2019
 Eric Moreland
 203961
-2017
+2019
 Marcus Morris
 202694
-2018
+2019
 Markieff Morris
 202693
-2018
+2019
 Anthony Morrow
 201627
 2016
 Donatas Motiejunas
 202700
-2016
+2019
 Timofey Mozgov
 202389
-2018
+2019
 Emmanuel Mudiay
 1626144
-2018
+2019
 Shabazz Muhammad
 203498
 2017
@@ -1145,19 +1145,19 @@ Xavier Munford
 2017
 Dejounte Murray
 1627749
-2018
+2019
 Jamal Murray
 1627750
-2018
+2019
 Mike Muscala
 203488
-2018
+2019
 Larry Nance Jr.
 1626204
-2018
+2019
 Shabazz Napier
 203894
-2018
+2019
 Maurice Ndour
 1626254
 2016
@@ -1166,22 +1166,22 @@ Jameer Nelson
 2017
 Nene 
 2403
-2018
+2019
 Raul Neto
 203526
-2018
+2019
 Georges Niang
 1627777
-2018
+2019
 Andrew Nicholson
 203094
 2016
 Joakim Noah
 201149
-2018
+2019
 Nerlens Noel
 203457
-2018
+2019
 Lucas Nogueira
 203512
 2017
@@ -1190,28 +1190,28 @@ Steve Novak
 2015
 Dirk Nowitzki
 1717
-2018
+2019
 Jusuf Nurkic
 203994
-2018
+2019
 Johnny O'Bryant
 203948
 2015
 Kyle O'Quinn
 203124
-2018
+2019
 Daniel Ochefu
 1627849
 2016
 Jahlil Okafor
 1626143
-2018
+2019
 Victor Oladipo
 203506
-2018
+2019
 Kelly Olynyk
 203482
-2018
+2019
 Arinze Onuaku
 202620
 2015
@@ -1223,28 +1223,28 @@ Kelly Oubre
 2015
 Zaza Pachulia
 2585
-2018
+2019
 Georgios Papagiannis
 1627834
 2017
 Jabari Parker
 203953
-2018
+2019
 Tony Parker
 2225
 2018
 Chandler Parsons
 202718
-2018
+2019
 Lamar Patterson
 203934
 2015
 Patrick Patterson
 202335
-2018
+2019
 Chris Paul
 101108
-2018
+2019
 Adreian Payne
 203940
 2016
@@ -1253,7 +1253,7 @@ Cameron Payne
 2017
 Elfrid Payton
 203901
-2018
+2019
 Nikola Pekovic
 201593
 2016
@@ -1277,31 +1277,31 @@ Marshall Plumlee
 2017
 Mason Plumlee
 203486
-2018
+2019
 Miles Plumlee
 203101
-2018
+2019
 Jakob Poeltl
 1627751
-2018
+2019
 Quincy Pondexter
 202347
-2018
+2019
 Otto Porter
 203490
 2015
 Bobby Portis
 1626171
-2018
+2019
 Kristaps Porzingis
 204001
-2018
+2019
 Dwight Powell
 203939
-2018
+2019
 Norman Powell
 1626181
-2018
+2019
 Ronnie Price
 101179
 2016
@@ -1310,7 +1310,7 @@ Pablo Prigioni
 2015
 Taurean Prince
 1627752
-2018
+2019
 Tayshaun Prince
 2419
 2015
@@ -1322,7 +1322,7 @@ Dino Radoncic
 2015
 Julius Randle
 203944
-2018
+2019
 Zach Randolph
 2216
 2017
@@ -1337,16 +1337,16 @@ Willie Reed
 2016
 Josh Richardson
 1626196
-2018
+2019
 Malachi Richardson
 1627781
 2017
 Austin Rivers
 203085
-2018
+2019
 Andre Roberson
 203460
-2018
+2019
 Brian Roberts
 203148
 2016
@@ -1364,19 +1364,19 @@ Sergio Rodriguez
 2016
 Rajon Rondo
 200765
-2018
+2019
 Derrick Rose
 201565
-2018
+2019
 Terrence Ross
 203082
-2018
+2019
 Terry Rozier
 1626179
-2018
+2019
 Ricky Rubio
 201937
-2018
+2019
 Damjan Rudez
 204014
 2016
@@ -1385,10 +1385,10 @@ Brandon Rush
 2016
 D'Angelo Russell
 1626156
-2018
+2019
 Domantas Sabonis
 1627734
-2018
+2019
 Robert Sacre
 203135
 2015
@@ -1403,28 +1403,28 @@ Matias Sandes
 2016
 Dario Saric
 203967
-2018
+2019
 NIR SARID
 1962937551
 2016
 Tomas Satoransky
 203107
-2018
+2019
 Santiago Scala
 52601
 2016
 Dennis Schroder
 203471
-2018
+2019
 Luis Scola
 2449
 2015
 Mike Scott
 203118
-2018
+2019
 Thabo Sefolosha
 200757
-2018
+2019
 Kevin Seraphin
 202338
 2016
@@ -1433,19 +1433,19 @@ Ramon Sessions
 2017
 Iman Shumpert
 202697
-2018
+2019
 Pascal Siakam
 1627783
-2018
+2019
 AMIT SIMHON
 1962937552
 2016
 Ben Simmons
 1627732
-2018
+2019
 Jonathon Simmons
 203613
-2018
+2019
 Henry Sims
 203156
 2015
@@ -1457,13 +1457,13 @@ Donald Sloan
 2015
 Marcus Smart
 203935
-2018
+2019
 Greg Smith
 202962
 2015
 Ish Smith
 202397
-2018
+2019
 J.R. Smith
 2747
 2015
@@ -1475,7 +1475,7 @@ Josh Smith
 2015
 Tony Snell
 203503
-2018
+2019
 Marreese Speights
 201578
 2017
@@ -1487,10 +1487,10 @@ Tiago Splitter
 2016
 Nik Stauskas
 203917
-2018
+2019
 Lance Stephenson
 202362
-2018
+2019
 Jarnell Stokes
 203950
 2015
@@ -1514,13 +1514,13 @@ Edy Tavares
 2016
 Jeff Teague
 201952
-2018
+2019
 Mirza Teletovic
 203141
 2016
 Garrett Temple
 202066
-2018
+2019
 Jason Terry
 1891
 2017
@@ -1529,10 +1529,10 @@ Samba Thiago
 2015
 Isaiah Thomas
 202738
-2018
+2019
 Lance Thomas
 202498
-2018
+2019
 Hollis Thompson
 203138
 2015
@@ -1541,31 +1541,31 @@ Jason Thompson
 2015
 Klay Thompson
 202691
-2018
+2019
 Tristan Thompson
 202684
-2018
+2019
 Marcus Thornton
 201977
 2015
 Anthony Tolliver
 201229
-2018
+2019
 Axel Toupane
 1626253
 2016
 Karl-Anthony Towns
 1626157
-2018
+2019
 P.J Tucker
 200782
 2015
 Evan Turner
 202323
-2018
+2019
 Myles Turner
 1626167
-2018
+2019
 Beno Udrih
 2757
 2016
@@ -1574,13 +1574,13 @@ Tyler Ulis
 2017
 Jonas Valanciunas
 202685
-2018
+2019
 Denzel Valentine
 1627756
-2018
+2019
 Fred VanVleet
 1627832
-2018
+2019
 Anderson Varejao
 2760
 2015
@@ -1598,25 +1598,25 @@ Charlie Villanueva
 2015
 Noah Vonleh
 203943
-2018
+2019
 Nikola Vucevic
 202696
-2018
+2019
 Sasha Vujacic
 2756
 2016
 Dwyane Wade
 2548
-2018
+2019
 Dion Waiters
 203079
-2018
+2019
 Kemba Walker
 202689
-2018
+2019
 John Wall
 202322
-2018
+2019
 TJ Warren
 203933
 2017
@@ -1631,25 +1631,25 @@ David West
 2017
 Russell Westbrook
 201566
-2018
+2019
 Isaiah Whitehead
 1627785
-2018
+2019
 Hassan Whiteside
 202355
-2018
+2019
 Shayne Whittington
 203963
 2015
 Andrew Wiggins
 203952
-2018
+2019
 CJ Wilcox
 203912
 2017
 Alan Williams
 1626210
-2018
+2019
 Deron Williams
 101114
 2016
@@ -1661,25 +1661,25 @@ Louis Williams
 2015
 Marvin Williams
 101107
-2018
+2019
 Mo Williams
 2590
 2015
 Troy Williams
 1627786
-2018
+2019
 Kyle Wiltjer
 1627787
 2016
 Justise Winslow
 1626159
-2018
+2019
 Jeff Withey
 203481
 2016
 Christian Wood
 1626174
-2018
+2019
 WILLY WORKMAN
 1962937553
 2017
@@ -1691,7 +1691,7 @@ Brandan Wright
 2016
 Delon Wright
 1626153
-2018
+2019
 Dorell Wright
 2748
 2015
@@ -1709,13 +1709,13 @@ Nick Young
 2017
 Thaddeus Young
 201152
-2018
+2019
 Cody Zeller
 203469
-2018
+2019
 Tyler Zeller
 203092
-2018
+2019
 Stephen Zimmerman
 1627757
 2016
@@ -1724,7 +1724,7 @@ Paul Zipser
 2017
 Ivica Zubac
 1627826
-2018
+2019
 Will Bynum
 101198
 2015
@@ -1739,10 +1739,10 @@ Jonathan Holmes
 2015
 Chasson Randle
 1626184
-2018
+2019
 Quinn Cook
 1626188
-2018
+2019
 Vincent Hunter
 1626205
 2015
@@ -1757,7 +1757,7 @@ Jaleel Roberts
 2015
 Jonathan Gibson
 1626780
-2017
+2019
 Derek Cooke Jr.
 1627496
 2015
@@ -1781,7 +1781,7 @@ Gary Payton II
 2017
 Wayne Selden
 1627782
-2018
+2019
 Jarrod Uthoff
 1627784
 2016
@@ -1793,13 +1793,13 @@ Zach Auguste
 2015
 Yogi Ferrell
 1627812
-2018
+2019
 Damion Lee
 1627814
-2018
+2019
 Alex Poythress
 1627816
-2018
+2019
 Kaleb Tarczewski
 1627818
 2015
@@ -1826,7 +1826,7 @@ Shawn Long
 2016
 Ryan Arcidiacono
 1627853
-2018
+2019
 Okaro White
 1627855
 2017
@@ -1877,7 +1877,7 @@ Jalen Jones
 2017
 Shaquille Harrison
 1627885
-2018
+2019
 D'Vauntes Smith-Rivera
 1627886
 2015
@@ -1892,7 +1892,7 @@ Jaleel Cousins
 2015
 Alex Caruso
 1627936
-2018
+2019
 J.J. Avila
 1627938
 2015
@@ -1925,7 +1925,7 @@ Wang Zezhong
 2015
 Guerschon Yabusele
 1627824
-2018
+2019
 Huang Shiqian
 1962937427
 2015
@@ -1939,8 +1939,8 @@ Ge Yang
 1962937430
 2015
 Jimmer Fredette
-1962937769
-2017
+202690
+2019
 Shi Yuchen
 1962937772
 2017
@@ -2111,7 +2111,7 @@ Josh Magette
 2017
 C.J. Williams
 203710
-2018
+2019
 Casper Ware
 203810
 2017
@@ -2159,67 +2159,67 @@ Wade Baldwin IV
 2017
 J.J. Barea
 200826
-2018
+2019
 Jordan Crawford
 202348
 2017
 James Ennis III
 203516
-2018
+2019
 Manny Harris
 202412
 2016
 Nikola Jokic
 203999
-2018
+2019
 Derrick Jones Jr.
 1627884
-2018
+2019
 Timothe Luwawu-Cabarrot
 1627789
-2018
+2019
 CJ McCollum
 203468
-2018
+2019
 T.J. McConnell
 204456
-2018
+2019
 CJ Miles
 101139
-2018
+2019
 Elijah Millsap
 202407
 2016
 David Nwaba
 1628021
-2018
+2019
 Johnny O'Bryant III
 203948
 2016
 Kelly Oubre Jr.
 1626162
-2018
+2019
 Otto Porter Jr.
 203490
-2018
+2019
 JJ Redick
 200755
-2018
+2019
 Glenn Robinson III
 203922
-2018
+2019
 JR Smith
 2747
-2018
+2019
 PJ Tucker
 200782
-2018
+2019
 Lou Williams
 101150
-2018
+2019
 Bam Adebayo
 1628389
-2018
+2019
 Kyle Adnam
 27025
 2017
@@ -2228,10 +2228,10 @@ Josh Akognon
 2017
 Jarrett Allen
 1628386
-2018
+2019
 Kadeem Allen
 1628443
-2018
+2019
 David Andersen
 2431
 2017
@@ -2243,16 +2243,16 @@ Ike Anigbogu
 2017
 OG Anunoby
 1628384
-2018
+2019
 Jamel Artis
 1628503
 2017
 Dwayne Bacon
 1628407
-2018
+2019
 Lonzo Ball
 1628366
-2018
+2019
 David Barlow
 6664001
 2017
@@ -2261,28 +2261,28 @@ Gal Baruch
 2017
 Jordan Bell
 1628395
-2018
+2019
 Khem Birch
 203920
-2018
+2019
 Jabari Bird
 1628444
 2017
 Antonio Blakeney
 1628469
-2018
+2019
 Todd Blanchfield
 1962937736
 2017
 Bogdan Bogdanovic
 203992
-2018
+2019
 Josh Boone
 51956
 2017
 Chris Boucher
 1628449
-2018
+2019
 Frederic Bourdillon
 27033
 2017
@@ -2291,22 +2291,22 @@ Brandon Bowman
 2017
 Tony Bradley
 1628396
-2018
+2019
 Dillon Brooks
 1628415
-2018
+2019
 MarShon Brooks
 202705
 2017
 Sterling Brown
 1628425
-2018
+2019
 Shaun Bruce
 27020
 2017
 Thomas Bryant
 1628418
-2018
+2019
 Perrin Buford
 57237
 2017
@@ -2318,7 +2318,7 @@ Jason Cadee
 2017
 Tyler Cavanaugh
 1628463
-2018
+2019
 Mario Chalmers
 201596
 2017
@@ -2327,10 +2327,10 @@ Antonius Cleveland
 2017
 John Collins
 1628381
-2018
+2019
 Zach Collins
 1628380
-2018
+2019
 Charles Cooke
 1628429
 2017
@@ -2339,46 +2339,46 @@ Jack Cooley
 2017
 Torrey Craig
 1628470
-2018
+2019
 Sam Daly
 1962937738
 2017
 Tyler Dorsey
 1628416
-2018
+2019
 Damyean Dotson
 1628422
-2018
+2019
 Milton Doyle
 1628495
 2017
 PJ Dozier
 1628408
-2018
+2019
 Larry Drew II
 203580
 2017
 Jawun Evans
 1628393
-2018
+2019
 Zhang Fan
 27005
 2017
 Terrance Ferguson
 1628390
-2018
+2019
 Kyle Fogg
 203176
 2017
 De'Aaron Fox
 1628368
-2018
+2019
 Tom Fullarton
 1962937810
 2017
 Markelle Fultz
 1628365
-2018
+2019
 Tom Garlepp
 1962937739
 2017
@@ -2390,7 +2390,7 @@ Adam Gibson
 2017
 Harry Giles III
 1628385
-2018
+2019
 Chris Goulding
 42824
 2017
@@ -2411,7 +2411,7 @@ Tyrell Harrison
 2017
 Josh Hart
 1628404
-2018
+2019
 Nigel Hayes
 1628502
 2017
@@ -2423,10 +2423,10 @@ Myke Henry
 2017
 Juancho Hernangomez
 1627823
-2018
+2019
 Isaiah Hicks
 1628439
-2018
+2019
 Stephen Holt
 1962937808
 2017
@@ -2444,25 +2444,25 @@ Andre Ingram
 2017
 Jonathan Isaac
 1628371
-2018
+2019
 Wes Iwundu
 1628411
-2018
+2019
 Aaron Jackson
 1628935
 2017
 Frank Jackson
 1628402
-2018
+2019
 Josh Jackson
 1628367
-2018
+2019
 Justin Jackson
 1628382
-2018
+2019
 Amile Jefferson
 1628518
-2018
+2019
 Tom Jervis
 27021
 2017
@@ -2480,7 +2480,7 @@ Guo Kai
 2017
 Luke Kennard
 1628379
-2018
+2019
 Matthew Kenyon
 27017
 2017
@@ -2489,19 +2489,19 @@ Daniel Kickert
 2017
 Maxi Kleber
 1628467
-2018
+2019
 Furkan Korkmaz
 1627788
-2018
+2019
 Luke Kornet
 1628436
-2018
+2019
 Kyle Kuzma
 1628398
-2018
+2019
 TJ Leaf
 1628388
-2018
+2019
 Andrej Lemanis
 27014
 2017
@@ -2516,7 +2516,7 @@ Kevin Lisch
 2017
 Tyler Lydon
 1628399
-2018
+2019
 Will Magnay
 1962937809
 2017
@@ -2525,13 +2525,13 @@ Majok Majok
 2017
 Lauri Markkanen
 1628374
-2018
+2019
 Luke Martinez
 1627383
 2017
 Frank Mason
 1628412
-2018
+2019
 Mangok Mathiang
 1628493
 2017
@@ -2540,13 +2540,13 @@ Erik McCree
 2017
 Alfonzo McKinnie
 1628035
-2018
+2019
 Darius Miller
 203121
-2018
+2019
 Malcolm Miller
 1626259
-2018
+2019
 Ju Mingxin
 27013
 2017
@@ -2555,46 +2555,46 @@ Nick Minnerath
 2017
 Donovan Mitchell
 1628378
-2018
+2019
 Craig Moller
 27026
 2017
 Malik Monk
 1628370
-2018
+2019
 Ben Moore
 1628500
-2018
+2019
 Jaylen Morris
 1628537
 2017
 Monte Morris
 1628420
-2018
+2019
 Johnathan Motley
 1628405
-2018
+2019
 Abdel Nader
 1627846
-2018
+2019
 Brad Newley
 1962937734
 2017
 Frank Ntilikina
 1628373
-2018
+2019
 Royce O'Neale
 1626220
-2018
+2019
 Semi Ojeleye
 1628400
-2018
+2019
 Emeka Okafor
 2731
 2017
 Cedi Osman
 1626224
-2018
+2019
 Justin Patton
 1628383
 2018
@@ -2621,13 +2621,13 @@ Zhou Qi
 2017
 Ivan Rabb
 1628397
-2018
+2019
 Davon Reed
 1628432
-2018
+2019
 Devin Robinson
 1628421
-2018
+2019
 Angel Rodriguez
 52526
 2017
@@ -2654,7 +2654,7 @@ Amritpal Singh
 2017
 Dennis Smith Jr.
 1628372
-2018
+2019
 Tohi Smith-Milner
 7021
 2017
@@ -2666,13 +2666,13 @@ David Stockton
 2017
 Edmond Sumner
 1628410
-2018
+2019
 Caleb Swanigan
 1628403
-2018
+2019
 Jayson Tatum
 1628369
-2018
+2019
 Marquis Teague
 203104
 2017
@@ -2684,10 +2684,10 @@ Reuben Te Rangi
 2017
 Daniel Theis
 1628464
-2018
+2019
 Sindarius Thornwell
 1628414
-2018
+2019
 Adam Thoseby
 1962937742
 2017
@@ -2699,10 +2699,10 @@ Travis Trice
 2017
 Ekpe Udoh
 202327
-2018
+2019
 Tyrone Wallace
 1627820
-2018
+2019
 Derrick Walton Jr.
 1628476
 2017
@@ -2711,13 +2711,13 @@ Tai Wesley
 2017
 Derrick White
 1628401
-2018
+2019
 Andrew White III
 1628510
 2017
 D.J. Wilson
 1628391
-2018
+2019
 Zhang Xiaolei
 27004
 2017
@@ -2765,304 +2765,508 @@ Fan Ziming
 2017
 Ante Zizic
 1627790
-2018
+2019
 Jaylen Adams
 1629121
-2018
+2019
 Deng Adel
 1629061
-2018
+2019
 Rawle Alkins
 1628959
-2018
+2019
 Grayson Allen
 1628960
-2018
+2019
 Kostas Antetokounmpo
 1628961
-2018
+2019
 Deandre Ayton
 1629028
-2018
+2019
 Marvin Bagley III
 1628963
-2018
+2019
 Mo Bamba
 1628964
-2018
+2019
 Keita Bates-Diop
 1628966
-2018
+2019
 Dairis Bertans
 1629541
-2018
+2019
 Jaron Blossomgame
 1628417
-2018
+2019
 Trevon Bluiett
 1629129
-2018
+2019
 Jonah Bolden
 1628413
-2018
+2019
 Isaac Bonga
 1629067
-2018
+2019
 Mikal Bridges
 1628969
-2018
+2019
 Miles Bridges
 1628970
-2018
+2019
 Isaiah Briscoe
 1628515
 2018
 Ryan Broekhoff
 1629151
-2018
+2019
 Bruce Brown
 1628971
-2018
+2019
 Troy Brown Jr.
 1628972
-2018
+2019
 Jalen Brunson
 1628973
-2018
+2019
 Deonte Burton
 1629126
-2018
+2019
 Jevon Carter
 1628975
-2018
+2019
 Wendell Carter Jr.
 1628976
-2018
+2019
 Troy Caupain
 1628505
-2018
+2019
 Joe Chealey
 1629147
-2018
+2019
 Gary Clark
 1629109
-2018
+2019
 Bonzie Colson
 1629045
-2018
+2019
 Angel Delgado
 1629116
-2018
+2019
 Marcus Derrickson
 1629094
-2018
+2019
 Hamidou Diallo
 1628977
-2018
+2019
 Donte DiVincenzo
 1628978
-2018
+2019
 Trevon Duval
 1628979
-2018
+2019
 Vincent Edwards
 1629053
-2018
+2019
 Drew Eubanks
 1629234
-2018
+2019
 Jacob Evans
 1628980
-2018
+2019
 Melvin Frazier Jr.
 1628982
-2018
+2019
 Wenyen Gabriel
 1629117
-2018
+2019
 Shai Gilgeous-Alexander
 1628983
-2018
+2019
 Brandon Goodwin
 1629164
-2018
+2019
 Devonte' Graham
 1628984
-2018
+2019
 Donte Grantham
 1629055
-2018
+2019
 Isaiah Hartenstein
 1628392
-2018
+2019
 Haywood Highsmith
 1629312
 2018
 Aaron Holiday
 1628988
-2018
+2019
 Scotty Hopson
 203816
 2018
 Danuel House Jr.
 1627863
-2018
+2019
 Kevin Huerter
 1628989
-2018
+2019
 Chandler Hutchison
 1628990
-2018
+2019
 Jaren Jackson Jr.
 1628991
-2018
+2019
 Alize Johnson
 1628993
-2018
+2019
 BJ Johnson
 1629168
-2018
+2019
 George King
 1628994
-2018
+2019
 Kevin Knox
 1628995
-2018
+2019
 Rodions Kurucs
 1629066
-2018
+2019
 Jordan Loyd
 1628070
-2018
+2019
 Kalin Lucas
 203564
-2018
+2019
 Daryl Macon
 1629133
-2018
+2019
 J.P. Macura
 1629122
-2018
+2019
 Yante Maten
 1628999
-2018
+2019
 Tahjere McCall
 1628769
 2018
 De'Anthony Melton
 1629001
-2018
+2019
 Chimezie Metu
 1629002
-2018
+2019
 Shake Milton
 1629003
-2018
+2019
 Naz Mitrou-Long
 1628513
-2018
+2019
 Dzanan Musa
 1629058
-2018
+2019
 Svi Mykhailiuk
 1629004
-2018
+2019
 Elie Okobo
 1629059
-2018
+2019
 Josh Okogie
 1629006
-2018
+2019
 Theo Pinson
 1629033
-2018
+2019
 Michael Porter Jr.
 1629008
-2018
+2019
 Cameron Reynolds
 1629244
-2018
+2019
 Duncan Robinson
 1629130
-2018
+2019
 Jerome Robinson
 1629010
-2018
+2019
 Mitchell Robinson
 1629011
-2018
+2019
 Brandon Sampson
 1629102
-2018
+2019
 Collin Sexton
 1629012
-2018
+2019
 Landry Shamet
 1629013
-2018
+2019
 Jordan Sibert
 1626296
 2018
 Anfernee Simons
 1629014
-2018
+2019
 Zhaire Smith
 1629015
-2018
+2019
 Richard Solomon
 204076
 2018
 Ray Spalding
 1629034
-2018
+2019
 Omari Spellman
 1629016
-2018
+2019
 Jared Terrell
 1629123
-2018
+2019
 Khyri Thomas
 1629017
-2018
+2019
 Gary Trent Jr.
 1629018
-2018
+2019
 Allonzo Trier
 1629019
-2018
+2019
 Jarred Vanderbilt
 1629020
-2018
+2019
 Moritz Wagner
 1629021
-2018
+2019
 Lonnie Walker IV
 1629022
-2018
+2019
 Brad Wanamaker
 202954
-2018
+2019
 T.J. Warren
 203933
-2018
+2019
 Julian Washburn
 1627395
-2018
+2019
 Yuta Watanabe
 1629139
-2018
+2019
 Thomas Welsh
 1629118
-2018
+2019
 Johnathan Williams
 1629140
-2018
+2019
 Kenrich Williams
 1629026
-2018
+2019
 Robert Williams III
 1629057
-2018
+2019
 Trae Young
 1629027
-2018
+2019
+Nickeil Alexander-Walker
+1629638
+2019
+RJ Barrett
+1629628
+2019
+Darius Bazley
+1629647
+2019
+Goga Bitadze
+1629048
+2019
+Bol Bol
+1629626
+2019
+Jordan Bone
+1629648
+2019
+Jarrell Brantley
+1629714
+2019
+Ignas Brazdeikis
+1629649
+2019
+Chris Chiozza
+1629185
+2019
+Brandon Clarke
+1629634
+2019
+Nicolas Claxton
+1629651
+2019
+Jarrett Culver
+1629633
+2019
+Sekou Doumbouya
+1629635
+2019
+Carsen Edwards
+1629035
+2019
+Bruno Fernando
+1628981
+2019
+Michael Frazier
+1626187
+2019
+Daniel Gafford
+1629655
+2019
+Darius Garland
+1629636
+2019
+Billy Garrett
+1628656
+2019
+Kyle Guy
+1629657
+2019
+Rui Hachimura
+1629060
+2019
+Jaylen Hands
+1628986
+2019
+Jaxson Hayes
+1629637
+2019
+Dewan Hernandez
+1629608
+2019
+Tyler Herro
+1629639
+2019
+Talen Horton-Tucker
+1629659
+2019
+Isaac Humphries
+1629353
+2019
+DeAndre Hunter
+1629631
+2019
+Justin James
+1629713
+2019
+Ty Jerome
+1629660
+2019
+Cameron Johnson
+1629661
+2019
+Keldon Johnson
+1629640
+2019
+Jemerrio Jones
+1629203
+2019
+Mfiondu Kabengele
+1629662
+2019
+Romeo Langford
+1629641
+2019
+Walter Lemon Jr.
+1627215
+2019
+Nassir Little
+1629642
+2019
+Marcos Louzada Silva
+1629712
+2019
+Terance Mann
+1629611
+2019
+Vanja Marinkovic
+1629079
+2019
+Cody Martin
+1628998
+2019
+Jalen McDaniels
+1629667
+2019
+Ja Morant
+1629630
+2019
+Jaylen Nowell
+1629669
+2019
+Kendrick Nunn
+1629134
+2019
+Chuma Okeke
+1629643
+2019
+KZ Okpala
+1629644
+2019
+Miye Oni
+1629671
+2019
+Eric Paschall
+1629672
+2019
+Tarik Phillip
+1629341
+2019
+Jordan Poole
+1629673
+2019
+Kevin Porter Jr.
+1629645
+2019
+Cameron Reddish
+1629629
+2019
+Isaiah Roby
+1629676
+2019
+Luka Samanic
+1629677
+2019
+Admiral Schofield
+1629678
+2019
+Marial Shayok
+1629621
+2019
+Deividas Sirvydis
+1629686
+2019
+Alen Smailagic
+1629346
+2019
+Matisse Thybulle
+1629680
+2019
+P.J. Washington
+1629023
+2019
+Tremont Waters
+1629682
+2019
+Quinndary Weatherspoon
+1629683
+2019
+Coby White
+1629632
+2019
+Grant Williams
+1629684
+2019
+Zion Williamson
+1629627
+2019
+Dylan Windler
+1629685
+2019
+Justin Wright-Foreman
+1629625
+2019

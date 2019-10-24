@@ -105,7 +105,7 @@ var playerNames = [];
 var preview = [];
 $(document).ready(function(){
   var rand = Math.random();
-  if (rand <= (1 / 15)) {
+  if (rand <= (1 / 20)) {
     $('#myModal2').modal('show');
   }
   $.ajax({
@@ -163,7 +163,6 @@ var players = [
 "https://images.axios.com/8wUansaUjDMYzmt8t2qLSXMa5rM=/0x71:4269x2472/1920x1080/2019/02/11/1549849055985.jpg",
 "https://nssdata.s3.amazonaws.com/images/galleries/18429/kawhi-leonard-110318-ftr-gettyjpg-t12l29gx1ont10g3s2nvbqbrn.jpg",
 "https://s.yimg.com/uu/api/res/1.2/Ezf7oPM7Ek3Bh1jp7RvQTw--~B/aD0xMDgwO3c9MTkyMDtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/en-GB/homerun/omnisport.uk/00ec56829389c8474af529a07ed2ef50",
-"https://a.espncdn.com/combiner/i?img=%2Fmedia%2Fmotion%2F2018%2F1207%2Fdm_181207_nba_76ers_butler_sotfull%2Fdm_181207_nba_76ers_butler_sotfull.jpg",
 "https://cdn.nba.net/nba-drupal-prod/styles/landscape/s3/2017-11/EMBIID%20PP.jpg?itok=jIgfw7N6",
 "https://images.performgroup.com/di/library/NBA_Global_CMS_image_storage/f8/40/luka-doncic-2-012119-ftr-gettyjpg_fblns1vpdkjz1thjkjzs6uprh.jpg?t=1913837288&quality=100"
 ];
