@@ -1,6 +1,12 @@
 # NBA_Website
 Displays statistics about the games and players in the National Basketball Association.
 
+**Screenshots**
+|||
+| ------------- | ------------- |
+| ![Home](https://github.com/imathur1/NBA_Website/blob/master/screenshots/NBA-1.png)  | ![Scores](https://github.com/imathur1/NBA_Website/blob/master/screenshots/NBA-2.png)  |
+| ![Game Information](https://github.com/imathur1/NBA_Website/blob/master/screenshots/NBA-3.png)  | ![Standings](https://github.com/imathur1/NBA_Website/blob/master/screenshots/NBA-4.png) |
+
 **Features**
   - Upcoming 6 games
   - Previous 6 games
