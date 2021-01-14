@@ -5,7 +5,7 @@ import http.client
 import urllib.request
 from pathlib import Path
 from bs4 import BeautifulSoup
-from newsapi import NewsApiClient
+# from newsapi import NewsApiClient
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
 from flask import Flask, render_template, request, jsonify
@@ -161,7 +161,11 @@ def writeXML(year, month, day):
         else:
             month += 1
     conn = http.client.HTTPSConnection("api.sportradar.us")
-    conn.request("GET", "/nba/trial/v5/en/games/" + str(year) + "/" + str(month) + "/" + str(day) + "/schedule.xml?api_key=rafgw5sffp5tj5g437uhc7we")
+    with open("credentials.txt", "r") as f:
+        f.readline()
+        nba_api_key = f.readline().strip("\n")
+
+    conn.request("GET", "/nba/trial/v5/en/games/" + str(year) + "/" + str(month) + "/" + str(day) + "/schedule.xml?api_key=" + nba_api_key)
     res = conn.getresponse()
     data = res.read()
     text = data.decode("utf-8")
@@ -221,7 +225,7 @@ def updateUpcoming(upcoming, currentTime, offset, a, b, c):
                 if elem.attrib["status"] == "closed":
                     pass
                 
-                time = elem.attrib["scheduled"]
+                time = elem.attrib["scheduled"].strip("Z")
                 gameTime = datetime.fromisoformat(time).timestamp() - offset
                 d1 = str(date.fromtimestamp(gameTime))
                 d2 = str(date.fromtimestamp(currentTime))
@@ -603,85 +607,86 @@ def getPreviewArticles(upcoming):
     return articleInfo
 
 def getNews(date1, date2):
-    newsapi = NewsApiClient(api_key='7477d1d0e72844348ebc6472a323c125')
-    top_headlines = newsapi.get_top_headlines(q='nba',
-                                            category='sports',
-                                            language='en',
-                                            country='us')
-    all_articles = newsapi.get_everything(q='nba',
-                                        sources='espn,bleacher-report',
-                                        domains='espn.com,bleacherreport.com,nba.com',
-                                        from_param=date1,
-                                        to=date2,
-                                        language='en',
-                                        sort_by='relevancy')
+    # newsapi = NewsApiClient(api_key='[KEY]')
+    # top_headlines = newsapi.get_top_headlines(q='nba',
+    #                                         category='sports',
+    #                                         language='en',
+    #                                         country='us')
+    # all_articles = newsapi.get_everything(q='nba',
+    #                                     sources='espn,bleacher-report',
+    #                                     domains='espn.com,bleacherreport.com,nba.com',
+    #                                     from_param=date1,
+    #                                     to=date2,
+    #                                     language='en',
+    #                                     sort_by='relevancy')
 
-    seen = []
-    data = []
-    articles1 = top_headlines['articles']
-    articles2 = all_articles['articles']
-    data.append(len(articles1))
-    for i in articles1:
-        source = i['source']['name']
-        author = i['author']
-        title = i['title']
-        url = i['url']
-        image = i['urlToImage']
-        time = i['publishedAt']
-        content = i['content']
-        if source == 'Espn.com' or source == 'Nba.com' or source == 'Bleacher Report':
-            if title not in seen:
-                seen.append(title)
-                by = ""
-                if author is None:
-                    by = source
-                elif author == "NBA.com":
-                    author = "Official release"
-                    by = author + " from " + source
-                else:
-                    by = author + " from " + source
-                if content is None:
-                    content = "No content"
-                if image is None:
-                    image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
+    # seen = []
+    # data = []
+    # articles1 = top_headlines['articles']
+    # articles2 = all_articles['articles']
+    # data.append(len(articles1))
+    # for i in articles1:
+    #     source = i['source']['name']
+    #     author = i['author']
+    #     title = i['title']
+    #     url = i['url']
+    #     image = i['urlToImage']
+    #     time = i['publishedAt']
+    #     content = i['content']
+    #     if source == 'Espn.com' or source == 'Nba.com' or source == 'Bleacher Report':
+    #         if title not in seen:
+    #             seen.append(title)
+    #             by = ""
+    #             if author is None:
+    #                 by = source
+    #             elif author == "NBA.com":
+    #                 author = "Official release"
+    #                 by = author + " from " + source
+    #             else:
+    #                 by = author + " from " + source
+    #             if content is None:
+    #                 content = "No content"
+    #             if image is None:
+    #                 image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
                 
-                mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
-                "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
-                "11":"November", "12":"December"}
-                time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
-                content = content.replace('\xa0', ' -')
-                data.append([title, by, time, content, image, url])
+    #             mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
+    #             "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
+    #             "11":"November", "12":"December"}
+    #             time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
+    #             content = content.replace('\xa0', ' -')
+    #             data.append([title, by, time, content, image, url])
 
-    for i in articles2:
-        source = i['source']['name']
-        author = i['author']
-        title = i['title']
-        url = i['url']
-        image = i['urlToImage']
-        time = i['publishedAt']
-        content = i['content']
-        if title not in seen:
-            seen.append(title)
-            by = ""
-            if author is None:
-                by = source
-            elif author == "NBA.com":
-                author = "Official release"
-                by = author + " from " + source
-            else:
-                by = author + " from " + source
-            if content is None:
-                content = "No content"
-            if image is None:
-                image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
+    # for i in articles2:
+    #     source = i['source']['name']
+    #     author = i['author']
+    #     title = i['title']
+    #     url = i['url']
+    #     image = i['urlToImage']
+    #     time = i['publishedAt']
+    #     content = i['content']
+    #     if title not in seen:
+    #         seen.append(title)
+    #         by = ""
+    #         if author is None:
+    #             by = source
+    #         elif author == "NBA.com":
+    #             author = "Official release"
+    #             by = author + " from " + source
+    #         else:
+    #             by = author + " from " + source
+    #         if content is None:
+    #             content = "No content"
+    #         if image is None:
+    #             image = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwin0ffp8v3gAhUcoYMKHaydCjYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Frefurbished%2Fclearance&psig=AOvVaw1B-rVuUmLBsRLXeO_bHC2o&ust=1552524562379261"
             
-            mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
-            "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
-            "11":"November", "12":"December"}
-            time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
-            content = content.replace('\xa0', '  -')
-            data.append([title, by, time, content, image, url])
-    return data
+    #         mapping = {"01":"January", "02":"February", "03":"March", "04":"April", "05":"May",
+    #         "06":"June", "07": "July", "08": "August","09": "September", "10": "October",
+    #         "11":"November", "12":"December"}
+    #         time = mapping[time[5:7]] + " " + str(int(time[8:10])) + ", " + time[0:4]
+    #         content = content.replace('\xa0', '  -')
+    #         data.append([title, by, time, content, image, url])
+    # return data
+    return ""
 
 def updateRecent(time):
     global theDate
