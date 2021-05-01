@@ -1,4 +1,4 @@
-# NBA_Website
+# NBA-Website
 Displays statistics about the games and players in the National Basketball Association.
 
 **Screenshots**
